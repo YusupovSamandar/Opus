@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CardCont from "./component/card-container/card-container";
+import Sidebar from './component/sidebar/sidebar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Search from "./container/Detail/detail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={() => <Sidebar component={<CardCont />} />} />
+          <Route exact path="/detail" component={() => <Sidebar component={<Search />} />} />
+          <Sidebar />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
