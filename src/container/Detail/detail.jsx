@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Components
 import Search from "./../../component/Search/search";
 import Table from "./../../component/student-table/student-table";
@@ -6,7 +6,9 @@ import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import "./detail.css"
+import axios from "axios";
+import "./detail.css";
+import Popup from "./../../component/Modal/modal";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,13 +22,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FullWidthGrid() {
+    // Data
+
+    useEffect(() => {
+        fetchItems();
+    }, []);
+
+    const [students, setStudents] = useState([]);
+
+    const fetchItems = async () => {
+        const { data } = await axios.get("http://localhost:3000/students");
+        setStudents(data);
+    }
+
+
     const classes = useStyles();
+
     return (
         <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={4} sm={3}>
-                        <Search />
+                        <Search data={students} />
                     </Grid>
                     <Grid item xs={12} sm={9}>
                         <Paper style={{ padding: "0 15px" }}>
@@ -50,6 +67,12 @@ export default function FullWidthGrid() {
                             <Grid item xs={5} sm={12}>
                                 <Table />
                             </Grid>
+                            <br />
+                            <br />
+                            <div style={{ textAlign: "right" }}>
+                                <Popup />
+                            </div>
+
                         </Paper>
                     </Grid>
 

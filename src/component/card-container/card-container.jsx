@@ -22,7 +22,7 @@ const cardContainer = () => {
                 <Grid container spacing={3}>
                     {
                         [{ text: "Hello", border: "gold", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "red", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "blue", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "yellow", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "aqua", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "grey", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "teal", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "red", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "#333", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }].map((card, index) => (
-                            <Card color={card.border} img={card.img} description={card.text} />
+                            <Card key={index} color={card.border} img={card.img} description={card.text} />
                         ))
                     }
                 </Grid>
