@@ -4,6 +4,7 @@ import "./search.css";
 import MaterialTable from 'material-table';
 
 function BasicSearch(props) {
+
     return (
         <MaterialTable
             title="Students"
@@ -15,6 +16,15 @@ function BasicSearch(props) {
             options={{
                 search: true
             }}
+            actions={[
+                {
+                    icon: "add",
+                    tooltip: 'Save User',
+                    onClick: (event, rowData) => {
+                        console.log(rowData);
+                    }
+                }
+            ]}
         />
     )
 }
