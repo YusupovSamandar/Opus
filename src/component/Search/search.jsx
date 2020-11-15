@@ -21,7 +21,7 @@ function BasicSearch(props) {
                     icon: "add",
                     tooltip: 'Save User',
                     onClick: (event, rowData) => {
-                        console.log(rowData);
+                        // console.log(rowData);
                     }
                 }
             ]}
