@@ -1,0 +1,13 @@
+#cardGroup{
+    cursor: pointer;
+    position: relative;
+    bottom: 0px;
+    transition: 0.5s;
+    
+}
+#cardGroup:hover{
+   bottom: 10px;
+   box-shadow: 20px 50px 100px rgba(0,0,0,0.5);
+    
+}
+
