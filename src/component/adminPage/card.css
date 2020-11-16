@@ -1,0 +1,16 @@
+#admin-card {
+    cursor: pointer;
+}
+#admin-card:hover{
+    background: linear-gradient(to right, #1F1C2C, #928DAB); 
+    margin: -4px;
+    transition: 0.5s;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+
+}
+
+
+#admin-card:hover .fonthover {
+    color: white !important
+
+}
