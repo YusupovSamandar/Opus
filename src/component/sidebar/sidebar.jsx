@@ -3,7 +3,6 @@ import Group from "./Icons/group-icon.png";
 import Report from "./Icons/Report.png";
 import AddGroup from "./Icons/add.svg";
 import Agree from "./Icons/Agree.png";
-import { Link } from 'react-router-dom';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
 import React from 'react';
@@ -189,9 +188,9 @@ export default function MiniDrawer(props) {
                     {['Groups', 'Reports'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
-                              {index % 2 === 0 ?  <Link to="/cardsgroup"><img src={Group} alt="" /></Link>  : <img src={Report} alt="" />}
+                                {index % 2 === 0 ? <Link to="/cardsgroup"><img src={Group} alt="" /></Link> : <img src={Report} alt="" />}
                             </ListItemIcon>
-                            {index % 2 === 0 ?  <Link to="/cardsgroup"><ListItemText style={{color:"#fff"}} primary={text} /></Link>  : <ListItemText primary={text} />}
+                            {index % 2 === 0 ? <Link to="/cardsgroup"><ListItemText style={{ color: "#fff" }} primary={text} /></Link> : <ListItemText primary={text} />}
                         </ListItem>
                     ))}
                 </List>
