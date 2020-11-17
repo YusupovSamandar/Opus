@@ -1,0 +1,25 @@
+    .MuiButton-containedSecondary {
+        width: 150px;
+    }
+
+    .Header {
+        margin-top: 50px !important;
+        padding: 50px !important;
+        width: 550px;
+        background-color: rgb(255, 255, 255) !important;
+        display: grid;
+        margin: 0 auto;
+    }
+
+    .MuiOutlinedInput-input {
+        padding: 5px !important;
+    }
+
+    .MuiOutlinedInput-root {
+        margin: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }

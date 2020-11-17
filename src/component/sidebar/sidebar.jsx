@@ -179,7 +179,7 @@ export default function MiniDrawer(props) {
                 <List>
                     {['Registration', 'Attendance / Fees'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /> : <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />}</ListItemIcon>
+                            <ListItemIcon>{index % 2 === 0 ? <Link to="/register"> <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /></Link> : <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
@@ -188,9 +188,9 @@ export default function MiniDrawer(props) {
                     {['Groups', 'Reports'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
-                              {index % 2 === 0 ?  <Link to="/cardsgroup"><img src={Group} alt="" /></Link>  : <img src={Report} alt="" />}
+                                {index % 2 === 0 ? <Link to="/cardsgroup"><img src={Group} alt="" /></Link> : <img src={Report} alt="" />}
                             </ListItemIcon>
-                            {index % 2 === 0 ?  <Link to="/cardsgroup"><ListItemText style={{color:"#fff"}} primary={text} /></Link>  : <ListItemText primary={text} />}
+                            {index % 2 === 0 ? <Link to="/cardsgroup"><ListItemText style={{ color: "#fff" }} primary={text} /></Link> : <ListItemText primary={text} />}
                         </ListItem>
                     ))}
                 </List>
