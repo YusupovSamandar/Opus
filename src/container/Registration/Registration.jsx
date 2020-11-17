@@ -10,7 +10,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 
 function Registration() {
   return (
-    <div className="container " maxWidth="lg">
+    <div className="container1 " maxWidth="lg">
 
       <h3>Edit User Registration</h3>
       <TextField id="outlined-basic" label="First name" variant="outlined" />
@@ -24,7 +24,7 @@ function Registration() {
       <TextField id="outlined-basic" label="Address" variant="outlined" />
 
       <div className="Phone-number">
-        <Grid container spacing={0}>
+        <Grid container spacing={0} style={{ marginLeft: "8px", width: "97%" }}>
           <Grid className='add_groupCom' item xs={6}>
 
             <div className="Sex ">
@@ -124,7 +124,7 @@ function Registration() {
         </Grid>
       </div>
       <TextField id="outlined-basic" label="Comment" variant="outlined" />
-      <Button className="Button" variant="contained" color="secondary" >
+      <Button className="Button1" variant="contained" color="secondary" >
         Submit
       </Button>
 

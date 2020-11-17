@@ -1,9 +1,4 @@
-body {
-    font-size: 16px !important;
-    color: rgb(112, 110, 110) !important;
-}
-
-.container {
+.container1 {
     margin-top: 80px !important;
     padding: 20px 10px !important;
     width: 630px;
@@ -12,10 +7,6 @@ body {
     margin: 0 auto;
 }
 
-h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
 
 .MuiOutlinedInput-root {
     height: 30px;
@@ -36,6 +27,8 @@ h3 {
     margin: 10px;
     padding: 10px;
     font-size: 16px;
+    color: rgb(112, 110, 110) !important;
+    font-size: 16px !important;
 }
 
 .MuiOutlinedInput-input {
@@ -48,13 +41,21 @@ h3 {
 
 .Phone-number {
     display: flex;
+    color: rgb(112, 110, 110) !important;
+    font-size: 16px !important;
 }
 
 .course {
     border-radius: 3px solid green !important;
 }
 
-p {
+
+.Phone-number1 p {
+    padding: 0 35px;
+    font-size: 17px;
+}
+
+.Phone-number p {
     padding: 0 35px;
     font-size: 17px;
 }
@@ -86,7 +87,10 @@ p {
 .add_group {
     margin-top: 10px;
     margin-bottom: 10px;
-
+    color: rgb(112, 110, 110) !important;
+    font-size: 16px !important;
+    margin-left: 8px !important;
+    width: 97% !important;
 
 }
 
@@ -112,18 +116,16 @@ p {
     font-size: 18px;
 }
 
-.MuiGrid-container {
-    margin-left: 8px !important;
-    width: 97% !important;
-}
 
 .Phone-number1 {
     display: flex;
     width: 97%;
     margin-left: 8px;
+    color: rgb(112, 110, 110) !important;
+    font-size: 16px !important;
 }
 
-.Button {
+.Button1 {
     margin-left: 10px !important;
     background-color: rgb(17, 17, 243) !important;
     width: 120px;
