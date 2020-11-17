@@ -3,6 +3,7 @@ import Group from "./Icons/group-icon.png";
 import Report from "./Icons/Report.png";
 import AddGroup from "./Icons/add.svg";
 import Agree from "./Icons/Agree.png";
+import { Link } from 'react-router-dom';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
 import React from 'react';
@@ -178,7 +179,7 @@ export default function MiniDrawer(props) {
                 <List>
                     {['Registration', 'Attendance / Fees'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /> : <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />}</ListItemIcon>
+                            <ListItemIcon>{index % 2 === 0 ? <Link to="/register"> <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /></Link> : <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}

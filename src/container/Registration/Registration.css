@@ -1,0 +1,130 @@
+body {
+    font-size: 16px !important;
+    color: rgb(112, 110, 110) !important;
+}
+
+.container {
+    margin-top: 80px !important;
+    padding: 20px 10px !important;
+    width: 630px;
+    background-color: rgb(255, 255, 255) !important;
+    display: grid;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.MuiOutlinedInput-root {
+    height: 30px;
+    margin: 0;
+
+}
+
+.MuiIconButton-root {
+    border-radius: 0 !important;
+}
+
+.MuiOutlinedInput-input {
+    padding: 30px !important;
+}
+
+.Gender {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.MuiOutlinedInput-input {
+    padding: 5px !important;
+}
+
+.MuiOutlinedInput-root {
+    margin: 10px;
+}
+
+.Phone-number {
+    display: flex;
+}
+
+.course {
+    border-radius: 3px solid green !important;
+}
+
+p {
+    padding: 0 35px;
+    font-size: 17px;
+}
+
+.Sex {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.PrivateSwitchBase-input-18 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+
+    background-color: #eee;
+}
+
+.PrivateSwitchBase-root-15 {
+    padding: 5px 0 !important;
+}
+
+.Phone-number .MuiFormControl-root.MuiTextField-root {
+    width: 50%;
+}
+
+
+.add_group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.add_groupCom {
+    padding: 11px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 5px;
+}
+
+.add_group select {
+    position: relative;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #60666d;
+}
+
+.course select {
+    border-radius: 4px;
+    color: rgb(112, 110, 110) !important;
+    font-size: 18px;
+}
+
+.MuiGrid-container {
+    margin-left: 8px !important;
+    width: 97% !important;
+}
+
+.Phone-number1 {
+    display: flex;
+    width: 97%;
+    margin-left: 8px;
+}
+
+.Button {
+    margin-left: 10px !important;
+    background-color: rgb(17, 17, 243) !important;
+    width: 120px;
+}
