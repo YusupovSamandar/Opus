@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
 const cardContainer = () => {
     const classes = useStyles();
     return (
-        <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
+        <Container maxWidth="sm" style={{ marginTop: "100px", maxWidth: "1118px" }}>
             <div className={classes.root}>
-                <Grid container spacing={3}>
+                <Grid container spacing={4}>
                     {
                         [{ text: "Hello", border: "gold", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "red", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "blue", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "yellow", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "aqua", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "grey", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "teal", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "red", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "#333", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }].map((card, index) => (
                             <Card key={index} color={card.border} img={card.img} description={card.text} />
