@@ -4,6 +4,9 @@ import Sidebar from './component/sidebar/sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Search from "./container/Detail/detail";
 import Registeration from "./container/Registration/Registration";
+import CardGroup2 from './component/CardsGroup/CardGroup2';
+import Teachers from './component/Teachers-page/Teachers'
+import AddToGroup from './component/addToGroup/category';
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
           <Route exact path="/" component={() => <Sidebar component={<CardCont />} />} />
           <Route exact path="/detail" component={() => <Sidebar component={<Search />} />} />
           <Route exact path="/register" component={() => <Sidebar component={<Registeration />} />} />
+          <Route exact path="/cardsgroup" component={() => <Sidebar component={<CardGroup2 />} />} />
+          <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
+          <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
           <Sidebar />
         </Switch>
       </div>

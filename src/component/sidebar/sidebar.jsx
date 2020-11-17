@@ -26,6 +26,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Language from './lang/Lang';
 import Input from '@material-ui/core/Input';
 import SearchIcon from '@material-ui/icons/Search';
+import { Link } from 'react-router-dom';
 // Custom css
 import "./sidebar.css";
 
@@ -187,8 +188,10 @@ export default function MiniDrawer(props) {
                 <List>
                     {['Groups', 'Reports'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img src={Group} alt="" /> : <img src={Report} alt="" />}</ListItemIcon>
-                            <ListItemText primary={text} />
+                            <ListItemIcon>
+                              {index % 2 === 0 ?  <Link to="/cardsgroup"><img src={Group} alt="" /></Link>  : <img src={Report} alt="" />}
+                            </ListItemIcon>
+                            {index % 2 === 0 ?  <Link to="/cardsgroup"><ListItemText style={{color:"#fff"}} primary={text} /></Link>  : <ListItemText primary={text} />}
                         </ListItem>
                     ))}
                 </List>
