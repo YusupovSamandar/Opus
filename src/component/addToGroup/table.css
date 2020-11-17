@@ -1,0 +1,29 @@
+.MuiSelect-select.MuiSelect-select{
+    padding-right: 20px;    
+}
+#standard-basic{
+    width: 130px;
+}
+#standard-basic-label{
+    font-size: 15px;
+    position: absolute;
+}
+.MuiInputBase-input.MuiFilledInput-input{
+    width: 70px;
+}
+#outlined-basic-label{
+    font-size: 15px;
+    position: absolute;
+}
+.MuiInputBase-input{
+    width:130px !important;
+    font-size: 14px !important;
+}
+..MuiButton-containedSizeSmall{
+    margin-top: 20px;
+    float: right;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-containedSizeSmall.MuiButton-sizeSmall{
+    margin-top: 20px;
+    float: right;
+}
