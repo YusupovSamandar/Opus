@@ -1,3 +1,10 @@
 #hover-paper {
     cursor: pointer;
+    width: 380px;
 }
+
+#hover-paper:hover{
+    margin-top: -10px;
+    transition: 0.5s;
+    
+ }
