@@ -22,9 +22,9 @@ export default function Card(props) {
     return (
         <Grid item xs={6} sm={4}>
             <Link to="/detail">
-                <Paper id="hover-paper" style={{ borderBottom: "1px solid red", padding: "40px 0" }} className={classes.paper}>
-                    <img style={{ width: "50px", }} className="card-img" src={props.img} alt="" />
-                    <p style={{ fontWeight: "bold", paddingBottom: "7px" }}>{props.description}</p>
+                <Paper id="hover-paper" style={{ borderBottom: "1px solid blue", padding: "40px 0" }} className={classes.paper}>
+                    <img style={{ width: "80px", }} className="card-img" src={props.img} alt="" />
+                    <p style={{ fontWeight: "", color: 'black', paddingTop: "10px", fontSize: '20px', }}>{props.description}</p>
                 </Paper>
             </Link>
         </Grid>
