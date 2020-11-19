@@ -56,7 +56,7 @@ export default function FullWidthGrid() {
                                     </Paper>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
-                                    <Table />
+                                    <Table className='table-color' />
                                 </Grid>
 
                             </Grid>
