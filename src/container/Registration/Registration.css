@@ -1,9 +1,4 @@
-body {
-    font-size: 16px !important;
-    color: rgb(112, 110, 110) !important;
-}
-
-.container {
+/* .container1 {
     margin-top: 80px !important;
     padding: 20px 10px !important;
     width: 630px;
@@ -12,10 +7,6 @@ body {
     margin: 0 auto;
 }
 
-h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
 
 .MuiOutlinedInput-root {
     height: 30px;
@@ -35,7 +26,8 @@ h3 {
     display: flex;
     margin: 10px;
     padding: 10px;
-    font-size: 16px;
+    color: rgb(112, 110, 110) !important;
+    font-size: 15px !important;
 }
 
 .MuiOutlinedInput-input {
@@ -48,21 +40,33 @@ h3 {
 
 .Phone-number {
     display: flex;
+    color: rgb(112, 110, 110) !important;
+    font-size: 15px !important;
 }
 
 .course {
     border-radius: 3px solid green !important;
 }
 
-p {
+
+.Phone-number1 p {
     padding: 0 35px;
-    font-size: 17px;
+    font-size: 15px;
+}
+
+.Phone-number p {
+    padding: 0 47px;
+    font-size: 15px;
 }
 
 .Sex {
     padding: 0 10px;
     display: flex;
     align-items: center;
+}
+
+.MuiTypography-body1 {
+    font-size: 15px !important;
 }
 
 .PrivateSwitchBase-input-18 {
@@ -84,14 +88,33 @@ p {
 
 
 .add_group {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+    margin: 10px 11px;
+    color: rgb(112, 110, 110) !important;
+    font-size: 15px !important;
+    margin-left: 11px !important;
+    width: 96.5% !important;
 
 }
 
 .add_groupCom {
-    padding: 11px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 5px;
+}
+
+.add_groupCom3 {
+    padding: 10px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 5px;
+}
+
+.add_groupCom1 {
+    padding-left: 11px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 5px;
+}
+
+.add_groupCom2 {
+    padding: 20px 0 0 11px;
     border: 1px solid rgb(179, 176, 176);
     border-radius: 5px;
 }
@@ -99,32 +122,39 @@ p {
 .add_group select {
     position: relative;
     display: block;
-    width: 150px;
     margin: 0 auto;
     font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
-    font-size: 18px;
+    font-size: 15px !important;
     color: #60666d;
 }
 
 .course select {
     border-radius: 4px;
     color: rgb(112, 110, 110) !important;
-    font-size: 18px;
+    font-size: 15px;
 }
 
-.MuiGrid-container {
-    margin-left: 8px !important;
-    width: 97% !important;
+.Phone-number .add_group {
+
+    display: -webkit-inline-box;
 }
+
 
 .Phone-number1 {
     display: flex;
-    width: 97%;
-    margin-left: 8px;
+    width: 96.5%;
+    margin-left: 11px;
+    color: rgb(112, 110, 110) !important;
+    font-size: 15px !important;
 }
 
-.Button {
+.Button1 {
     margin-left: 10px !important;
     background-color: rgb(17, 17, 243) !important;
     width: 120px;
 }
+
+
+.MuiFormControlLabel-root {
+    margin: 0 !important;
+} */

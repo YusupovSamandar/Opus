@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Registration.css";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -9,8 +9,12 @@ import FormControl from '@material-ui/core/FormControl';
 import RadioGroup from '@material-ui/core/RadioGroup';
 
 function Registration() {
+  const [hasSchoolarship, setHasSchoolarship] = useState(false);
+  const handleInput = (e) => {
+    setHasSchoolarship(e.target.value == "Added" ? true : false);
+  }
   return (
-    <div className="container " maxWidth="lg">
+    <div className="container1 " maxWidth="lg">
 
       <h3>Edit User Registration</h3>
       <TextField id="outlined-basic" label="First name" variant="outlined" />
@@ -24,8 +28,8 @@ function Registration() {
       <TextField id="outlined-basic" label="Address" variant="outlined" />
 
       <div className="Phone-number">
-        <Grid container spacing={0}>
-          <Grid className='add_groupCom' item xs={6}>
+        <Grid container spacing={0} style={{ marginLeft: "11px", width: "96.5%" }}>
+          <Grid className='add_groupCom' item xs={4}>
 
             <div className="Sex ">
               <div>
@@ -41,38 +45,42 @@ function Registration() {
               </div>
             </div>
           </Grid>
-          <Grid className='add_groupCom' item xs={6}>
+          <Grid className='add_groupCom' item xs={8}>
 
             <div className="Sex">
               <div>
-                <span style={{ margin: "0 40px 0 20px" }}>Schoolarship</span>
+                <span style={{ margin: "0 10px 0 10px" }}>Schoolarship</span>
               </div>
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <FormControl component="fieldset">
-                  <RadioGroup aria-label="gender" name="gender1" >
-                    <FormControlLabel className='radio' value="Added" control={<Radio />} label="Yes" />
-                    <FormControlLabel value="Add" control={<Radio />} label="No" />
+                  <RadioGroup name="gender1" >
+                    <FormControlLabel onClick={handleInput} className='radio' value="Added" control={<Radio />} label="Yes" />
+                    <FormControlLabel onClick={handleInput} value="Add" control={<Radio />} label="No" />
                   </RadioGroup>
                 </FormControl>
               </div>
+              <TextField style={{ marginLeft: "20px" }} disabled={hasSchoolarship ? !"disabled" : "disabled"} id="outlined-basic" label="Payment" variant="outlined" />
             </div>
+
           </Grid>
+
         </Grid>
+
+
 
       </div>
       <Grid className='add_group' container spacing={0}>
-        <Grid className='add_groupCom' item xs={6}>
+        <Grid className='add_groupCom1' item xs={6}>
 
           <FormControl component="fieldset">
-            <RadioGroup aria-label="gender" name="gender1" >
+            <RadioGroup   >
               <FormControlLabel value="Added" control={<Radio />} label="Add existing group" />
               <FormControlLabel value="Add" control={<Radio />} label="Waiting for a new group" />
             </RadioGroup>
           </FormControl>
-
         </Grid>
 
-        <Grid className='add_groupCom' item xs={6}>
+        <Grid className='add_groupCom2' item xs={6}>
           <div className="Phone-number">
             <p>Course</p>
             <div className="course">
@@ -92,39 +100,39 @@ function Registration() {
 
 
       <div className="Phone-number1">
-        <Grid className='add_groupCom' item xs={6}>
+        <Grid className='add_groupCom3' item xs={6}>
           <div className="Phone-number1">
             <p>Groups</p>
             <div className="course">
               <select>
-                <option value="Kids">Shohida</option>
-                <option value="1-Bosqich">Shohida</option>
-                <option selected value="2-Bosqich">Shohida</option>
-                <option value="3-Bosqich">Shohida</option>
-                <option value="4-Bosqich">Shohida</option>
-                <option value="DTM">DTM</option>
+                <option >Shohida</option>
+                <option >Shohida</option>
+                <option >Shohida</option>
+                <option >Shohida</option>
+                <option >Shohida</option>
+                <option >DTM</option>
               </select>
             </div>
           </div>
         </Grid>
-        <Grid className='add_groupCom' item xs={6}>
+        <Grid className='add_groupCom3' item xs={6}>
           <div className="Phone-number1">
             <p>Advertise</p>
             <div className="course">
               <select>
-                <option value="Kids">E'lon</option>
-                <option value="1-Bosqich">Gazeta</option>
-                <option selected value="2-Bosqich">Radio</option>
-                <option value="3-Bosqich">Tanishlar</option>
-                <option value="4-Bosqich">O'qituvchilar</option>
-                <option value="DTM">Televideniya</option>
+                <option >E'lon</option>
+                <option >Gazeta</option>
+                <option >Radio</option>
+                <option >Tanishlar</option>
+                <option >O'qituvchilar</option>
+                <option >Televideniya</option>
               </select>
             </div>
           </div>
         </Grid>
       </div>
       <TextField id="outlined-basic" label="Comment" variant="outlined" />
-      <Button className="Button" variant="contained" color="secondary" >
+      <Button className="Button1" variant="contained" color="secondary" >
         Submit
       </Button>
 
