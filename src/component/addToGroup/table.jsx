@@ -12,13 +12,12 @@ import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
-import "./table.css";
 import Date from "./date";
+import './table.css'
 
 const styles = theme => ({
     root: {
-        width: '100%',
-        marginLeft: '0px'
+        width: '103%'
     },
 
     row: {
@@ -34,11 +33,11 @@ function CustomizedTable(props) {
     return (
         <Paper className={classes.root}>
             <Table className={classes.table}>
-                <TableBody>
+                <TableBody >
                     <TableRow >
                         <TableCell size="small">
                             <FormControl className={classes.formControl}>
-                                <InputLabel htmlFor="grouped-native-select">Course</InputLabel>
+                                <InputLabel style={{ fontSize: "15px" }} htmlFor="grouped-native-select">Course</InputLabel>
                                 <Select native defaultValue="" id="grouped-native-select">
                                     <option aria-label="None" value="" />
                                     <option value={1}>Option 1</option>
@@ -50,7 +49,7 @@ function CustomizedTable(props) {
                         </TableCell>
                         <TableCell>
                             <FormControl className={classes.formControl}>
-                                <InputLabel htmlFor="grouped-native-select">Teacher</InputLabel>
+                                <InputLabel style={{ fontSize: "15px" }} htmlFor="grouped-native-select">Teacher</InputLabel>
                                 <Select native defaultValue="" id="grouped-native-select">
                                     <option aria-label="None" value="" />
                                     <option value={1}>Option 1</option>
@@ -62,20 +61,20 @@ function CustomizedTable(props) {
                         </TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>
+                        <TableCell style={{ fontSize: "15px" }}>
                             Date of starting course
                         <Date />
                         </TableCell>
                         <TableCell>
                             <form className={classes.root} noValidate autoComplete="off">
-                                <TextField id="standard-basic" label="Name of the group" />
+                                <TextField style={{ fontSize: "15px" }} id="standard-basic" label="Name of the group" />
                             </form>
                         </TableCell>
                     </TableRow>
                     <TableRow>
                         <TableCell>
                             <form className={classes.root} noValidate autoComplete="off">
-                                <TextField id="outlined-basic" label="Total amount to pay" variant="filled" />
+                                <TextField style={{ fontSize: "15px" }} id="outlined-basic" label="Total amount to pay" variant="filled" />
                             </form>
                         </TableCell>
                         <TableCell>
@@ -86,7 +85,7 @@ function CustomizedTable(props) {
                     </TableRow>
                 </TableBody>
             </Table>
-            <Button
+            <Button style={{ marginTop: "20px", float: "right" }}
                 variant="contained"
                 color="primary"
                 size="small"
