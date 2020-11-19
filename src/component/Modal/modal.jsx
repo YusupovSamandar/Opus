@@ -70,9 +70,6 @@ const useStyles = makeStyles((theme) => ({
             width: '25ch',
         },
     },
-    table: {
-        minWidth: 650,
-    },
     modal: {
         display: 'flex',
         alignItems: 'center',
@@ -156,7 +153,7 @@ export default function TransitionsModal() {
                             <Grid item xs={6}>
                                 <h1 style={{ color: "White", backgroundColor: "blue" }}>Malumotlar</h1>
                                 <TableContainer component={Paper}>
-                                    <Table className={classes.table} aria-label="simple table">
+                                    <Table aria-label="simple table">
                                         <TableBody>
                                             {rows.map((row) => (
                                                 <TableRow key={row.name}>

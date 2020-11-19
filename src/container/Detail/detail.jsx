@@ -42,7 +42,7 @@ export default function FullWidthGrid() {
         <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
             <div className={classes.root}>
                 <Grid container spacing={3}>
-                    <Grid item xs={4} sm={3}>
+                    <Grid style={{ paddingTop: "0px" }} item xs={4} sm={3}>
                         <Search data={students} />
                     </Grid>
                     <Grid item xs={12} sm={9}>
@@ -56,7 +56,7 @@ export default function FullWidthGrid() {
                                     </Paper>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
-                                    <Table className='table-color' />
+                                    <Table />
                                 </Grid>
 
                             </Grid>

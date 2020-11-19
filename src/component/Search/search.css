@@ -1,7 +1,9 @@
-.MuiTableBody-root tr.MuiTableRow-root {
-    cursor: pointer;
+.hovered-styled-row .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit {
+    border-radius: 100% !important;
 }
 
-.MuiTableBody-root tr.MuiTableRow-root:hover {
-    background-color: #999090;
+.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-29,
+.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-25 {
+    background-color: #3c4e81;
+    color: #eee;
 }
