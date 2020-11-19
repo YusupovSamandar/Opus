@@ -7,6 +7,7 @@ import Registeration from "./container/Registration/Registration";
 import CardGroup2 from './component/CardsGroup/CardGroup2';
 import Teachers from './component/Teachers-page/Teachers'
 import AddToGroup from './component/addToGroup/category';
+import ReportsContainer from './component/ReportsPage/ReportsContainer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/cardsgroup" component={() => <Sidebar component={<CardGroup2 />} />} />
           <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
           <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
+          <Route exact path="/reports" component={() => <Sidebar component={<ReportsContainer />} />} />
           <Sidebar />
         </Switch>
       </div>
