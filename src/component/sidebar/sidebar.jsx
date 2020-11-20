@@ -185,7 +185,7 @@ export default function MiniDrawer(props) {
                     {['Registration', 'Attendance / Fees'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>{index % 2 === 0 ?
-                                <Link to='/register'> <img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2397/2397697.svg" alt="" /></Link> : <Link to='/detail'><img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" alt="" /></Link>}</ListItemIcon>
+                                <Link to='/register'> <img className="img-icon" src="https://www.flaticon.com/svg/static/icons/svg/2878/2878595.svg" alt="" /></Link> : <Link to='/detail'><img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" alt="" /></Link>}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
 

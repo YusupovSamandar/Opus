@@ -1,7 +1,7 @@
-.MuiTableBody-root tr.MuiTableRow-root {
+#shakalad .MuiTableBody-root tr.MuiTableRow-root {
     cursor: pointer;
 }
 
-.MuiTableBody-root tr.MuiTableRow-root:hover {
+#shakalad .MuiTableBody-root tr.MuiTableRow-root:hover {
     background-color: #999090;
 }
