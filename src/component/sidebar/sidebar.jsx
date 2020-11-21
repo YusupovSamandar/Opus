@@ -1,8 +1,4 @@
 // Icons
-import Group from "./Icons/group-icon.png";
-import Report from "./Icons/Report.png";
-import AddGroup from "./Icons/add.svg";
-import Agree from "./Icons/Agree.png";
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
 import React from 'react';
