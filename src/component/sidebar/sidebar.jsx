@@ -185,7 +185,7 @@ export default function MiniDrawer(props) {
                     {['Registration', 'Attendance / Fees'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>{index % 2 === 0 ?
-                                <Link to='/register'> <img className="img-icon" src="https://www.flaticon.com/svg/static/icons/svg/2878/2878595.svg" alt="" /></Link> : <Link to='/detail'><img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" alt="" /></Link>}</ListItemIcon>
+                                <Link to='/register'> <img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2397/2397697.svg" alt="" /></Link> : <Link to='/detail'><img className="img-icon" src="https://www.flaticon.com/svg/static/icons/svg/2878/2878595.svg" alt="" /></Link>}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
 
@@ -202,8 +202,7 @@ export default function MiniDrawer(props) {
                 <List>
                     {['Add to Group', 'Teachers'].map((text, index) => (
                         <ListItem button key={text}>
-
-                            <ListItemIcon>{index % 2 === 0 ? <Link to='/add'><img src="https://www.flaticon.com/premium-icon/icons/svg/3032/3032276.svg" alt="" /> </Link> : <Link to='/teachers'><img src="https://www.flaticon.com/svg/static/icons/svg/1995/1995539.svg" alt="" /> </Link>}</ListItemIcon>
+                            <ListItemIcon>{index % 2 === 0 ? <Link to='/add'><img srcd="https://www.flaticon.com/premium-icon/icons/svg/3032/3032276.svg" alt="" /> </Link> : <Link to='/teachers'><img src="https://www.flaticon.com/svg/static/icons/svg/1995/1995539.svg" alt="" /> </Link>}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}

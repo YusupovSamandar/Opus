@@ -28,7 +28,7 @@ const cardContainer = () => {
                         { text: "Attendance", link: '/register', img: "https://www.flaticon.com/svg/static/icons/svg/3125/3125856.svg" },
                         { text: "Groups", link: '/cardsgroup', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
                         { text: "Reports", link: '/register', img: "https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg" },
-                        { text: "Fees", link: '/detail', img: "https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" },
+                        { text: "Fees", link: '/detail', img: "https://www.flaticon.com/svg/static/icons/svg/2878/2878595.svg" },
                         { text: "Add to group", link: '/add', img: "https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" },
                         { text: "Teacher", link: '/teacher  s', img: "https://www.flaticon.com/svg/static/icons/svg/906/906175.svg" },
                         { text: "Exam   ", link: '/register', img: "https://www.flaticon.com/svg/static/icons/svg/3430/3430082.svg" },
