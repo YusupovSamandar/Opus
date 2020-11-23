@@ -48,7 +48,7 @@ export default function CustomizedTables() {
         <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="customized table">
                 <TableHead>
-                    <TableRow>
+                    <TableRow className="styled-table-header-row">
                         <StyledTableCell>Sr.No.</StyledTableCell>
                         <StyledTableCell align="center">Yil</StyledTableCell>
                         <StyledTableCell align="center">Oy</StyledTableCell>

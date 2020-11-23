@@ -7,7 +7,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import green from '@material-ui/core/colors/green';
-import "./section.css";
 import Table from "./table";
 import Table2 from "./table2";
 
@@ -29,7 +28,7 @@ TabContainer.propTypes = {
 const styles = theme => ({
     root: {
         backgroundColor: theme.palette.background.paper,
-        width: 450,
+        width: 400,
         position: 'relative',
         minHeight: 200,
     },
@@ -64,7 +63,7 @@ class FloatingActionButtonZoom extends React.Component {
         const { classes, theme } = this.props;
 
         return (
-            <div className={classes.root}>
+            <div style={{ display: "inline-block", marginLeft: "20px" }} className={classes.root}>
                 <AppBar position="static" color="default">
                     <Tabs
                         value={this.state.value}

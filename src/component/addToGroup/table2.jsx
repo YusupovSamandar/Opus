@@ -12,7 +12,6 @@ import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
-import "./table2.css";
 import Date from "./date";
 
 
@@ -65,7 +64,7 @@ function CustomizedTable(props) {
                     </TableRow>
                 </TableBody>
                 <div float="left">
-                    <Button
+                    <Button style={{ marginTop: "20px", float: "right" }}
                         variant="contained"
                         color="primary"
                         size="small"

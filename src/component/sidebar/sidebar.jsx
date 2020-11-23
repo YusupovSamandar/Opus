@@ -1,8 +1,4 @@
 // Icons
-import Group from "./Icons/group-icon.png";
-import Report from "./Icons/Report.png";
-import AddGroup from "./Icons/add.svg";
-import Agree from "./Icons/Agree.png";
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
 import React from 'react';
@@ -26,10 +22,12 @@ import Language from './lang/Lang';
 import Input from '@material-ui/core/Input';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
+
 // Custom css
 import "./sidebar.css";
 
 const drawerWidth = 240;
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -127,14 +125,15 @@ export default function MiniDrawer(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-
                     <div className="header-content-grid">
                         <Typography className="my-account" variant="h6" noWrap>
                             My Account
                         </Typography>
-                        <div className="header-logo">
-                            Logo
+                        <Link to="/">
+                            <div className="header-logo">
+                                Logo
                         </div>
+                        </Link>
                         <div>
                             <div>
                                 <Input />
@@ -144,20 +143,22 @@ export default function MiniDrawer(props) {
                     </div>
                     <Language />
                     <div className="devider"></div>
-                    <div>Account and user</div>
+                    <div>Account and user
+
+                    </div>
                     <div className="devider"></div>
+                    <PowerSettingsNewIcon />
                     <h3 className="log-out">
-                        <PowerSettingsNewIcon />
-                    Logout
+                        <Link href="#" >
+                            LogOut
+                    </Link>
                     </h3>
-
-
 
 
 
                 </Toolbar>
             </AppBar>
-            <Drawer
+            <Drawer id='sidebar'
                 variant="permanent"
                 className={clsx(classes.drawer, {
                     [classes.drawerOpen]: open,
@@ -179,39 +180,40 @@ export default function MiniDrawer(props) {
                 <List>
                     {['Registration', 'Attendance / Fees'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <Link to="/register"> <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /></Link> : <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />}</ListItemIcon>
+                            <ListItemIcon>{index % 2 === 0 ?
+                                <Link to='/register'> <img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2397/2397697.svg" alt="" /></Link> : <Link to='/detail'><img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" alt="" /></Link>}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
+
                     ))}
                 </List>
                 <List>
                     {['Groups', 'Reports'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <Link to="/cardsgroup"><img src={Group} alt="" /></Link> : <img src={Report} alt="" />}
-                            </ListItemIcon>
-                            {index % 2 === 0 ? <Link to="/cardsgroup"><ListItemText style={{ color: "#fff" }} primary={text} /></Link> : <ListItemText primary={text} />}
+                            <ListItemIcon>{index % 2 === 0 ? <Link to='/cardsGroup'><img src='https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg' alt="" /></Link> : <Link to='/cardsGroup'> <img src='https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg' alt="" /></Link>}</ListItemIcon>
+                            <ListItemText primary={text} />
                         </ListItem>
                     ))}
                 </List>
                 <List>
                     {['Add to Group', 'Teachers'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img src={AddGroup} alt="" /> : <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />}</ListItemIcon>
+
+                            <ListItemIcon>{index % 2 === 0 ? <Link to='/add'><img src="https://www.flaticon.com/premium-icon/icons/svg/3032/3032276.svg" alt="" /> </Link> : <Link to='/teachers'><img src="https://www.flaticon.com/svg/static/icons/svg/1995/1995539.svg" alt="" /> </Link>}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
                 </List>
                 <List>
-                    {['Amin Panel', 'LMS'].map((text, index) => (
+                    {['Admin Panel', 'LMS'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img src="https://cdn3.iconfinder.com/data/icons/illustricon-tech-ii/512/calendar-512.png" alt="" /> : <img src={Agree} alt="" />}</ListItemIcon>
+                            <ListItemIcon>{index % 2 === 0 ? <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" alt="" /> : <img src={'https://www.flaticon.com/svg/static/icons/svg/3280/3280897.svg'} alt="" />}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
                 </List>
-            </Drawer>
-            {props.component}
-        </div>
+            </Drawer >
+            { props.component}
+        </div >
     );
 }

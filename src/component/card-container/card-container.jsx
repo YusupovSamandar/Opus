@@ -17,12 +17,19 @@ const useStyles = makeStyles((theme) => ({
 const cardContainer = () => {
     const classes = useStyles();
     return (
-        <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
+        <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "" }}>
             <div className={classes.root}>
-                <Grid container spacing={3}>
+                <Grid container spacing={3}
+                >
                     {
-                        [{ text: "Hello", border: "gold", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "red", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "blue", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "yellow", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "aqua", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "grey", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "teal", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "red", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }, { text: "Hello", border: "#333", img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" }].map((card, index) => (
-                            <Card key={index} color={card.border} img={card.img} description={card.text} />
+                        [{
+                        text: "Registration", link: '/register', img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg"},                      
+                        { text: "Groups", link: '/cardsgroup', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
+                        { text: "Reports", link: '/reports', img: "https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg" },
+                        { text: "Fees", link: '/detail', img: "https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" },
+                        { text: "Add to group", link: '/add', img: "https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" },
+                        { text: "Teachers", link: '/teachers', img: "https://www.flaticon.com/svg/static/icons/svg/906/906175.svg" }].map((card, index) => (
+                            <Card className='card-paper' key={index} color={card.border} link={card.link} img={card.img} description={card.text} />
                         ))
                     }
                 </Grid>
