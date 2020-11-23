@@ -13,6 +13,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import Date from "./date";
+import './table.css';
 
 
 const styles = theme => ({
@@ -56,10 +57,17 @@ function CustomizedTable(props) {
                         </TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>
-                            <form className={classes.root} noValidate autoComplete="off">
-                                <TextField id="standard-basic" label="Name of the group" />
-                            </form>
+                        <TableCell size="small">
+                            <FormControl className={classes.formControl}>
+                                <InputLabel style={{ fontSize: "15px" }} htmlFor="grouped-native-select">Group Name</InputLabel>
+                                <Select style={{ width: "120px" }} native defaultValue="" id="grouped-native-select">
+                                    <option aria-label="None" value="" />
+                                    <option value={1}>Option 1</option>
+                                    <option value={2}>Option 2</option>
+                                    <option value={3}>Option 3</option>
+                                    <option value={4}>Option 4</option>
+                                </Select>
+                            </FormControl>
                         </TableCell>
                     </TableRow>
                 </TableBody>
