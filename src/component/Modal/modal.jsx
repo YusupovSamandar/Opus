@@ -151,7 +151,7 @@ export default function TransitionsModal() {
                     <Paper style={{ textAlign: "center", padding: "0 20px", width: "1000px" }} className={classes.paper}>
                         <Grid container spacing={3}>
                             <Grid item xs={6}>
-                                <h1 style={{ color: "White", backgroundColor: "blue" }}>Malumotlar</h1>
+                                <h1 style={{ color: "White", backgroundColor: "#0e1c42" }}>Malumotlar</h1>
                                 <TableContainer component={Paper}>
                                     <Table aria-label="simple table">
                                         <TableBody>
@@ -171,7 +171,7 @@ export default function TransitionsModal() {
                                 </TableContainer>
                             </Grid>
                             <Grid item xs={6}>
-                                <h1 style={{ color: "White", backgroundColor: "blue" }}>To'lov</h1>
+                                <h1 style={{ color: "White", backgroundColor: "#0e1c42" }}>To'lov</h1>
                                 <form className={classes.root} noValidate autoComplete="off">
                                     <TextField
                                         id="standard-select-currency"
