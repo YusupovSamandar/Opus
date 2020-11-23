@@ -166,8 +166,8 @@ function Table() {
   }
 
   return (
-      <Container maxWidth=" xl" className = 'main_cont'>
-
+      <Container maxWidth="md" id='teach-id'>
+      
       <Grid container spacing={0}>
           <Grid item xs={12}></Grid>
           <Grid item xs={12}>
