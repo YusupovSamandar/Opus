@@ -23,10 +23,11 @@ const cardContainer = () => {
                 >
                     {
                         [{
-                        text: "Registration", link: '/register', img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg"},                      
+                            text: "Registration", link: '/register', img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg"
+                        },
+                        { text: "Fees", link: '/detail', img: "https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" },
                         { text: "Groups", link: '/cardsgroup', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
                         { text: "Reports", link: '/reports', img: "https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg" },
-                        { text: "Fees", link: '/detail', img: "https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" },
                         { text: "Add to group", link: '/add', img: "https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" },
                         { text: "Teachers", link: '/teachers', img: "https://www.flaticon.com/svg/static/icons/svg/906/906175.svg" }].map((card, index) => (
                             <Card className='card-paper' key={index} color={card.border} link={card.link} img={card.img} description={card.text} />
