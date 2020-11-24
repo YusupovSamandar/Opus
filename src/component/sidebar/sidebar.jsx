@@ -174,7 +174,7 @@ export default function MiniDrawer(props) {
                 <div className={classes.toolbar}>
                     <IconButton className="text-white-icon" onClick={handleDrawerClose}>
                         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                    </Icon  Button>
+                    </IconButton>
                 </div>
                 <Divider />
                 <List>
