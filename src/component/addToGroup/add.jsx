@@ -1,5 +1,6 @@
 import React from "react";
 import MaterialTable from "material-table";
+import './add.css';
 
 function HandlingSelectionChanges() {
     return (

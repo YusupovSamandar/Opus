@@ -22,6 +22,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-swipeable-views": "^0.13.9",
+    "react-to-print": "^2.11.0",
     "reactjs-popup": "^2.0.4",
     "web-vitals": "^0.2.4"
   },
