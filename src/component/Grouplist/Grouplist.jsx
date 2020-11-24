@@ -125,7 +125,7 @@ export default function VerticalTabs() {
       }}
     /> */}
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={1} style={{width: '1040px'}}>
       <Print />
       {/* <MaterialTable
       title="Groups"
@@ -150,7 +150,7 @@ export default function VerticalTabs() {
       }}
     /> */}
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={2} style={{width: '1040px'}}>
     
        
       <MaterialTable
@@ -176,7 +176,7 @@ export default function VerticalTabs() {
       }}
     />
       </TabPanel>
-      <TabPanel value={value} index={3}>
+      <TabPanel value={value} index={3} style={{width: '1040px'}}>
       <MaterialTable
       title="Groups"
       columns={[
@@ -200,7 +200,7 @@ export default function VerticalTabs() {
       }}
     />
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      <TabPanel value={value} index={4} style={{width: '1040px'}}>
       <MaterialTable
       title="Groups"
       columns={[
@@ -224,7 +224,7 @@ export default function VerticalTabs() {
       }}
     />
       </TabPanel>
-      <TabPanel value={value} index={5}>
+      <TabPanel value={value} index={5} style={{width: '1040px'}}>
       <MaterialTable
       title="Groups"
       columns={[
@@ -248,7 +248,7 @@ export default function VerticalTabs() {
       }}
     />
       </TabPanel>
-      <TabPanel value={value} index={6}>
+      <TabPanel value={value} index={6} style={{width: '1040px'}}>
       <MaterialTable
       title="Groups"
       columns={[
