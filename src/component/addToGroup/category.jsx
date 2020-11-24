@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import green from '@material-ui/core/colors/green';
 import Add from "./add";
 import Section from "./section";
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 function TabContainer(props) {
     const { children, dir } = props;
@@ -28,11 +30,10 @@ TabContainer.propTypes = {
 const styles = theme => ({
     root: {
         backgroundColor: theme.palette.background.paper,
-        width: "75%",
+        width: "100%",
         position: 'relative',
         minHeight: 200,
-        marginTop: "100px",
-        marginLeft: "80px"
+        marginTop: "100px"
     },
     fab: {
         position: 'absolute',
@@ -65,31 +66,34 @@ class FloatingActionButtonZoom extends React.Component {
         const { classes, theme } = this.props;
 
         return (
-            <div className={classes.root}>
-                <AppBar position="static" color="default">
-                    <Tabs
-                        value={this.state.value}
-                        onChange={this.handleChange}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        variant="fullWidth"
-                    >
-                        <Tab label="Waiting list" />
-                        <Tab label="Students" />
-                        <Tab label="Archive" />
-                    </Tabs>
-                </AppBar>
-                <SwipeableViews
-                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                    index={this.state.value}
-                    onChangeIndex={this.handleChangeIndex}
-                >
-                    <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
-                    <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
-                    <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
-                </SwipeableViews>
-
-            </div>
+            <Container maxWidth="lg" minWidth="sm">
+                <div className={classes.root}>
+                    <Grid container spacing={3}>
+                        <AppBar position="static" color="default">
+                            <Tabs
+                                value={this.state.value}
+                                onChange={this.handleChange}
+                                indicatorColor="primary"
+                                textColor="primary"
+                                variant="fullWidth"
+                            >
+                                <Tab label="Waiting list" />
+                                <Tab label="Students" />
+                                <Tab label="Archive" />
+                            </Tabs>
+                        </AppBar>
+                        <SwipeableViews
+                            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                            index={this.state.value}
+                            onChangeIndex={this.handleChangeIndex}
+                        >
+                            <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
+                            <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
+                            <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
+                        </SwipeableViews>
+                    </Grid>
+                </div >
+            </Container >
         );
     }
 }
