@@ -9,8 +9,8 @@ import Grouplist from './component/Grouplist/Grouplist';
 import Teachers from './component/Teachers-page/Teachers';
 import AddToGroup from './component/addToGroup/category';
 import ReportsContainer from './component/ReportsPage/ReportsContainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import TeachersReg from './container/teachers-reges/teacher-reges';
+import Rekvizits from './container/Rekvizits/Rekvizit';
 
 function App() {
   return (
@@ -25,6 +25,8 @@ function App() {
           <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
           <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
           <Route exact path="/reports" component={() => <Sidebar component={<ReportsContainer />} />} />
+          <Route exact path="/teachersreg" component={() => <Sidebar component={<TeachersReg />} />} />
+          <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
           <Sidebar />
         </Switch>
       </div>
