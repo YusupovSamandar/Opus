@@ -5,11 +5,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import MaterialTable from "material-table";
-import "./Grouplist.css";
 import Container from '@material-ui/core/Container';
-import AllButtons from "./AllButtons";
-
+import Payments from "./Payments";
 
 
 function TabPanel(props) {
@@ -63,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function VerticalTabs() {
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -83,41 +81,34 @@ export default function VerticalTabs() {
         style = {{padding: '14px'}}
       >
         <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group One" {...a11yProps(0)} />
+    margin: '10px 0'}} label="To'lovlar bo'yicha" {...a11yProps(0)} />
         <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Two" {...a11yProps(1)} />
+    margin: '10px 0'}} label="Qarzdorlik" {...a11yProps(1)} />
         <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Three" {...a11yProps(2)} />
+    margin: '10px 0'}} label="Shartnomalar" {...a11yProps(2)} />
         <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Four" {...a11yProps(3)} />
+    margin: '10px 0'}} label="Reklama" {...a11yProps(3)} />
         <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Five" {...a11yProps(4)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Six" {...a11yProps(5)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Seven" {...a11yProps(6)} />
+    margin: '10px 0'}} label="Arxiv" {...a11yProps(4)} />
       </Tabs>
     <TabPanel value={value} index={0} style={{width: '1040px'}}>
-        <AllButtons />
-      </TabPanel>
-      <TabPanel value={value} index={1} style={{width: '1040px'}}>
-      <AllButtons />
-      </TabPanel>
-      <TabPanel value={value} index={2} style={{width: '1040px'}}>
-      <AllButtons />
-      </TabPanel>
-      <TabPanel value={value} index={3} style={{width: '1040px'}}>
-      <AllButtons />
-      </TabPanel>
-      <TabPanel value={value} index={4} style={{width: '1040px'}}>
-      <AllButtons />
-      </TabPanel>
-      <TabPanel value={value} index={5} style={{width: '1040px'}}>
-      <AllButtons />
-      </TabPanel>
-      <TabPanel value={value} index={6} style={{width: '1040px'}}>
-      <AllButtons />
-      </TabPanel>
+      <Payments />
+    </TabPanel>
+    <TabPanel value={value} index={1} style={{width: '1040px'}}>
+      <Payments />   
+    </TabPanel>
+    <TabPanel value={value} index={2} style={{width: '1040px'}}>
+      <Payments />
+    </TabPanel>
+    <TabPanel value={value} index={3} style={{width: '1040px'}}>
+      <Payments />
+    </TabPanel>
+    <TabPanel value={value} index={4} style={{width: '1040px'}}>
+      <Payments />
+    </TabPanel>
+    <TabPanel value={value} index={5} style={{width: '1040px'}}>
+      <Payments />
+    </TabPanel>
     </div>
     </Container>
   );
