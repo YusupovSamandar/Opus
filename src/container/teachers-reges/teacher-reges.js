@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import './teacher-reges.css';
+import Button from '@material-ui/core/Button'
 
 function FormPage() {
   return (
@@ -72,8 +73,12 @@ function FormPage() {
           placeholder="Address"
           required
         ></input>
-        <button class="btn info">SUBMIT</button>
+        <br></br>
+        <Button variant="contained" color="primary">
+          SAVE
+        </Button>
       </form>
+      <br></br>
     </Container>
   )
 }

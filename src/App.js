@@ -12,7 +12,7 @@ import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
 import AdminPanel from './component/AdminPanel/AdminContainer'
-
+import Teachers from './component/Teachers-page/Teachers'
 function App() {
   return (
     <Router>
@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/teachersreg" component={() => <Sidebar component={<TeachersReg />} />} />
           <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
           <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
+          <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
           <Sidebar />
         </Switch>
       </div>
