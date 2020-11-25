@@ -214,7 +214,7 @@ export default function MiniDrawer(props) {
                     />
                   </Link>
                 ) : (
-                  <Link to="/cardsGroup">
+                  <Link to="/reports">
                     {' '}
                     <img
                       src="https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg"
