@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
+import Button from '@material-ui/core/Button'
 import './Rekvizit.css'
 
 function Rekvizit() {
@@ -22,26 +23,11 @@ function Rekvizit() {
           required
         ></input>
         <label class="focus">MFO</label>
-        <input
-          id="reg-input"
-          type="text"
-          placeholder="MFO"
-          required
-        ></input>
+        <input id="reg-input" type="text" placeholder="MFO" required></input>
         <label class="focus">OKONX</label>
-        <input
-          id="reg-input"
-          type="text"
-          placeholder="OKONX"
-          required
-        ></input>
+        <input id="reg-input" type="text" placeholder="OKONX" required></input>
         <label class="focus">ENN</label>
-        <input
-          id="reg-input"
-          type="text"
-          placeholder="ENN"
-          required
-        ></input>
+        <input id="reg-input" type="text" placeholder="ENN" required></input>
         <label class="focus">Xisob raqam</label>
         <input
           id="reg-input"
@@ -63,10 +49,14 @@ function Rekvizit() {
           placeholder="Telefon Raqam"
           required
         ></input>
-        <button class="btn info">SAVE</button>
+        <br></br>
+        <Button variant="contained" color="primary">
+          SAVE
+        </Button>
       </form>
+    <br></br>
     </Container>
   )
 }
 
-export default Rekvizit;
+export default Rekvizit

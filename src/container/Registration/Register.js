@@ -4,6 +4,7 @@ import './Register.css'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Radio from '@material-ui/core/Radio'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -195,8 +196,13 @@ function FormPage() {
            <textarea placeholder="Typing..." id="text-area"name="message" rows="5" cols="60"></textarea>
          </div>
       </div>
-
-    <button class="btn info">SUBMIT</button>
+      <br></br>
+        <Button variant="contained" color="primary">
+          SUBMIT
+        </Button>
+    <br></br>
+    <br></br>
+    
 </form>
     </Container>
   )
