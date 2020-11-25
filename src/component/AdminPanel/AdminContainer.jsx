@@ -1,5 +1,5 @@
 // Icons
-import Report from "./Reports"
+import Admin from "./Admin"
 // Packages
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3),
     },
 }));
-function ReportsContainer() {
+function AdminContainer() {
     const classes = useStyles();
 
     return (<Container maxWidth="sm" style={{ marginTop: "100px", maxWidth: "1000px" }}>
@@ -44,17 +44,16 @@ function ReportsContainer() {
 
             <Grid container spacing={20} >
                 {
-                    [ {name: "Qarzdorlik", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3399/3399165.svg" },
-                    { name: "Shartnomalar", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/748/748504.svg" },
-                    { name: "Reklama", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3800/3800402.svg" },
-                    { name: "Payments", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3135/3135706.svg" },
-                    { name: "Archive", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/716/716820.svg" }
+                    [ {name: "Staff", border: "#0779e4", link: '/teachers', img: "https://www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
+                    { name: "Add a New Employee", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256628.svg" },
+                    { name: "Edit Course", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg" },
+                    { name: "Rekvizits", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2897/2897980.svg" }
                    ].map((card, index) => (
-                        <Report style={{ marginTop: "10px" }} color={card.border} img={card.img} description={card.text} name={card.name} day1={card.day1} day2={card.day2} day3={card.day3} />))
+                        <Admin style={{ marginTop: "10px" }} color={card.border} link={card.link} img={card.img} description={card.text} name={card.name} day1={card.day1} day2={card.day2} day3={card.day3} />))
                 }
             </Grid>
         </div>
     </Container>
     )
 }
-export default  ReportsContainer
+export default  AdminContainer

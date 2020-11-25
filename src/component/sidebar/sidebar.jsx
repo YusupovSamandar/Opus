@@ -207,7 +207,7 @@ export default function MiniDrawer(props) {
                 <List>
                     {['Admin Panel', ''].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" alt="" /> : <img src={''} alt="" />}</ListItemIcon>
+                            <ListItemIcon>{index % 2 === 0 ? <Link to='/adminpanel'> <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" alt="" /> </Link> : <Link to='/adminpanel'> <img src={''} alt="" /></Link>}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
