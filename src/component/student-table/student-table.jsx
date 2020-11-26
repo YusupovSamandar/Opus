@@ -62,7 +62,7 @@ export default function CustomizedTables() {
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
-                        <StyledTableRow key={row.name}>
+                        <StyledTableRow style={{ backgroundColor: 'white' }} key={row.name}>
                             <StyledTableCell component="th" scope="row">
                                 {row.name}
                             </StyledTableCell>

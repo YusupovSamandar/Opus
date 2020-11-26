@@ -50,9 +50,9 @@ export default function FullWidthGrid() {
                             <Grid container spacing={3}>
 
                                 <Grid item xs={12} sm={4}>
-                                    <Paper style={{ textAlign: "left", backgroundColor: "rgba(0, 0, 0, 0.04)" }} className={classes.paper}>
-                                        <h1 style={{ color: "grey" }}>Urinboe Abdushukur →</h1>
-                                        <h2>+998996035599</h2>
+                                    <Paper style={{ textAlign: "left", backgroundColor: "#fff" }} className={classes.paper}>
+                                        <p style={{ color: "#000", fontSize: '1.8rem' }}>Urinboev Abdushukur →</p>
+                                        <p style={{ color: "#212121", fontSize: '1.2rem' }}> +998996035599</p>
                                     </Paper>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>

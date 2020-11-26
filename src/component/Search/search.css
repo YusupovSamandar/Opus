@@ -4,6 +4,28 @@
 
 .hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-29,
 .hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-25 {
-    background-color: #0e1c42;
+    background-color: #009D77;
     color: #eee;
+}
+
+.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-25:hover {
+    color: #eee;
+}
+
+.hovered-styled-row .MuiTableSortLabel-root:hover {
+    color: white !important;
+}
+
+.hovered-styled-row .MuiTableSortLabel-root {
+    color: white !important;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.hovered-styled-row .MuiTableSortLabel-active:hover {
+    color: white !important
+}
+
+.hovered-styled-row .MuiTableSortLabel-active {
+    color: white !important
 }
