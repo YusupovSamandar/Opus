@@ -179,39 +179,48 @@ export default function MiniDrawer(props) {
                 <Divider />
                 <List>
                     {['Registration', 'Attendance / Fees'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ?
-                                <Link to='/register'> <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /></Link> : <Link to='/detail'><img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" alt="" /></Link>}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                        <Link to={index % 2 === 0 ? "/register" : "/detail"}>
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ?
+                                    <img className="img-icon" src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" /> : <img className="img-icon" src="https://www.flaticon.com/premium-icon/icons/svg/2117/2117281.svg" alt="" />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </Link>
 
                     ))}
                 </List>
                 <List>
                     {['Groups', 'Reports'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <Link to='/cardsGroup'><img src='https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg' alt="" /></Link> : <Link to='/cardsGroup'> <img src='https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg' alt="" /></Link>}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                        <Link to={index % 2 === 0 ? "/cardsGroup" : "/detail"}>
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <img src='https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg' alt="" /> : <img src='https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg' alt="" />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
 
                 <List>
                     {['Add to Group', 'Teachers'].map((text, index) => (
-                        <ListItem button key={text}>
+                        <Link to={index % 2 === 0 ? "/add" : "/teachers"}>
 
-                            <ListItemIcon>{index % 2 === 0 ? <Link to='/add'><img src="https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" alt="" /> </Link> : <Link to='/teachers'><img src="https://www.flaticon.com/svg/static/icons/svg/906/906175.svg" alt="" /> </Link>}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <img src="https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" alt="" /> : <img src="https://www.flaticon.com/svg/static/icons/svg/906/906175.svg" alt="" />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
 
                 <List>
                     {['Admin Panel', ''].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" alt="" /> : <img src={''} alt="" />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                        <Link to={index % 2 === 0 ? "/add" : "/teachers"}>
+
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" alt="" /> : <img src={''} alt="" />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
             </Drawer >
