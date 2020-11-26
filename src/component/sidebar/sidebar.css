@@ -1,81 +1,82 @@
-a{
-    text-decoration: none !important;
+a {
+  text-decoration: none !important;
 }
 .header-logo {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: #838383;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #838383;
+}
+.header-myaccount {
+  font: 1.5rem;
+  color: #838383;
 }
 
 .header-content-grid {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .MuiAppBar-colorPrimary {
-    background-color: white !important;
-    color: #838383 !important;
+  background-color: white !important;
+  color: #838383 !important;
 }
 
 .MuiDrawer-paper {
-    color: #dedede !important;
-    background-color: #373F4A !important;
+  color: #dedede !important;
+  background-color: #373f4a !important;
 }
 
 .MuiDrawer-paper::-webkit-scrollbar {
-    border-radius: 0 8px 8px 0;
-    width: 8px;
-    background-color: #333;
+  border-radius: 0 8px 8px 0;
+  width: 8px;
+  background-color: #333;
 }
 
 .MuiDrawer-paper::-webkit-scrollbar-thumb {
-    border-radius: 0 8px 8px 0;
-    width: 8px;
-    background-color: #707070;
+  border-radius: 0 8px 8px 0;
+  width: 8px;
+  background-color: #707070;
 }
 
-
 .MuiListItemIcon-root img {
-    width: 40px;
+  width: 40px;
 }
 
 .MuiList-padding {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .my-search {
-    top: 10px !important;
-    position: relative;
-    cursor: pointer;
+  top: 10px !important;
+  position: relative;
+  cursor: pointer;
 }
 
 .log-out {
-    width: 120px;
+  width: 120px;
 }
 
 .log-out svg {
-    position: relative;
-    top: 6px;
-    cursor: pointer;
+  position: relative;
+  top: 6px;
+  cursor: pointer;
 }
 
 .devider {
-    width: 2px;
-    height: 20px;
-    background-color: rgb(134, 109, 109);
-    margin: 0 20px;
+  width: 2px;
+  height: 20px;
+  background-color: rgb(134, 109, 109);
+  margin: 0 20px;
 }
 
 .text-white-icon {
-    color: #fff !important;
+  color: #fff !important;
 }
-#sidebar img{
-    width: 35px !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-
+#sidebar img {
+  width: 35px !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

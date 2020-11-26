@@ -44,11 +44,13 @@ function ReportsContainer() {
 
             <Grid container spacing={20} >
                 {
-                    [ {name: "Group Journal", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2232/2232712.svg" },
-                    { name: "Reports", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/1087/1087185.svg" },
-                    { name: "Payments", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3135/3135706.svg" }
+                    [ {name: "Qarzdorlik", link: '/reports/reportsinside', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3399/3399165.svg" },
+                    { name: "Shartnomalar", link: '/reports/reportsinside', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/748/748504.svg" },
+                    { name: "Reklama", link: '/reports/reportsinside', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3800/3800402.svg" },
+                    { name: "Payments", link: '/reports/reportsinside', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3135/3135706.svg" },
+                    { name: "Archive", link: '/reports/reportsinside', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/716/716820.svg" }
                    ].map((card, index) => (
-                        <Report style={{ marginTop: "10px" }} color={card.border} img={card.img} description={card.text} name={card.name} day1={card.day1} day2={card.day2} day3={card.day3} />))
+                        <Report style={{ marginTop: "10px" }} color={card.border} link={card.link} img={card.img} description={card.text} name={card.name} day1={card.day1} day2={card.day2} day3={card.day3} />))
                 }
             </Grid>
         </div>

@@ -1,190 +1,211 @@
-import React , {useState} from 'react'
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react'
+import Container from '@material-ui/core/Container'
 import './Register.css'
+import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Radio from '@material-ui/core/Radio'
+import Button from '@material-ui/core/Button'
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}))
+
 function FormPage() {
-  const [hasSchoolarship, setHasSchoolarship] = useState(false);
-  const handleInput = (e) => {
-    setHasSchoolarship(e.target.value === "Added" ? true : false);
+  const classes = useStyles()
+  const [gender, setGender] = useState()
+  const [scholarship, setScholarship] = useState()
+  const [groups, setGroups] = useState()
+
+  const handleScholarship = (e) => {
+    setScholarship(e.target.name)
   }
+
+  const handleGender = (e) => {
+    setGender(e.target.value)
+  }
+
+  const handleGrops = (e) => {
+    setGroups(e.target.value)
+  }
+
+  const [hasSchoolarship, setHasSchoolarship] = useState(false)
+  const handleInput = (e) => {
+    setHasSchoolarship(e.target.value === 'Added' ? true : false)
+  }
+
   return (
-      <Container Container fluid id='container'>
-        <Container id="form-container">
-        <h2 id="main">Edit User Registration</h2>
-    <Form>
-  <Form.Group>
-    <Form.Label>First Name</Form.Label>
-    <Form.Control type="text" placeholder="First Name" />
-  </Form.Group>
-  <Form.Group>
-    <Form.Label>Last Name</Form.Label>
-    <Form.Control type="text" placeholder="Last Name" />
-  </Form.Group>
-  <Form.Group>
-    <Form.Label>Father's Name</Form.Label>
-    <Form.Control type="text" placeholder="Father's Name" />
-  </Form.Group>
-  <Form.Group>
-    <Form.Label>Date Of Brith</Form.Label>
-    <Form.Control type="date" id="birthday" name="birthday"/>
-  </Form.Group>
-  <Form.Group>
-    <Form.Label>Address</Form.Label>
-    <Form.Control placeholder="Your Address "/>
-  </Form.Group>
-  <Row>
-  <Col>
-  <Form.Group>
-    <Form.Label>Phone number</Form.Label>
-    <Form.Control placeholder="Phone Number "/>
-  </Form.Group>
-  </Col>
-  <Col>
-  <Form.Group>
-    <Form.Label>Extra Phone number</Form.Label>
-    <Form.Control placeholder="Extra Phone Number"/>
-  </Form.Group>
-  </Col>
-  </Row>
-  <Container id='radio1'>
-   <Row>
-    <Col>
-    <Form.Group as={Row}>
-      <Form.Label as="legend" column sm={5}>
-        Sex:
-      </Form.Label>
-      <Col sm={10}>
-        <Form.Check
-          type="radio"
-          label="Male"
-          name="formHorizontalRadiosa"
-          id="formHorizontalRadios1"
-        />
-        <Form.Check
-          type="radio"
-          label="Female"
-          name="formHorizontalRadiosa"
-          id="formHorizontalRadios2"
-        />
-      </Col>
-    </Form.Group>
-    </Col>
-    <Col>
-    <Form.Group as={Row}>
-      <Form.Label as="legend" column sm={5}>
-        Scholarship:
-      </Form.Label>
-      <Col sm={10}>
-        <Form.Check
-          onClick={handleInput}
-          type="radio"
-          label="Yes"
-          name="formHorizontalRadioss"
-          id="formHorizontalRadios1"
-          value="Added"
-        />
-        <Form.Check
-          onClick={handleInput}
-          type="radio"
-          label="No"
-          name="formHorizontalRadioss"
-          id="formHorizontalRadios2"
-        />
-      </Col>
-    </Form.Group>
-    </Col>
-
-    <Col>
-      <Form.Group as={Row}>
-      <Form.Label as="legend" column sm={5}>
-        Payment:
-      </Form.Label>
-      <Col sm={10}>
-        <Form.Control disabled={hasSchoolarship ? !"disabled"  : "disabled"} id="outlined-basic" label="Payment" variant="outlined"  />
-      </Col>
-    </Form.Group>
-    </Col>
-  </Row>
-</Container> 
-
-{/* End of radio1 */}
-
-<Container id='radio2'>
+    <Container id="reg-cont" maxWidth="sm">
+    <form>
+      <h1 id="reg-header">Registration</h1>
+      <label class="focus" >First Name</label>
+      <input id="reg-input" type="text" placeholder="First Name" required></input>
+      <label class="focus">Last Name</label>
+      <input id="reg-input" type="text" placeholder="Last Name" required></input>
+      <label class="focus">Father's Name</label>
+      <input id="reg-input" type="text" placeholder="Father's name" required></input>
+      <label class="focus">Data was born</label>
+      <input class="reg-time" type="date" placeholder="First name" required></input>
+      <div id="reg-div">
+        <Grid container spacing={3}>
+          <Grid item xs={6}>
+            <label class="focus">Phone Number</label>
+            <input
+              id="reg-input"
+              type="text"
+              placeholder="Phone Number"
+              required
+            ></input>
+          </Grid>
+          <Grid item xs={6}>
+            <label class="focus" required>Extra Phone Number</label>
+            <input
+              id="reg-input"
+              type="text"
+              placeholder="Extra Phone Number"
+              required
+            ></input>
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs>
+            <div id="border-div">
+              <p id="gender-p">Gender</p>
+              <Radio
+                value="male"
+                checked={gender === 'male'}
+                onChange={handleGender}
+                required
+              />
+              <span class="focus">Male</span>
+              <br></br>
+              <Radio
+                value="female"
+                checked={gender === 'female'}
+                onChange={handleGender}
+                required
+              />
+              <span class="focus">Female</span>
+            </div>
+          </Grid>
+          <Grid item xs>
+            <div id="border-div-scholar">
+              <p id="gender-p" class="focus">Scholarship</p>
+              <div>
+                <Radio
+                  onClick={handleInput}
+                  value="Added"
+                  name="yes"
+                  checked={scholarship === 'yes'}
+                  onChange={handleScholarship}
+                  
+                />
+                <span class="focus">Yes</span>
+                <br></br>
+                <Radio
+                  onClick={handleInput}
+                  name="no"
+                  checked={scholarship === 'no'}
+                  onChange={handleScholarship}
+                  required
+                />
+                <span class="focus">NO</span>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs>
+            <label class="focus">Payment</label>
+            <input
+              id="reg-input"
+              type="text"
+              placeholder="Payment"
+              disabled={hasSchoolarship ? !'disabled' : 'disabled'}
+              label="Payment"
+              variant="outlined"
+              required
+            ></input>
+          </Grid>
+        </Grid>
+      </div>
+      <div id="reg-div">
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <Radio
+              value="add"
+              checked={groups === 'add'}
+              onChange={handleGrops}
+              required
+            />
+            <span>Add exsisting group</span>
+            <br />
+            <Radio
+              value="waiting"
+              checked={groups === 'waiting'}
+              onChange={handleGrops}
+              required
+            />
+            <span>Waiting for a new group</span>
+          </Grid>
+          <Grid item xs={6}>
+            <div class="select">
+            <span class="focus">Course</span>
+              <select id="reg-select">
+                <option id='reg-select' value="Option 1">1-bosqich</option>
+                <option id='reg-select' value="Option 2">2-bosqich</option>
+                <option id='reg-select' value="Option 3">3-bosqich</option>
+                <option id='reg-select' value="Option 4">4-bosqich</option>
+              </select>
+              
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+      <div id="reg-div">
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <div class="select">
+            <span class="focus">Groups</span>
+              <select id="reg-select">
+                <option id='reg-select' value="Option 1">Ahror</option>
+                <option id='reg-select' value="Option 2">Samandar</option>
+                <option id='reg-select' value="Option 3">Shaxbozbek</option>
+                <option id='reg-select' value="Option 4">Maftuna</option>
+              </select>
+              
+            </div>
+          </Grid>
+          <Grid item xs={6}>
+            <div class="select">
+            <span class="focus">Advertise</span>
+              <select id="reg-select">
+                <option id='reg-select' value="Option 1">Social Media</option>
+                <option id='reg-select' value="Option 2">Tv</option>
+                <option id='reg-select' value="Option 3">Friends</option>
+                <option id='reg-select' value="Option 4">Radio</option>
+              </select>
+            </div>
+          </Grid>
+        </Grid>
+         <div>
+           <textarea placeholder="Typing..." id="text-area"name="message" rows="5" cols="60"></textarea>
+         </div>
+      </div>
+      <br></br>
+        <Button variant="contained" color="primary">
+          SUBMIT
+        </Button>
+    <br></br>
+    <br></br>
     
-    <Row>
-      <Col>
-      <Form.Label>State</Form.Label>
-        <Form.Group as={Row}>
-        
-      <Col sm={10}>
-        <Form.Check
-          type="radio"
-          label="Adding existing group"
-          name="formHorizontalRadiosss"
-          id="formHorizontalRadios1"
-        />
-        <Form.Check
-          type="radio"
-          label="Waiting for a new group"
-          name="formHorizontalRadiosss"
-          id="formHorizontalRadios2"
-        />
-      </Col>
-    </Form.Group>
-      </Col>
-      <Col>
-        <Form.Label>Course</Form.Label>
-    <Form.Control as="select" size="sm" custom>
-      <option>1-Bosqich</option>
-      <option>2-Bosqich</option>
-      <option>3-Bosqich</option>
-      <option>4-Bosqich</option>
-      <option>5-Bosqich</option>
-    </Form.Control>
-      </Col>
-    </Row>   
-</Container>
-{/* End of radio2 */}
-
-<Container id='radio2'>
-  <Row>
-     <Col>
-        <Form.Label>Groups</Form.Label>
-       <Form.Control as="select" size="sm" custom>
-        <option>Shohida</option>
-        <option>Shaxbozbek</option>
-        <option>Muqaddam</option>
-        <option>Samandar</option>
-        <option>Maftuna</option>
-    </Form.Control>
-      </Col>
-
-      <Col>
-        <Form.Label>Advertise</Form.Label>
-       <Form.Control as="select" size="sm" custom>
-        <option>Radio</option>
-        <option>TV</option>
-        <option>form Friends</option>
-        <option>Gazeet</option>
-        <option>Other</option>
-    </Form.Control>
-      </Col>
-  </Row>
-</Container>
-
-    <Container id='text-area'>
-    <Form.Label>Comment</Form.Label>
-    <Form.Control as="textarea" rows={3} placeholder='Typin...'/>
+</form>
     </Container>
-
-
-</Form>
-    <Button variant="primary" type="submit">
-    Submit
-  </Button>
-
-        </Container>
-    </Container>
-  );
+  )
 }
 
-export default FormPage;
+export default FormPage

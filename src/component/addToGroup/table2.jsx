@@ -14,6 +14,8 @@ import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import Date from "./date";
 import './table.css';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 
 const styles = theme => ({
@@ -33,58 +35,62 @@ function CustomizedTable(props) {
     const { classes } = props;
 
     return (
-        <Paper className={classes.root}>
-            <Table className={classes.table}>
-                <TableBody>
-                    <TableRow >
-                        <TableCell size="small">
-                            <FormControl className={classes.formControl}>
-                                <InputLabel htmlFor="grouped-native-select">Course</InputLabel>
-                                <Select native defaultValue="" id="grouped-native-select">
-                                    <option aria-label="None" value="" />
-                                    <option value={1}>Option 1</option>
-                                    <option value={2}>Option 2</option>
-                                    <option value={3}>Option 3</option>
-                                    <option value={4}>Option 4</option>
-                                </Select>
-                            </FormControl>
-                        </TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>
-                            Date of starting course
+        <Container maxWidth="lg" minWidth="sm">
+            <Grid container spacing={3}>
+                <Paper className={classes.root}>
+                    <Table className={classes.table}>
+                        <TableBody>
+                            <TableRow >
+                                <TableCell size="small">
+                                    <FormControl className={classes.formControl}>
+                                        <InputLabel htmlFor="grouped-native-select">Course</InputLabel>
+                                        <Select native defaultValue="" id="grouped-native-select">
+                                            <option aria-label="None" value="" />
+                                            <option value={1}>Option 1</option>
+                                            <option value={2}>Option 2</option>
+                                            <option value={3}>Option 3</option>
+                                            <option value={4}>Option 4</option>
+                                        </Select>
+                                    </FormControl>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    Date of starting course
                             <Date />
-                        </TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell size="small">
-                            <FormControl className={classes.formControl}>
-                                <InputLabel style={{ fontSize: "15px" }} htmlFor="grouped-native-select">Group Name</InputLabel>
-                                <Select style={{ width: "120px" }} native defaultValue="" id="grouped-native-select">
-                                    <option aria-label="None" value="" />
-                                    <option value={1}>Option 1</option>
-                                    <option value={2}>Option 2</option>
-                                    <option value={3}>Option 3</option>
-                                    <option value={4}>Option 4</option>
-                                </Select>
-                            </FormControl>
-                        </TableCell>
-                    </TableRow>
-                </TableBody>
-                <div float="left">
-                    <Button style={{ marginTop: "20px", float: "right" }}
-                        variant="contained"
-                        color="primary"
-                        size="small"
-                        float="right"
-                        className={classes.button}
-                        startIcon={<SaveIcon />}
-                    >
-                        Save
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell size="small">
+                                    <FormControl className={classes.formControl}>
+                                        <InputLabel style={{ fontSize: "15px" }} htmlFor="grouped-native-select">Group Name</InputLabel>
+                                        <Select style={{ width: "120px" }} native defaultValue="" id="grouped-native-select">
+                                            <option aria-label="None" value="" />
+                                            <option value={1}>Option 1</option>
+                                            <option value={2}>Option 2</option>
+                                            <option value={3}>Option 3</option>
+                                            <option value={4}>Option 4</option>
+                                        </Select>
+                                    </FormControl>
+                                </TableCell>
+                            </TableRow>
+                        </TableBody>
+                        <div float="left">
+                            <Button style={{ marginTop: "20px", float: "right" }}
+                                variant="contained"
+                                color="primary"
+                                size="small"
+                                float="right"
+                                className={classes.button}
+                                startIcon={<SaveIcon />}
+                            >
+                                Save
       </Button>
-                </div>
-            </Table>
-        </Paper>
+                        </div>
+                    </Table>
+                </Paper>
+            </Grid>
+        </Container>
     );
 }
 
