@@ -1,0 +1,181 @@
+#reg-cont {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  border: 1px solid rgb(188, 188, 207);
+  border-radius: 3px;
+  box-shadow: 0px px px 1px rgb(0, 0, 0);
+  background-color: white;
+}
+
+.focus {
+  color: #14274e;
+}
+
+#reg-header {
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#reg-input[type='text'] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+#reg-input[type='text']:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  margin-bottom: 15px;
+}
+
+[type='date'] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+[type='date']:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 10px 0 dodgerBlue;
+}
+
+#reg-input[type='password'] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+#reg-input[type='password']:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  margin-bottom: 15px;
+}
+
+#gender-p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#border-div {
+  border-right: 2px solid #aaa;
+}
+
+#border-div-scholar {
+  border-right: 2px solid #aaa;
+}
+
+#reg-div {
+  border: 2px solid #aaa;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 1px;
+  border-radius: 3px;
+  box-shadow: 0px px px 1px rgb(0, 0, 0);
+  background-color: white;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: '';
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  border: 1px solid black;
+  background-color: #2196f3;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 20%;
+}
+
+/* Blue */
+.info {
+  border-color: #2196f3;
+  border-radius: 3px;
+  color: white;
+}
+
+.info:hover {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
