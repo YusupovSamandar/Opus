@@ -12,8 +12,9 @@ import AddToGroup from './component/addToGroup/category';
 import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
-import AdminPanel from './component/AdminPanel/AdminContainer'
-import Teachers from './component/Teachers-page/Teachers'
+import AdminPanel from './component/AdminPanel/AdminContainer';
+import Teachers from './component/Teachers-page/Teachers';
+import TeacherFees from "./container/Teacher-fees/teacher-fees";
 function App() {
   return (
     <Router>
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
           <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
           <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
+          <Route exact path="/teachers-fees" component={() => <Sidebar component={<TeacherFees />} />} />
           <Sidebar />
         </Switch>
       </div>
