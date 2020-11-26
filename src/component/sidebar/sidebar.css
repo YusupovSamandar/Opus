@@ -6,7 +6,7 @@ a {
   text-transform: uppercase;
   color: #838383;
 }
-.header-myaccount {
+.header-myaccounst {
   font: 1.5rem;
   color: #838383;
 }
@@ -29,9 +29,7 @@ a {
 }
 
 .MuiDrawer-paper::-webkit-scrollbar {
-  border-radius: 0 8px 8px 0;
-  width: 8px;
-  background-color: #333;
+display:none
 }
 
 .MuiDrawer-paper::-webkit-scrollbar-thumb {
