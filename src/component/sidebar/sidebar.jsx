@@ -195,6 +195,7 @@ export default function MiniDrawer(props) {
                         </ListItem>
                     ))}
                 </List>
+
                 <List>
                     {['Add to Group', 'Teachers'].map((text, index) => (
                         <ListItem button key={text}>
@@ -204,6 +205,7 @@ export default function MiniDrawer(props) {
                         </ListItem>
                     ))}
                 </List>
+
                 <List>
                     {['Admin Panel', ''].map((text, index) => (
                         <ListItem button key={text}>
@@ -213,7 +215,7 @@ export default function MiniDrawer(props) {
                     ))}
                 </List>
             </Drawer >
-            { props.component}
+            {props.component}
         </div >
     );
 }
