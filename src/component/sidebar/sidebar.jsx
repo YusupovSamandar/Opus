@@ -126,9 +126,11 @@ export default function MiniDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <div className="header-content-grid">
-                        <Typography className="my-account" variant="h6" noWrap>
-                            My Account
-                        </Typography>
+                                <Link to='/teachersreg'>
+                                    <div className="header-myaccounst" variant="h6" noWrap>
+                                        My Account
+                                    </div>
+                                </Link>
                         <Link to="/">
                             <div className="header-logo">
                                 Logo

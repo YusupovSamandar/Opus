@@ -15,6 +15,7 @@ import Rekvizits from './container/Rekvizits/Rekvizit';
 import AdminPanel from './component/AdminPanel/AdminContainer'
 import Teachers from './component/Teachers-page/Teachers';
 import GroupJournal from './component/GroupJournal/GroupJournal';
+import AddNewEmployee from './container/AddNewEmployee/AddNewEmployee'
 function App() {
   return (
     <Router>
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
           <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
           <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
+          <Route exact path="/addnewemployee" component={() => <Sidebar component={<AddNewEmployee />} />} />
           <Sidebar />
         </Switch>
       </div>
