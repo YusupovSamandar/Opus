@@ -7,7 +7,7 @@ function BasicSearch(props) {
 
     return (
         <div className="hovered-styled-row">
-            <MaterialTable
+            <MaterialTable className='styled'
                 title="Students"
                 columns={[
                     { title: 'Name', field: 'name' },

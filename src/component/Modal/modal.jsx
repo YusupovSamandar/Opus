@@ -132,7 +132,7 @@ export default function TransitionsModal() {
 
     return (
         <div>
-            <Button style={{ marginRight: "20px" }} onClick={handleOpen} variant="contained" color="primary">
+            <Button style={{ marginRight: "20px", backgroundColor: '#009D77', color: "white" }} onClick={handleOpen} variant="contained" color="primary">
                 To'lov
             </Button>
             <Modal
@@ -151,7 +151,7 @@ export default function TransitionsModal() {
                     <Paper style={{ textAlign: "center", padding: "0 20px", width: "1000px" }} className={classes.paper}>
                         <Grid container spacing={3}>
                             <Grid item xs={6}>
-                                <h1 style={{ color: "White", backgroundColor: "#0e1c42" }}>Malumotlar</h1>
+                                <h1 style={{ color: "White", backgroundColor: "#009D77" }}>Malumotlar</h1>
                                 <TableContainer component={Paper}>
                                     <Table aria-label="simple table">
                                         <TableBody>
@@ -171,7 +171,7 @@ export default function TransitionsModal() {
                                 </TableContainer>
                             </Grid>
                             <Grid item xs={6}>
-                                <h1 style={{ color: "White", backgroundColor: "#0e1c42" }}>To'lov</h1>
+                                <h1 style={{ color: "White", backgroundColor: "#009D77" }}>To'lov</h1>
                                 <form className={classes.root} noValidate autoComplete="off">
                                     <TextField
                                         id="standard-select-currency"
@@ -238,9 +238,9 @@ export default function TransitionsModal() {
 
                                         </MuiPickersUtilsProvider>
                                     </div>
-                                    <Checkbox inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} /> <span>Check Chiqarish</span>
+                                    <Checkbox style={{ color: "#009D77" }} inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} /> <span>Check Chiqarish</span>
                                     <br />
-                                    <Button style={{ margin: "10px" }} onClick={handleOpen} variant="contained" color="primary">
+                                    <Button style={{ margin: "10px", backgroundColor: '#009D77', color: "white" }} onClick={handleOpen} variant="contained" >
                                         To'lov Qilish
                                     </Button>
                                 </form>
