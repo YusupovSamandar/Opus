@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./search.css";
 // Table package
 import MaterialTable from 'material-table';
+import { TempStudentContext } from "./../Student-datail-context";
 
 function BasicSearch(props) {
+    const [tempStudent, SetTempStudent] = useContext(TempStudentContext);
 
     return (
         <div className="hovered-styled-row">
@@ -22,7 +24,7 @@ function BasicSearch(props) {
                         icon: "add",
                         tooltip: 'Save User',
                         onClick: (event, rowData) => {
-                            // console.log(rowData);
+                            SetTempStudent(rowData);
                         }
                     }
                 ]}

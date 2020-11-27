@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 // Components
 import Search from "./../../component/Search/search";
 import Table from "./../../component/student-table/student-table";
@@ -6,9 +6,12 @@ import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import axios from "axios";
+// import axios from "axios";
 import "./detail.css";
+import { StudentContext } from "./../../component/Student-datail-context";
 import Popup from "./../../component/Modal/modal";
+import { TempStudentContext } from "./../../component/Student-datail-context";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,17 +26,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FullWidthGrid() {
     // Data
+    const [value] = useContext(StudentContext);
+    const [tempStudent] = useContext(TempStudentContext);
 
-    useEffect(() => {
-        fetchItems();
-    }, []);
+    // useEffect(() => {
+    //     fetchItems();
+    // }, []);
 
-    const [students, setStudents] = useState([]);
+    // const [students, setStudents] = useState([]);
 
-    const fetchItems = async () => {
-        const { data } = await axios.get("http://localhost:3000/students");
-        setStudents(data);
-    }
+    // const fetchItems = async () => {
+    //     const { data } = await axios.get("http://localhost:3000/students");
+    //     setStudents(data);
+    // }
 
 
     const classes = useStyles();
@@ -43,7 +48,7 @@ export default function FullWidthGrid() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid style={{ paddingTop: "0px" }} item xs={4} sm={3}>
-                        <Search data={students} />
+                        <Search data={value} />
                     </Grid>
                     <Grid item xs={12} sm={9}>
                         <Paper style={{ padding: "0 15px" }}>
@@ -51,8 +56,8 @@ export default function FullWidthGrid() {
 
                                 <Grid item xs={12} sm={4}>
                                     <Paper style={{ textAlign: "left", backgroundColor: "#fff" }} className={classes.paper}>
-                                        <p style={{ color: "#000", fontSize: '1.8rem' }}>Urinboev Abdushukur →</p>
-                                        <p style={{ color: "#212121", fontSize: '1.2rem' }}> +998996035599</p>
+                                        <p style={{ color: "#000", fontSize: '1.8rem' }}>{tempStudent.surname} {tempStudent.name}</p>
+                                        <p style={{ color: "#212121", fontSize: '1.2rem' }}>{tempStudent.phone}</p>
                                     </Paper>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
