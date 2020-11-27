@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 // Card packages
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import { Link } from 'react-router-dom';
 
 
 
@@ -45,7 +44,7 @@ function TeachersContainer() {
 
             <Grid container spacing={20} >
                 {
-                    [{ name: "Guruh Jurnali", border: "#0779e4", link: '/teachers', img: "https://www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
+                    [{ name: "Guruh Jurnali", link: '/teacherscontainer/groupjournal', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
                     { name: "Xisobotlar", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256628.svg" },
                     { name: "Tulovlar", link: "/teachers-fees", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg" }
 
