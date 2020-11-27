@@ -9,8 +9,7 @@ function Params() {
         name: 'hai',
     });
     const [month, setMonth] = React.useState({
-        group: '',
-        name: 'hai',
+        month: 'September'
     });
 
     const handleChange = (event) => {
@@ -22,7 +21,7 @@ function Params() {
     };
     const handleChange2 = (event) => {
         const name = event.target.name;
-        setState({
+        setMonth({
             ...state,
             [name]: event.target.value,
         });
@@ -48,13 +47,13 @@ function Params() {
                     <FormHelperText>Iltimos Guruhni kiriting</FormHelperText>
                     <h3>Oy:</h3>
                     <NativeSelect
-                        value={state.group}
-                        onChange={handleChange}
-                        name="group"
-                        inputProps={{ 'aria-label': 'group' }}
+                        value={month.month}
+                        onChange={handleChange2}
+                        name="month"
+                        inputProps={{ 'aria-label': 'month' }}
                     >
                         <option value="September">September</option>
-                        <option value="october">October</option>
+                        <option value="October">October</option>
                         <option value="November">November</option>
                         <option value="December">December</option>
                     </NativeSelect>
