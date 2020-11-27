@@ -45,8 +45,7 @@ function AdminContainer() {
             <Grid container spacing={20} >
                 {
                     [ {name: "Staff", border: "#0779e4", link:'/teachers', img: "https://www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
-                    { name: "Add a New Employee", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256628.svg" },
-                    { name: "Edit Course", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg" },
+                    { name: "Add a New Employee", border: "#0779e4", link:'/addnewemployee', img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256628.svg" },
                     { name: "Rekvizits", border: "#0779e4", link:'/rekvizits', img: "https://www.flaticon.com/svg/static/icons/svg/2897/2897980.svg" }
                    ].map((card, index) => (
                         <Admin style={{ marginTop: "10px" }} color={card.border} link={card.link} img={card.img} description={card.text} name={card.name} day1={card.day1} day2={card.day2} day3={card.day3} />))

@@ -13,7 +13,9 @@ import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
 import AdminPanel from './component/AdminPanel/AdminContainer'
-import Teachers from './component/Teachers-page/Teachers'
+import Teachers from './component/Teachers-page/Teachers';
+import GroupJournal from './component/GroupJournal/GroupJournal';
+import AddNewEmployee from './container/AddNewEmployee/AddNewEmployee'
 function App() {
   return (
     <Router>
@@ -25,6 +27,7 @@ function App() {
           <Route exact path="/cardsgroup" component={() => <Sidebar component={<CardGroup2 />} />} />
           <Route exact path="/cardsgroup/grouplist" component={() => <Sidebar component={<Grouplist />} />} />
           <Route exact path="/Teacherscontainer" component={() => <Sidebar component={<TeachersContainer />} />} />
+          <Route exact path="/Teacherscontainer/groupjournal" component={() => <Sidebar component={<GroupJournal />} />} />
           <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
           <Route exact path="/reports" component={() => <Sidebar component={<ReportsContainer />} />} />
           <Route exact path="/reports/reportsinside" component={() => <Sidebar component={<ReportsInside />} />} />
@@ -32,6 +35,7 @@ function App() {
           <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
           <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
           <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
+          <Route exact path="/addnewemployee" component={() => <Sidebar component={<AddNewEmployee />} />} />
           <Sidebar />
         </Switch>
       </div>
