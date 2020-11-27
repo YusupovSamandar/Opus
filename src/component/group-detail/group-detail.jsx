@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import "./group-detail.css";
 
 const columns = [
     { id: 'name', label: 'ID', minWidth: 10 },
@@ -75,7 +76,7 @@ export default function StickyHeadTable() {
 
     return (
         <Paper className={classes.root}>
-            <TableContainer className={classes.container}>
+            <TableContainer id="own-scroll-x" className={classes.container}>
                 <Table stickyHeader aria-label="sticky table">
                     <TableHead>
                         <TableRow>
@@ -83,7 +84,7 @@ export default function StickyHeadTable() {
                                 <TableCell
                                     key={column.id}
                                     align={column.align}
-                                    style={{ minWidth: column.minWidth }}
+                                    style={{ minWidth: column.minWidth, backgroundColor: "#009D77" }}
                                 >
                                     {column.label}
                                 </TableCell>

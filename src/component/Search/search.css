@@ -3,7 +3,8 @@
 }
 
 .hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-29,
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-25 {
+.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-25,
+.hovered-styled-row .MTableHeader-header-50 {
     background-color: #009D77;
     color: #eee;
 }
