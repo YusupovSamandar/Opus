@@ -20,14 +20,14 @@ export default function Admin(props) {
     const classes = useStyles();
 
     return (
-        <Grid item xs={6} sm={4} lg={4} xl={4} md={6} sm={12}>
-<Link to={props.link}>
-            <Paper id="cardGroup" style={{ borderBottom: "3px solid " + props.color, padding: "30px 50px", marginTop: "10px", boxShadow: "5px 10px 10px #bbbfca" }} className={classes.paper}>
-                
-                <img style={{ width: "50px", }} className="card-img" src={props.img} alt="" />
-                <p style={{ fontWeight: "bold", paddingBottom: "10px", paddingTop:"20px" }}>{props.name} </p>
-                
-            </Paper>
+        <Grid item xs={6} lg={4} xl={4} md={6} sm={12}>
+            <Link to={props.link}>
+                <Paper id="cardGroup" style={{ borderBottom: "3px solid " + props.color, padding: "30px 50px", marginTop: "10px", boxShadow: "5px 10px 10px #bbbfca" }} className={classes.paper}>
+
+                    <img style={{ width: "50px", }} className="card-img" src={props.img} alt="" />
+                    <p style={{ fontWeight: "bold", paddingBottom: "10px", paddingTop: "20px" }}>{props.name} </p>
+
+                </Paper>
             </Link>
         </Grid>
     );
