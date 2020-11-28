@@ -126,11 +126,11 @@ export default function MiniDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <div className="header-content-grid">
-                                <Link to='/teachersreg'>
-                                    <div className="header-myaccounst" variant="h6" noWrap>
-                                        My Account
+                        <Link to='/teachersreg'>
+                            <div className="header-myaccounst" variant="h6" noWrap>
+                                My Account
                                     </div>
-                                </Link>
+                        </Link>
                         <Link to="/">
                             <div className="header-logo">
                                 Logo
@@ -151,9 +151,8 @@ export default function MiniDrawer(props) {
                     <div className="devider"></div>
                     <PowerSettingsNewIcon />
                     <h3 className="log-out">
-                        <Link href="#" >
-                            LogOut
-                    </Link>
+
+                        LogOut
                     </h3>
 
 
@@ -193,7 +192,7 @@ export default function MiniDrawer(props) {
                 </List>
                 <List>
                     {['Groups', 'Reports'].map((text, index) => (
-                        <Link to={index % 2 === 0 ? "/cardsGroup" : "/detail"}>
+                        <Link to={index % 2 === 0 ? "/cardsGroup" : "/reports"}>
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <img src='https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg' alt="" /> : <img src='https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg' alt="" />}</ListItemIcon>
                                 <ListItemText primary={text} />
@@ -216,7 +215,7 @@ export default function MiniDrawer(props) {
 
                 <List>
                     {['Admin Panel', ''].map((text, index) => (
-                        <Link to={index % 2 === 0 ? "/add" : "/teachers"}>
+                        <Link to={index % 2 === 0 ? "/adminpanel" : "/"}>
 
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <img src="https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" alt="" /> : <img src={''} alt="" />}</ListItemIcon>
