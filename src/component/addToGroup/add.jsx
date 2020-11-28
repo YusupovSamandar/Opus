@@ -18,7 +18,8 @@ function HandlingSelectionChanges() {
                 { name: 'Urinboyev Abdushukur', date: '10.10.2020', number: '90 - 633 - 55 - 99', courseName: '2-bosqich', comment: '' },
             ]}
             options={{
-                selection: true
+                selection: true,
+                selectionProps: { color: 'primary' }
             }}
             onSelectionChange={(rows) => alert('You selected ' + rows.length + ' rows')}
         />
