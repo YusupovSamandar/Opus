@@ -17,6 +17,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
 import DateFnsUtils from '@date-io/date-fns';
 import Checkbox from '@material-ui/core/Checkbox';
+import ClearIcon from '@material-ui/icons/Clear';
+
 import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
@@ -142,6 +144,7 @@ export default function TransitionsModal() {
                 open={open}
                 onClose={handleClose}
                 closeAfterTransition
+                disableBackdropClick={true}
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                     timeout: 500,
@@ -149,6 +152,8 @@ export default function TransitionsModal() {
             >
                 <Fade style={{ outline: "none", border: "none" }} in={open}>
                     <Paper style={{ textAlign: "center", padding: "0 20px", width: "1000px" }} className={classes.paper}>
+                        <Button onClick={handleClose} style={{ minWidth: "42px", padding: "6px 0", position: "absolute", top: "15%", right: "15%" }} variant="contained"><ClearIcon /></Button>
+
                         <Grid container spacing={3}>
                             <Grid item xs={6}>
                                 <h1 style={{ color: "White", backgroundColor: "#009D77" }}>Malumotlar</h1>
