@@ -63,7 +63,7 @@ class FloatingActionButtonZoom extends React.Component {
         const { classes, theme } = this.props;
 
         return (
-            <div style={{ display: "inline-block", marginLeft: "20px" }} className={classes.root}>
+            <div style={{ display: "inline-block", marginLeft: "2px", position: "absolute" }} className={classes.root}>
                 <AppBar position="static" color="default">
                     <Tabs
                         value={this.state.value}
