@@ -1,13 +1,13 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import MaterialTable from "material-table";
 import Container from '@material-ui/core/Container';
 import JournalWindows from "./JournalWindows";
+import axios from "axios";
 
 
 
@@ -62,6 +62,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function VerticalTabs() {
+  const [teacher, setTeacher] = useState([]);
+ 
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    const { data } = await axios.get("http://localhost:3000/Student-details");
+    setTeacher(data);
+  }
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -81,21 +92,16 @@ export default function VerticalTabs() {
         className={classes.tabs}
         style = {{padding: '14px'}}
       >
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group One" {...a11yProps(0)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Two" {...a11yProps(1)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Three" {...a11yProps(2)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Four" {...a11yProps(3)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Five" {...a11yProps(4)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Six" {...a11yProps(5)} />
-        <Tab style={{   boxShadow: '0 2px 10px',
-    margin: '10px 0'}} label="Group Seven" {...a11yProps(6)} />
+        {
+            teacher.map((obj, index) => (
+              <Tab style={{
+                boxShadow: '0 2px 10px',
+                margin: '10px 0'
+              }} label={obj.Group} {...a11yProps({ index })} />
+            ))
+          }
       </Tabs>
+      
     <TabPanel value={value} index={0} style={{width: '1040px'}}>
         <JournalWindows />
       </TabPanel>
