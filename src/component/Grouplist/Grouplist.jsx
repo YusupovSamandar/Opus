@@ -10,8 +10,6 @@ import Container from '@material-ui/core/Container';
 import AllButtons from "./AllButtons";
 import axios from "axios";
 
-
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -52,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
+    maxHeight: '500px'
   },
   paper: {
     padding: theme.spacing(2),
@@ -63,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function VerticalTabs() {
   const [teacher, setTeacher] = useState([]);
+  const [group,setGroup] = useState([]);
 
   useEffect(() => {
     fetchItems();
@@ -71,6 +71,7 @@ export default function VerticalTabs() {
   const fetchItems = async () => {
     const { data } = await axios.get("http://localhost:3000/Student-details");
     setTeacher(data);
+    setGroup(data);
   }
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -80,9 +81,10 @@ export default function VerticalTabs() {
   };
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
+    <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
       <div className={classes.root}>
         <Tabs
+          id="own-scroll-x"
           orientation="vertical"
           variant="scrollable"
           value={value}
@@ -98,29 +100,15 @@ export default function VerticalTabs() {
               }} label={obj.Group} {...a11yProps({ index })} />
             ))
           }
-
         </Tabs>
-        <TabPanel value={value} index={0} style={{ width: '1040px' }}>
+{group.map((obj,index)=>(
+   
+  <TabPanel value={value} index={index} style={{ width: '1040px' }}>
           <AllButtons />
         </TabPanel>
-        <TabPanel value={value} index={1} style={{ width: '1040px' }}>
-          <AllButtons />
-        </TabPanel>
-        <TabPanel value={value} index={2} style={{ width: '1040px' }}>
-          <AllButtons />
-        </TabPanel>
-        <TabPanel value={value} index={3} style={{ width: '1040px' }}>
-          <AllButtons />
-        </TabPanel>
-        <TabPanel value={value} index={4} style={{ width: '1040px' }}>
-          <AllButtons />
-        </TabPanel>
-        <TabPanel value={value} index={5} style={{ width: '1040px' }}>
-          <AllButtons />
-        </TabPanel>
-        <TabPanel value={value} index={6} style={{ width: '1040px' }}>
-          <AllButtons />
-        </TabPanel>
+      
+))}
+
       </div>
     </Container>
   );
