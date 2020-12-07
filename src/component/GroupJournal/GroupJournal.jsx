@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function VerticalTabs() {
   const [teacher, setTeacher] = useState([]);
+  const [group,setGroup] = useState([]);
  
 
   useEffect(() => {
@@ -81,7 +82,7 @@ export default function VerticalTabs() {
   };
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
+    <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
     <div className={classes.root}>
       <Tabs
         orientation="vertical"
@@ -101,7 +102,14 @@ export default function VerticalTabs() {
             ))
           }
       </Tabs>
-      
+      {group.map((obj,index)=>(
+   
+   <TabPanel value={value} index={index} style={{ width: '1040px' }}>
+           <JournalWindows />
+         </TabPanel>
+       
+ ))}
+{/*       
     <TabPanel value={value} index={0} style={{width: '1040px'}}>
         <JournalWindows />
       </TabPanel>
@@ -122,7 +130,7 @@ export default function VerticalTabs() {
       </TabPanel>
       <TabPanel value={value} index={6} style={{width: '1040px'}}>
       <JournalWindows />
-      </TabPanel>
+      </TabPanel> */}
     </div>
     </Container>
   );

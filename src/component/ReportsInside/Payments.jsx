@@ -5,9 +5,9 @@ import Button from '@material-ui/core/Button';
 import TableContainer from '@material-ui/core/TableContainer';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-import SaveIcon from '@material-ui/icons/Save';
+// import jsPDF from 'jspdf';
+// import html2canvas from 'html2canvas';
+// import SaveIcon from '@material-ui/icons/Save';
 
 
 export class MatTable extends Component {
@@ -17,19 +17,19 @@ export class MatTable extends Component {
       ProductData: []
     }
   }
-  printDocument() {
-    const input = document.getElementById('pdfdiv');
-    html2canvas(input)
-      .then((canvas) => {
-        var imgWidth = 200;
-        var imgHeight = canvas.height * imgWidth / canvas.width;
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4')
-        var position = 0;
-        pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-        pdf.save("download.pdf");
-      });
-  }
+  // printDocument() {
+  //   const input = document.getElementById('pdfdiv');
+  //   html2canvas(input)
+  //     .then((canvas) => {
+  //       var imgWidth = 200;
+  //       var imgHeight = canvas.height * imgWidth / canvas.width;
+  //       const imgData = canvas.toDataURL('image/png');
+  //       const pdf = new jsPDF('p', 'mm', 'a4')
+  //       var position = 0;
+  //       pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+  //       pdf.save("download.pdf");
+  //     });
+  // }
 
   componentDidMount() {
     this.fethData();
@@ -48,7 +48,7 @@ export class MatTable extends Component {
       <div className="Excel">
 
         <table id="table-to-xls">
-          <TableContainer id="pdfdiv" className="txt" component={Paper} style={{ width: '1000px' }}>
+          <TableContainer id="pdfdiv" className="txt" component={Paper} style={{ width: '1200px' }}>
             <MaterialTable
               title="Groups"
               columns={[
@@ -74,9 +74,9 @@ export class MatTable extends Component {
                 }
               }}
             />
-            <Button onClick={this.printDocument} variant="contained" color="primary" >
+            {/* <Button onClick={this.printDocument} variant="contained" color="primary" >
               Pdf
-                                  </Button>
+                                  </Button> */}
 
             <Button style={{ marginRight: "10px", float: "left", height: "35px", padding: "10px" }} variant="contained" color="primary">
               <ReactHTMLTableToExcel
@@ -88,7 +88,7 @@ export class MatTable extends Component {
                 buttonText="Excel"
               />
             </Button>
-            <Button style={{ marginRight: "10px", float: "left", height: "35px", padding: "10px" }}
+            {/* <Button style={{ marginRight: "10px", float: "left", height: "35px", padding: "10px" }}
               variant="contained"
               color="primary"
               size="small"
@@ -106,7 +106,7 @@ export class MatTable extends Component {
               onClick={() => window.print()}
             >
               Print
-          </Button>
+          </Button> */}
 
           </TableContainer>
         </table>
