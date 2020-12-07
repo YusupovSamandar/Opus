@@ -151,7 +151,6 @@ export default function MiniDrawer(props) {
                     <div className="devider"></div>
                     <PowerSettingsNewIcon />
                     <h3 className="log-out">
-
                         LogOut
                     </h3>
 
