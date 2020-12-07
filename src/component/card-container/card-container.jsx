@@ -29,7 +29,7 @@ const cardContainer = () => {
                         { text: "Groups", link: '/cardsgroup', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
                         { text: "Reports", link: '/reports', img: "https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg" },
                         { text: "Add to group", link: '/add', img: "https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" },
-                        { text: "Amin Panel", link: '/adminpanel', img: "https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" },
+                        { text: "Admin Panel", link: '/adminpanel', img: "https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" },
                         { text: "Teachers", link: '/teacherscontainer', img: "https://www.flaticon.com/svg/static/icons/svg/906/906175.svg" }].map((card, index) => (
                             <Card className='card-paper' key={index} color={card.border} link={card.link} img={card.img} description={card.text} />
                         ))
