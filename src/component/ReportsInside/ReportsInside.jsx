@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+// import Tabs from '@material-ui/core/Tabs';
+// import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -69,9 +69,9 @@ export default function VerticalTabs() {
   };
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1600px" }}>
+    <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
     <div className={classes.root}>
-      <Tabs
+      {/* <Tabs
         orientation="vertical"
         variant="scrollable"
         value={value}
@@ -90,8 +90,8 @@ export default function VerticalTabs() {
     margin: '10px 0'}} label="Reklama" {...a11yProps(3)} />
         <Tab style={{   boxShadow: '0 2px 10px',
     margin: '10px 0'}} label="Arxiv" {...a11yProps(4)} />
-      </Tabs>
-    <TabPanel value={value} index={0} style={{width: '1040px'}}>
+      </Tabs> */}
+    <TabPanel value={value} index={0} style={{width: '1300px'}}>
       <Payments />
     </TabPanel>
     <TabPanel value={value} index={1} style={{width: '1040px'}}>
