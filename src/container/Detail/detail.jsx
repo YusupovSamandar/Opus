@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 // Components
 import Search from "./../../component/Search/search";
 import Table from "./../../component/student-table/student-table";
