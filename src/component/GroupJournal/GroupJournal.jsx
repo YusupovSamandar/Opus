@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
+    maxHeight: '550px'
   },
   paper: {
     padding: theme.spacing(2),
@@ -73,6 +74,7 @@ export default function VerticalTabs() {
   const fetchItems = async () => {
     const { data } = await axios.get("http://localhost:3000/Student-details");
     setTeacher(data);
+    setGroup(data)
   }
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
