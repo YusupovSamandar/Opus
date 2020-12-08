@@ -20,7 +20,7 @@ export default function Admin(props) {
     const classes = useStyles();
 
     return (
-        <Grid item xs={6} lg={4} xl={4} md={6} sm={12}>
+        <Grid item xs={6} lg={6} xl={6} md={6} sm={12}>
             <Link to={props.link}>
                 <Paper id="cardGroup" style={{ borderBottom: "3px solid " + props.color, padding: "30px 50px", marginTop: "10px", boxShadow: "5px 10px 10px #bbbfca" }} className={classes.paper}>
 

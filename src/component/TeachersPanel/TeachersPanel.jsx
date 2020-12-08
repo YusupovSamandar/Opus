@@ -39,13 +39,12 @@ const useStyles = makeStyles((theme) => ({
 function TeachersContainer() {
     const classes = useStyles();
 
-    return (<Container maxWidth="sm" style={{ marginTop: "100px", maxWidth: "1000px" }}>
+    return (<Container maxWidth="sm" style={{ marginTop: "100px", maxWidth: "600px" }}>
         <div className={classes.root}>
 
-            <Grid container spacing={20} >
+            <Grid container spacing={5} >
                 {
                     [{ name: "Guruh Jurnali", link: '/teacherscontainer/groupjournal', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
-                    { name: "Xisobotlar", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256628.svg" },
                     { name: "Tulovlar", link: "/teachers-fees", border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg" }
 
                     ].map((card, index) => (
@@ -54,7 +53,7 @@ function TeachersContainer() {
                 }
             </Grid>
         </div>
-    </Container>
+    </Container >
     )
 }
 export default TeachersContainer
