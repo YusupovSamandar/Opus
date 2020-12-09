@@ -97,7 +97,7 @@ export default function VerticalTabs() {
               <Tab style={{
                 boxShadow: '0 2px 10px',
                 margin: '10px 0'
-              }} label={obj.Group} {...a11yProps({ index })} />
+              }} label={obj.group} {...a11yProps({ index })} />
             ))
           }
         </Tabs>
