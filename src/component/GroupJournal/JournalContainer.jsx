@@ -52,9 +52,9 @@ export class MatTable extends Component {
             <MaterialTable
               title="Groups"
               columns={[
-                { title: 'Name', field: 'First name' },
-                { title: 'Surname', field: 'Last name' },
-                { title: 'Birth Year', field: 'Date of birth' },
+                { title: 'Name', field: 'firstName' },
+                { title: 'Surname', field: 'lastName' },
+                { title: 'Birth Year', field: 'dateOfBirth' },
                 {
                   title: 'Phone number',
                   field: 'phoneNumber',
