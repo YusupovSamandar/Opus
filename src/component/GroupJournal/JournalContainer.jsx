@@ -48,7 +48,7 @@ export class MatTable extends Component {
       <div className="Excel">
 
         <table id="table-to-xls">
-          <TableContainer id="pdfdiv" className="txt" component={Paper} style={{ width: '1000px' }}>
+          <TableContainer id="pdfdiv" className="txt" component={Paper} style={{ width: '960px' }}>
             <MaterialTable
               title="Groups"
               columns={[
