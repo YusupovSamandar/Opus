@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         ...theme.mixins.toolbar,
     },
     content: {
-        flexGrow: 1,
+        c      flexGrow: 1,
         padding: theme.spacing(3),
     },
 }));
