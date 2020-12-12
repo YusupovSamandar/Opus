@@ -12,7 +12,7 @@ export const StudentProvider = (props) => {
     }, []);
 
     const fetchItems = async () => {
-        const { data } = await axios.get("http://localhost:3000/students");
+        const { data } = await axios.get("http://localhost:3000/Student-details");
         setStudents(data);
     }
 
