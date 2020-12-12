@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
+    maxHeight: '550px'
   },
   paper: {
     padding: theme.spacing(2),
@@ -73,6 +74,7 @@ export default function VerticalTabs() {
   const fetchItems = async () => {
     const { data } = await axios.get("http://localhost:3000/Student-details");
     setTeacher(data);
+    setGroup(data)
   }
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -98,7 +100,7 @@ export default function VerticalTabs() {
               <Tab style={{
                 boxShadow: '0 2px 10px',
                 margin: '10px 0'
-              }} label={obj.Group} {...a11yProps({ index })} />
+              }} label={obj.group} {...a11yProps({ index })} />
             ))
           }
       </Tabs>
