@@ -56,8 +56,8 @@ export default function FullWidthGrid() {
 
                                 <Grid item xs={12} sm={4}>
                                     <Paper style={{ textAlign: "left", backgroundColor: "#fff" }} className={classes.paper}>
-                                        <p style={{ color: "#000", fontSize: '1.8rem' }}>{tempStudent.surname} {tempStudent.name}</p>
-                                        <p style={{ color: "#212121", fontSize: '1.2rem' }}>{tempStudent.phone}</p>
+                                        <p style={{ color: "#000", fontSize: '1.8rem' }}>{tempStudent.lastName} {tempStudent.firstName}</p>
+                                        <p style={{ color: "#212121", fontSize: '1.2rem' }}>{tempStudent.phoneNumber}</p>
                                     </Paper>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
