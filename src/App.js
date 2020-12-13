@@ -19,7 +19,7 @@ import GroupJournal from './component/GroupJournal/GroupJournal';
 import AddNewEmployee from './container/AddNewEmployee/AddNewEmployee';
 import { StudentProvider } from "./component/Student-datail-context";
 import { TempStudentProvider } from "./component/Student-datail-context";
-
+import Archive from "./component/ReportsInside/Archive/Archive1";
 function App() {
   return (
     <StudentProvider>
@@ -37,6 +37,7 @@ function App() {
             <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
             <Route exact path="/reports" component={() => <Sidebar component={<ReportsContainer />} />} />
             <Route exact path="/reports/reportsinside" component={() => <Sidebar component={<ReportsInside />} />} />
+            <Route exact path="/reports/Archive" component={() => <Sidebar component={<Archive />} />} />
             <Route exact path="/teachersreg" component={() => <Sidebar component={<TeachersReg />} />} />
             <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
             <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
