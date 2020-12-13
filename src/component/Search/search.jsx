@@ -5,7 +5,7 @@ import MaterialTable from 'material-table';
 import { TempStudentContext } from "./../Student-datail-context";
 
 function BasicSearch(props) {
-    const [tempStudent, SetTempStudent] = useContext(TempStudentContext);
+    const SetTempStudent = useContext(TempStudentContext)[1];
 
     return (
         <div className="hovered-styled-row">
