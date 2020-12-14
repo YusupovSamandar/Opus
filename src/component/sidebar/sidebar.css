@@ -55,6 +55,8 @@ display:none
 
 .log-out {
   width: 120px;
+  color: #707070;
+  cursor: pointer;
 }
 
 .log-out svg {

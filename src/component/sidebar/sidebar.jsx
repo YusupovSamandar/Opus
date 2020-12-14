@@ -25,6 +25,8 @@ import { Link } from 'react-router-dom';
 
 // Custom css
 import "./sidebar.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { logOuts } from '../../actions';
 
 const drawerWidth = 240;
 
@@ -94,8 +96,13 @@ const useStyles = makeStyles((theme) => ({
 export default function MiniDrawer(props) {
     const classes = useStyles();
     const theme = useTheme();
+    const user = useSelector(state => state.currentUser.name);
     const [open, setOpen] = React.useState(false);
+    const dispatch = useDispatch();
 
+    function logOut() {
+        dispatch(logOuts());
+    }
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -126,11 +133,11 @@ export default function MiniDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <div className="header-content-grid">
-                                <Link to='/teachersreg'>
-                                    <div className="header-myaccounst" variant="h6" noWrap>
-                                        My Account
+                        <Link to='/teachersreg'>
+                            <div className="header-myaccounst" variant="h6" noWrap>
+                                My Account
                                     </div>
-                                </Link>
+                        </Link>
                         <Link to="/">
                             <div className="header-logo">
                                 Logo
@@ -145,15 +152,13 @@ export default function MiniDrawer(props) {
                     </div>
                     <Language />
                     <div className="devider"></div>
-                    <div>Account and user
+                    <div>Welcome to {user}
 
                     </div>
                     <div className="devider"></div>
                     <PowerSettingsNewIcon />
-                    <h3 className="log-out">
-                        <Link href="#" >
-                            LogOut
-                    </Link>
+                    <h3 onClick={logOut} className="log-out">
+                        LogOut
                     </h3>
 
 

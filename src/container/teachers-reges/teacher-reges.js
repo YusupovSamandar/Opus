@@ -2,12 +2,14 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import './teacher-reges.css';
 import Button from '@material-ui/core/Button'
+import { useSelector } from 'react-redux';
 
 function FormPage() {
+  const userRole = useSelector(state => state.currentUser.name);
   return (
     <Container id="reg-cont" maxWidth="sm">
       <form>
-        <h1 id="reg-header">Edit User (Teachers)</h1>
+        <h1 id="reg-header">Edit User ({userRole})</h1>
         <label class="focus">Login</label>
         <input
           id="reg-input"
@@ -51,14 +53,14 @@ function FormPage() {
           required
         ></input>
         <div class="select">
-            <span class="focus">Course</span>
-              <select id="reg-select">
-                <option id='reg-select' value="Option 1">Teacher</option>
-                <option id='reg-select' value="Option 2">Director</option>
-                <option id='reg-select' value="Option 3">Kassa</option>
-                <option id='reg-select' value="Option 4">Adminstrator</option>
-              </select>
-            </div>
+          <span class="focus">Course</span>
+          <select id="reg-select">
+            <option id='reg-select' value="Option 1">Teacher</option>
+            <option id='reg-select' value="Option 2">Director</option>
+            <option id='reg-select' value="Option 3">Kassa</option>
+            <option id='reg-select' value="Option 4">Adminstrator</option>
+          </select>
+        </div>
         <label class="focus">Data was born</label>
         <input
           class="reg-time"
