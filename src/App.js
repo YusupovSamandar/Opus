@@ -12,6 +12,8 @@ import AddToGroup from './component/addToGroup/category';
 import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
+import Adverts from './container/reportsContracts/Advert';
+
 import AdminPanel from './component/AdminPanel/AdminContainer';
 import Teachers from './component/Teachers-page/Teachers';
 import TeacherFees from "./container/Teacher-fees/teacher-fees";
@@ -24,6 +26,7 @@ import { ThemeProvider } from "./component/Student-datail-context";
 import Archive from "./component/ReportsInside/Archive/Archive1";
 import ReportsPayment from './component/Reportes-payments/Reports-table';
 
+
 function App() {
   return (
     <ThemeProvider>
@@ -32,7 +35,6 @@ function App() {
           <div className="App">
             <Switch>
               <Route exact path="/" component={() => <Sidebar component={<CardCont />} />} />
-
               <Route exact path="/detail" component={() => <TempStudentProvider><Sidebar component={<Search />} /></TempStudentProvider>} />
               <Route exact path="/register" component={() => <Sidebar component={<Registeration />} />} />
               <Route exact path="/cardsgroup" component={() => <Sidebar component={<CardGroup2 />} />} />
