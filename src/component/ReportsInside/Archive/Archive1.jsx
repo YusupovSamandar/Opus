@@ -38,7 +38,7 @@ function Params() {
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
-    return (<Grid style={{ alignItems: "baseline", display: "flex" }}>
+    return (<Grid style={{ alignItems: "baseline", display: "flex", marginBottom: "30px" }}>
         <KeyboardDatePicker
             style={{ marginRight: "15px" }}
             size="small"
@@ -86,10 +86,10 @@ function Params() {
             </Select>
 
         </FormControl>
-        <Button style={{ backgroundColor: "#c9cbff" }} variant="contained" >
+        <Button style={{ backgroundColor: "#d0e8f2" }} variant="contained" >
             Saralash
                     </Button>
-    </Grid>)
+    </Grid >)
 }
 
 
@@ -127,7 +127,7 @@ export default function MaterialUIPickers() {
                     options={{
                         exportButton: true,
                         headerStyle: {
-                            backgroundColor: '#c9cbff',
+                            backgroundColor: '#d0e8f2',
                             color: '#000'
                         }
 
