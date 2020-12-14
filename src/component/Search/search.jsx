@@ -12,8 +12,8 @@ function BasicSearch(props) {
             <MaterialTable className='styled'
                 title="Students"
                 columns={[
-                    { title: 'Name', field: 'name' },
-                    { title: 'Surname', field: 'surname' }
+                    { title: 'Name', field: 'firstName' },
+                    { title: 'Surname', field: 'lastName' }
                 ]}
                 data={props.data}
                 options={{
