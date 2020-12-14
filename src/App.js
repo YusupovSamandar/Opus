@@ -22,6 +22,7 @@ import { StudentProvider } from "./component/Student-datail-context";
 import { TempStudentProvider } from "./component/Student-datail-context";
 import { ThemeProvider } from "./component/Student-datail-context";
 import Archive from "./component/ReportsInside/Archive/Archive1";
+import PageNotFound from "./component/notFound/404";
 import ReportsPayment from './component/Reportes-payments/Reports-table';
 
 
@@ -51,7 +52,7 @@ function App() {
               <Route exact path="/contracts" component={() => <Sidebar component={<Contracts />} />} />
               <Route exact path="/teachers-fees" component={() => <Sidebar component={<TeacherFees />} />} />
               <Route exact path="/addnewemployee" component={() => <Sidebar component={<AddNewEmployee />} />} />
-              <Sidebar />
+              <Sidebar component={<PageNotFound />} />
             </Switch>
           </div>
         </Router>
