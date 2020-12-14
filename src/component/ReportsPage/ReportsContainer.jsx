@@ -44,7 +44,7 @@ function ReportsContainer() {
 
             <Grid container spacing={20} >
                 {
-                    [{ name: "Qarzdorlik", link: '/reports/reportsinside', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3399/3399165.svg" },
+                    [{ name: "Qarzdorlik", link: '/contracts', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3399/3399165.svg" },
                     { name: "Shartnomalar", link: '/contracts', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/748/748504.svg" },
                     { name: "Reklama", link: '/contracts', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3800/3800402.svg" },
                     { name: "Payments", link: '/reports/reportpayment', border: "#0779e4", img: "https://www.flaticon.com/svg/static/icons/svg/3135/3135706.svg" },
