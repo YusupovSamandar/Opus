@@ -13,6 +13,15 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button'
 import MaterialTable from 'material-table';
+import TextField from '@material-ui/core/TextField';
+
+
+<MaterialTable
+    // other props
+    options={{
+        exportButton: true
+    }}
+/>
 
 
 
@@ -23,6 +32,15 @@ const useStyles = makeStyles((theme) => ({
     },
     selectEmpty: {
         marginTop: theme.spacing(2),
+    },
+    container: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    textField: {
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
+        width: 120,
     },
 }));
 
@@ -39,35 +57,28 @@ function Params() {
         setSelectedDate(date);
     };
     return (<Grid style={{ alignItems: "baseline", display: "flex", marginBottom: "30px" }}>
-        <KeyboardDatePicker
-            style={{ marginRight: "15px" }}
-            size="small"
-            disableToolbar
-            variant="inline"
-            format="MM/dd/yyyy"
-            margin="normal"
-            id="date-picker-inline"
-            label="Date picker inline"
-            value={selectedDate}
-            onChange={handleDateChange}
-            KeyboardButtonProps={{
-                'aria-label': 'change date',
-            }}
-        />
-        <KeyboardDatePicker
-            size="small"
-            disableToolbar
-            variant="inline"
-            format="MM/dd/yyyy"
-            margin="dense"
-            id="date-picker-inline"
-            label="Date picker inline"
-            value={selectedDate}
-            onChange={handleDateChange}
-            KeyboardButtonProps={{
-                'aria-label': 'change date',
-            }}
-        />
+        <form className={classes.container} noValidate>
+            <TextField
+                id="date"
+                type="date"
+                defaultValue="2017-05-24"
+                className={classes.textField}
+                InputLabelProps={{
+                    shrink: true,
+                }}
+            />
+        </form>
+        <form className={classes.container} noValidate>
+            <TextField
+                id="date"
+                type="date"
+                defaultValue="2017-05-24"
+                className={classes.textField}
+                InputLabelProps={{
+                    shrink: true,
+                }}
+            />
+        </form>
         <FormControl className={classes.formControl}>
             <Select
 
@@ -86,7 +97,7 @@ function Params() {
             </Select>
 
         </FormControl>
-        <Button style={{ backgroundColor: "#d0e8f2" }} variant="contained" >
+        <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >
             Saralash
                     </Button>
     </Grid >)
@@ -100,45 +111,44 @@ export default function MaterialUIPickers() {
 
     return (
         <Container maxWidth="lg" style={{ marginTop: "150px", padding: "30px", maxWidth: "1050px", backgroundColor: "#fff" }}>
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <MaterialTable
+                title={Params()}
+                columns={[
+                    { title: 'No.', field: 'No' },
+                    { title: 'Name', field: 'name' },
+                    { title: 'Surname', field: 'surname' },
+                    { title: 'Phone Number', field: 'Phone Number' },
+                    { title: 'Group', field: 'Group' },
+                    { title: 'Teacher', field: 'Group' },
+                    { title: 'Kelgan', field: 'Kelgan' },
+                    {
+                        title: 'Ketgan',
+                        field: 'Ketgan',
 
-
-
-                <MaterialTable
-                    title={Params()}
-                    columns={[
-                        { title: 'No.', field: 'No' },
-                        { title: 'Name', field: 'name' },
-                        { title: 'Surname', field: 'surname' },
-                        { title: 'Phone Number', field: 'Phone Number' },
-                        { title: 'Group', field: 'Group' },
-                        { title: 'Teacher', field: 'Group' },
-                        { title: 'Kelgan', field: 'Kelgan' },
-                        {
-                            title: 'Ketgan',
-                            field: 'Ketgan',
-
-                        },
-                    ]}
-                    data={[
-                        { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-                        { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-                    ]}
-                    options={{
-                        exportButton: true,
-                        headerStyle: {
-                            backgroundColor: '#d0e8f2',
-                            color: '#000'
-                        }
-
-                    }}
-                />
+                    },
+                ]}
+                data={[
+                    { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+                    { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+                ]}
+                options={{
+                    exportButton: true,
+                    headerStyle: {
+                        backgroundColor: '#f1f1f1',
+                        color: '#000'
+                    }
+                }}
+            />
 
 
 
 
 
-            </MuiPickersUtilsProvider>
+
+
+
+
+
         </Container>
     );
 }
