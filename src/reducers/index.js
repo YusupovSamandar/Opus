@@ -5,6 +5,10 @@ export const AppState = {
     teachers: [],
     students: [],
     selectedTeacher: {},
+    groupStudents: [],
+    users: [],
+    currentUser: {},
+    isAuth: false,
     groupStudents: []
 }
 
@@ -30,6 +34,27 @@ const reducer = (state = AppState, action) => {
                 students: students,
                 selectedTeacher: chosenteacher,
                 groupStudents: filteredStudents
+            }
+        }
+        case "LOAD_USERS": {
+            const { users } = action;
+            return {
+                ...state,
+                users: users
+            }
+        }
+        case "SET_USER": {
+            return {
+                ...state,
+                currentUser: action.user,
+                isAuth: true
+            }
+        }
+        case "LOG_OUT": {
+            return {
+                ...state,
+                isAuth: false,
+                currentUser: {}
             }
         }
 

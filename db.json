@@ -1,4 +1,36 @@
 {
+    "users": [
+        {
+            "id": 1,
+            "name": "Abdushukur",
+            "password": "abc123",
+            "role": "super-admin"
+        },
+        {
+            "id": 2,
+            "name": "Samandar",
+            "password": "abc123",
+            "role": "teacher"
+        },
+        {
+            "id": 3,
+            "name": "Mohinur",
+            "password": "abc123",
+            "role": "teacher"
+        },
+        {
+            "id": 4,
+            "name": "Muqaddam",
+            "password": "abc123",
+            "role": "teacher"
+        },
+        {
+            "id": 5,
+            "name": "Maftuna",
+            "password": "abc123",
+            "role": "teacher"
+        }
+    ],
     "teachers": [
         {
             "id": 1,

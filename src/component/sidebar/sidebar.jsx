@@ -28,6 +28,8 @@ import { themeContext } from "./../Student-datail-context";
 
 // Custom css
 import "./sidebar.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { logOuts } from '../../actions';
 
 const drawerWidth = 240;
 
@@ -98,8 +100,13 @@ export default function MiniDrawer(props) {
     const [isDark, setIsDark] = useContext(themeContext);
     const classes = useStyles();
     const theme = useTheme();
+    const user = useSelector(state => state.currentUser.name);
     const [open, setOpen] = React.useState(false);
+    const dispatch = useDispatch();
 
+    function logOut() {
+        dispatch(logOuts());
+    }
     React.useEffect(() => {
         console.log("fooooo");
         document.querySelector("body").style.backgroundColor = isDark ? "#333" : "#FAFAFA";
@@ -157,15 +164,16 @@ export default function MiniDrawer(props) {
                         {isDark ? <Brightness7Icon style={{ color: "#707070" }} /> : <Brightness4Icon style={{ color: "#707070" }} />}
                     </Button>
                     <div className="devider"></div>
-                    <div>Account and user
+                    <div>Welcome to {user}
 
                     </div>
                     <div className="devider"></div>
                     <PowerSettingsNewIcon />
-                    <h3 className="log-out">
-                        LogOut
+                    <h3 onClick={logOut} className="log-out">
+                        <h3 className="log-out">
+                            LogOut
+                        </h3>
                     </h3>
-
 
 
                 </Toolbar>
