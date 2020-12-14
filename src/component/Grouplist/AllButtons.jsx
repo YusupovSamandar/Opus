@@ -20,7 +20,7 @@ export class MatTable extends Component {
   // printDocument() {
   //   const input = document.getElementById('pdfdiv');
   //   html2canvas(input)
-  //     .then((canvas) => {
+  //     .then((canvas) => {  
   //       var imgWidth = 200;
   //       var imgHeight = canvas.height * imgWidth / canvas.width;
   //       const imgData = canvas.toDataURL('image/png');
@@ -62,7 +62,6 @@ export class MatTable extends Component {
                 { title: 'Address', field: 'address' },
               ]}
               data={this.state.ProductData
-
                 //   [
                 //   { name: 'Samandar', surname: 'Yusupov', birthYear: 2004, phoneNumber: +998999999999, address: 'Bozorboshi 4' },
                 //   { name: 'Abdushukur', surname: 'Urinboyev', birthYear: 1990, phoneNumber: +998997777777, address: 'Bozorboshi 5' },

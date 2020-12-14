@@ -17,6 +17,7 @@ import Teachers from './component/Teachers-page/Teachers';
 import TeacherFees from "./container/Teacher-fees/teacher-fees";
 import GroupJournal from './component/GroupJournal/GroupJournal';
 import AddNewEmployee from './container/AddNewEmployee/AddNewEmployee';
+import Contracts from './container/reportsContracts/rContracts'
 import { StudentProvider } from "./component/Student-datail-context";
 import { TempStudentProvider } from "./component/Student-datail-context";
 
@@ -41,6 +42,7 @@ function App() {
             <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
             <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
             <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
+            <Route exact path="/contracts" component={() => <Sidebar component={<Contracts />} />} />
             <Route exact path="/teachers-fees" component={() => <Sidebar component={<TeacherFees />} />} />
             <Route exact path="/addnewemployee" component={() => <Sidebar component={<AddNewEmployee />} />} />
             <Sidebar />
