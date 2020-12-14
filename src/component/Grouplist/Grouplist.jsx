@@ -9,8 +9,12 @@ import "./Grouplist.css";
 import Container from '@material-ui/core/Container';
 import AllButtons from "./AllButtons";
 import axios from "axios";
+import { useSelector, useDispatch } from 'react-redux';
+
+import { loadData, selectedTeacher } from '../../actions';
 
 function TabPanel(props) {
+  // const loadData = useSelector(state => state.)
   const { children, value, index, ...other } = props;
   return (
     <div
@@ -60,25 +64,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function VerticalTabs() {
-  const [teacher, setTeacher] = useState([]);
-  const [group,setGroup] = useState([]);
+const VerticalTabs = () => {
+  // const [teacher, setTeacher] = useState([]);
+  // const [group, setGroup] = useState([]);
 
   useEffect(() => {
     fetchItems();
   }, []);
 
   const fetchItems = async () => {
-    const { data } = await axios.get("http://localhost:3000/Student-details");
-    setTeacher(data);
-    setGroup(data);
+    const { data: teachers } = await axios.get("http://localhost:4000/teachers");
+    const { data: students } = await axios.get("http://localhost:4000/students");
+    dispatch(loadData(teachers, students));
   }
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const dispatch = useDispatch();
+  const teachers = useSelector(state => state.teachers);
+  const students = useSelector(state => state.students);
+  const groupStudents = useSelector(state => state.groupStudents);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  function handleClick(obj) {
+    dispatch(selectedTeacher(obj))
+  }
 
   return (
     <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
@@ -93,23 +106,31 @@ export default function VerticalTabs() {
           className={classes.tabs}
           style={{ padding: '14px' }}
         >{
-            teacher.map((obj, index) => (
+            teachers.map((obj, index) => (
               <Tab style={{
                 boxShadow: '0 2px 10px',
                 margin: '10px 0'
-              }} label={obj.group} {...a11yProps({ index })} />
+              }} onClick={() => { handleClick(obj) }} label={obj.title + ' - ' + obj.group} {...a11yProps({ index })} />
             ))
           }
         </Tabs>
-{group.map((obj,index)=>(
-   
-  <TabPanel value={value} index={index} style={{ width: '1040px' }}>
-          <AllButtons />
+
+        <TabPanel style={{ width: '700px' }}>
+          <AllButtons students={groupStudents} />
         </TabPanel>
-      
-))}
 
       </div>
     </Container>
   );
 }
+
+// const mapStateToProps = state => {
+//   return {
+//     teachers: state.teachers,
+//     students: state.students
+//   }
+// }
+
+
+
+export default VerticalTabs
