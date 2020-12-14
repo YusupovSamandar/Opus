@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const StudentContext = createContext();
 export const TempStudentContext = createContext();
+export const themeContext = createContext();
 
 export const StudentProvider = (props) => {
     const [students, setStudents] = useState([]);
@@ -20,6 +21,16 @@ export const StudentProvider = (props) => {
         <StudentContext.Provider value={[students, setStudents]}>
             {props.children}
         </StudentContext.Provider>
+    )
+}
+
+export const ThemeProvider = (props) => {
+    const [isDark, setIsDark] = useState(false);
+
+    return (
+        <themeContext.Provider value={[isDark, setIsDark]}>
+            {props.children}
+        </themeContext.Provider>
     )
 }
 
