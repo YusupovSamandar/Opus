@@ -1,13 +1,12 @@
 #hover-paper {
     cursor: pointer;
-    width: 380px;
     transition: 0.5s;
 
 }
 
 #hover-paper:hover{
     margin-top: -10px;
-    
+
     background-color: #8BC6EC;
 background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    
