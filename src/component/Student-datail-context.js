@@ -12,7 +12,7 @@ export const StudentProvider = (props) => {
     }, []);
 
     const fetchItems = async () => {
-        const { data } = await axios.get("http://localhost:3000/students");
+        const { data } = await axios.get("http://localhost:3000/Student-details");
         setStudents(data);
     }
 
@@ -24,7 +24,7 @@ export const StudentProvider = (props) => {
 }
 
 export const TempStudentProvider = (props) => {
-    const [tempStudents, setTempStudents] = useState({ name: "Abdushukur", surname: "Urinboev", phone: "+998906335599" });
+    const [tempStudents, setTempStudents] = useState({ firstName: "Abdushukur", lastName: "Urinboev", phoneNumber: "+998906335599" });
 
     return (
         <TempStudentContext.Provider value={[tempStudents, setTempStudents]}>
