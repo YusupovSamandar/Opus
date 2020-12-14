@@ -1,7 +1,7 @@
 // Icons
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -9,7 +9,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -22,6 +21,10 @@ import Language from './lang/Lang';
 import Input from '@material-ui/core/Input';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
+import Brightness7Icon from '@material-ui/icons/Brightness7';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Button from '@material-ui/core/Button';
+import { themeContext } from "./../Student-datail-context";
 
 // Custom css
 import "./sidebar.css";
@@ -92,9 +95,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MiniDrawer(props) {
+    const [isDark, setIsDark] = useContext(themeContext);
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+
+    React.useEffect(() => {
+        console.log("fooooo");
+        document.querySelector("body").style.backgroundColor = isDark ? "#333" : "#FAFAFA";
+    }, [isDark]);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -144,6 +153,9 @@ export default function MiniDrawer(props) {
                         </div>
                     </div>
                     <Language />
+                    <Button onClick={() => { setIsDark(!isDark) }} style={{ borderRadius: "100%", padding: "6px 14px", minWidth: "unset", height: "50px" }} >
+                        {isDark ? <Brightness7Icon style={{ color: "#707070" }} /> : <Brightness4Icon style={{ color: "#707070" }} />}
+                    </Button>
                     <div className="devider"></div>
                     <div>Account and user
 
