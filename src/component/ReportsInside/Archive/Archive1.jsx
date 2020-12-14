@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     textField: {
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
-        width: 120,
+        width: 140,
     },
 }));
 
@@ -110,7 +110,7 @@ export default function MaterialUIPickers() {
 
 
     return (
-        <Container maxWidth="lg" style={{ marginTop: "150px", padding: "30px", maxWidth: "1050px", backgroundColor: "#fff" }}>
+        <Container maxWidth="lg" style={{ marginTop: "150px", padding: "30px", maxWidth: "1080px", backgroundColor: "#fff" }}>
             <MaterialTable
                 title={Params()}
                 columns={[
