@@ -12,6 +12,8 @@ import AddToGroup from './component/addToGroup/category';
 import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
+import Adverts from './container/reportsContracts/Advert';
+
 import AdminPanel from './component/AdminPanel/AdminContainer';
 import Teachers from './component/Teachers-page/Teachers';
 import TeacherFees from "./container/Teacher-fees/teacher-fees";
@@ -22,6 +24,7 @@ import { StudentProvider } from "./component/Student-datail-context";
 import { TempStudentProvider } from "./component/Student-datail-context";
 import Archive from "./component/ReportsInside/Archive/Archive1";
 import ReportsPayment from './component/Reportes-payments/Reports-table';
+
 
 function App() {
   return (
@@ -42,6 +45,7 @@ function App() {
             <Route exact path="/reports/reportpayment" component={() => <Sidebar component={<ReportsPayment />} />} />
             <Route exact path="/reports/Archive" component={() => <Sidebar component={<Archive />} />} />
             <Route exact path="/teachersreg" component={() => <Sidebar component={<TeachersReg />} />} />
+            <Route exact path="/adverts" component={() => <Sidebar component={<Adverts />} />} />
             <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
             <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
             <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
