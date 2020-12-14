@@ -47,7 +47,7 @@ function CardGroup2() {
     }, []);
 
     const getData = async () => {
-        const { data } = await axios.get('http://localhost:3000/Student-details');
+        const { data } = await axios.get('http://localhost:4000/Student-details');
         setCards(data);
     }
 
