@@ -60,7 +60,7 @@ function App() {
               <Private exact path="/reports/Archive"><Sidebar component={<Archive />} /></Private>
               <Private exact path="/add"><Sidebar component={<AddToGroup />} /></Private>
               <Private exact path="/reports"><Sidebar component={<ReportsContainer />} /></Private>
-              <Private exact path="/reports/reportsinside"><Sidebar component={<ReportsInside />} /></Private>
+              {/* <Private exact path="/reports/reportsinside"><Sidebar component={<ReportsInside />} /></Private> */}
               <Private exact path="/reports/reportpayment"><Sidebar component={<ReportsPayment />} /></Private>
               <Private exact path="/teachersreg"><Sidebar component={<TeachersReg />} /></Private>
               <Private exact path="/rekvizits"><Sidebar component={<Rekvizits />} /></Private>

@@ -59,7 +59,8 @@ class MatTable extends Component {
                 { title: 'Surname', field: 'surname' },
                 { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
                 {
-                  title: 'Birth Place',
+                  title: 'Birth Place'
+                },
                 { title: 'Phone number', field: 'PhoneNumber', type: 'numeric' },
                 {
                   title: 'Extra phone number',
