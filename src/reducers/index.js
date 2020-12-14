@@ -8,7 +8,8 @@ export const AppState = {
     groupStudents: [],
     users: [],
     currentUser: {},
-    isAuth: false
+    isAuth: false,
+    groupStudents: []
 }
 
 
@@ -56,7 +57,6 @@ const reducer = (state = AppState, action) => {
                 currentUser: {}
             }
         }
-
 
         default:
             return state;

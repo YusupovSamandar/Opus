@@ -5,15 +5,15 @@ import MaterialTable from 'material-table';
 import { TempStudentContext } from "./../Student-datail-context";
 
 function BasicSearch(props) {
-    const [tempStudent, SetTempStudent] = useContext(TempStudentContext);
+    const SetTempStudent = useContext(TempStudentContext)[1];
 
     return (
         <div className="hovered-styled-row">
             <MaterialTable className='styled'
                 title="Students"
                 columns={[
-                    { title: 'Name', field: 'name' },
-                    { title: 'Surname', field: 'surname' }
+                    { title: 'Name', field: 'firstName' },
+                    { title: 'Surname', field: 'lastName' }
                 ]}
                 data={props.data}
                 options={{
