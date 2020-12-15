@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 // Components
 import Search from "./../../component/Search/search";
 import Table from "./../../component/student-table/student-table";
+import Table2 from "./../../component/student-table/student-table2";
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
@@ -70,7 +71,7 @@ export default function FullWidthGrid() {
                         <br />
                         <Paper style={{ padding: "20px 10px" }}>
                             <Grid item xs={5} sm={12}>
-                                <Table />
+                                <Table2 details={Object.values(tempStudent).slice(0, 12)} titles={Object.keys(tempStudent).slice(0, 12)} />
                             </Grid>
                             <br />
                             <br />
