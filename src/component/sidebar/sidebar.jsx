@@ -1,8 +1,9 @@
+import React, { useState, useContext, } from 'react';
 // Icons
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
-import React, { useContext } from 'react';
 import clsx from 'clsx';
+
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,9 +18,9 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Language from './lang/Lang';
 import Input from '@material-ui/core/Input';
 import SearchIcon from '@material-ui/icons/Search';
+import Search from './search'
 import { Link } from 'react-router-dom';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
@@ -32,7 +33,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logOuts } from '../../actions';
 
 const drawerWidth = 240;
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -119,16 +119,22 @@ export default function MiniDrawer(props) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-
+    // const [stats, setSearch] = useState('');
+    // const filteredComponents = card.filter(discription => (
+    //     props.component.toLowerCase().includes(setSearch.toLowerCase())
+    // ))
     return (
+
         <div className={classes.root}>
             <CssBaseline />
+
             <AppBar
                 position="fixed"
                 className={clsx(classes.appBar, {
                     [classes.appBarShift]: open,
                 })}
             >
+
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -153,31 +159,35 @@ export default function MiniDrawer(props) {
                         </div>
                         </Link>
                         <div>
-                            <div>
-                                <Input />
-                                <SearchIcon className="my-search" />
+                            <div className='search'>
+
+                                <Search
+                                    placeholder='type to search'
+                                    handleChange={(event) => {
+                                    }}
+                                />
+
                             </div>
                         </div>
                     </div>
-                    <Language />
                     <Button onClick={() => { setIsDark(!isDark) }} style={{ borderRadius: "100%", padding: "6px 14px", minWidth: "unset", height: "50px" }} >
                         {isDark ? <Brightness7Icon style={{ color: "#707070" }} /> : <Brightness4Icon style={{ color: "#707070" }} />}
                     </Button>
                     <div className="devider"></div>
-                    <div>Welcome to {user}
+                    <div>Welcome {user}
 
                     </div>
-                    <div className="devider"></div>
-                    <PowerSettingsNewIcon />
+                    <div id='sdev2' className="devider"></div>
+
                     <h3 onClick={logOut} className="log-out">
                         <h3 className="log-out">
-                            LogOut
+                            <PowerSettingsNewIcon />
+                            Logout
                         </h3>
                     </h3>
-
-
                 </Toolbar>
             </AppBar>
+
             <Drawer id='sidebar'
                 variant="permanent"
                 className={clsx(classes.drawer, {
