@@ -8,8 +8,7 @@ export const AppState = {
     groupStudents: [],
     users: [],
     currentUser: {},
-    isAuth: false,
-    groupStudents: []
+    isAuth: false
 }
 
 

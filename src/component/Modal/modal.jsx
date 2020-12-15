@@ -245,7 +245,7 @@ export default function TransitionsModal() {
                                     </div>
                                     <Checkbox style={{ color: "#009D77" }} inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} /> <span>Check Chiqarish</span>
                                     <br />
-                                    <Button style={{ margin: "10px", backgroundColor: '#009D77', color: "white" }} onClick={handleOpen} variant="contained" >
+                                    <Button style={{ margin: "10px", backgroundColor: '#009D77', color: "white" }} onClick={handleClose} variant="contained" >
                                         To'lov Qilish
                                     </Button>
                                 </form>
