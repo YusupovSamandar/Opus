@@ -15,7 +15,9 @@ export default function Table() {
                 ]}
                 options={{
                     sorting: true,
-                    search: false
+                    search: false,
+                    exportButton: true
+
                 }}
             />
         </div>

@@ -22,10 +22,12 @@ export default function Card(props) {
     return (
         <Grid item lg={4} xl={4} md={6} sm={12}>
             <Link to={props.link}>
-                <Paper id="hover-paper" style={{ borderBottom: "1px solid blue", padding: "40px 0" }} className={classes.paper}>
-                    <img style={{ width: "80px", }} className="card-img" src={props.img} alt="" />
-                    <p style={{ fontWeight: "", color: 'black', paddingTop: "10px", fontSize: '20px', }}>{props.description}</p>
-                </Paper>
+                <div id="hover-paper" >
+                    <Paper id='hovered' style={{ borderBottom: "1px solid blue", padding: "40px 0" }} className={classes.paper}>
+                        <img style={{ width: "80px", }} className="card-img" src={props.img} alt="" />
+                        <p style={{ fontWeight: "", color: 'black', paddingTop: "10px", fontSize: '20px', }}>{props.description}</p>
+                    </Paper>
+                </div>
             </Link>
         </Grid >
     );

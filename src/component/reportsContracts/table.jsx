@@ -1,10 +1,14 @@
 import MaterialTable from 'material-table';
 import React from 'react'
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import Button from "@material-ui/core/Button";
 
 export default function Table() {
     return (
         <div className='table'>
+
             <MaterialTable
+                id = 'reportsTable'
                 title="Basic Search Preview"
                 columns={[
                     { title: '#', field: 'id' },
@@ -30,7 +34,9 @@ export default function Table() {
                 ]}
                 options={{
                     sorting: true,
-                    search: false
+                    search: false,
+                    exportButton: true
+
                 }}
             />
         </div>

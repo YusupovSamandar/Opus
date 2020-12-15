@@ -4,9 +4,15 @@ import Container from '@material-ui/core/Container';
 import "./contracts.css"
 import Chart from "../../component/chart/chart";
 import Table from "../../component/reportsContracts/table2";
+import Links from "../../component/links/Link";
 
 function Adverts() {
     return (
+       <div style={{width:'100%'}}>
+     <Links link1 = '/' link2 = '/reports'
+      text1 = 'Home' text2 = 'Reports ' text3 = 'Reklama '
+        />
+
         <Container maxWidth="lg" style={{ padding: "50px", marginTop: "100px", backgroundColor: "white", maxWidth: "" }}>
             <div className='contracts'>
                 <Grid container spacing={12}>
@@ -32,7 +38,7 @@ function Adverts() {
             </div>
 
         </Container >
-
+       </div>
     )
 }
 

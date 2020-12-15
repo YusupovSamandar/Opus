@@ -9,7 +9,6 @@ export const AppState = {
     users: [],
     currentUser: {},
     isAuth: false,
-    groupStudents: []
 }
 
 
