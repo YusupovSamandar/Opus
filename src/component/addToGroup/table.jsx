@@ -87,16 +87,9 @@ function CustomizedTable(props) {
                         </TableRow>
                     </TableBody>
                 </Table>
-                <Button style={{ marginTop: "20px", float: "right" }}
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    float="right"
-                    className={classes.button}
-                    startIcon={<SaveIcon />}
-                >
+                <Button style={{ marginTop: "20px", float: "right", backgroundColor: '#009D77', color: "white" }} variant="contained" color="primary">
                     Save
-      </Button>
+            </Button>
             </Paper>
         </Grid>
     );

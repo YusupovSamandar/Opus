@@ -1,5 +1,11 @@
+#header{
+  height: 200px!important;
+}
 a {
   text-decoration: none !important;
+}
+#{
+  width : 1000px;
 }
 .header-logo {
   font-size: 2.5rem;
@@ -79,4 +85,15 @@ display:none
   width: 35px !important;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media only screen and (max-width: 800px){
+.search{
+  display: none;
+}
+.log-out{
+display:none;
+}
+#dev2{
+  display: none
+}
 }
