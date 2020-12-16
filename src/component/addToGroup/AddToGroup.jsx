@@ -7,8 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import green from '@material-ui/core/colors/green';
-import Add from "./add";
-import Section from "./section";
+import Add from "./AllStudent";
+import Section from "./combineTable";
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
