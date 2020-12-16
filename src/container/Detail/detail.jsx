@@ -71,7 +71,7 @@ export default function FullWidthGrid() {
                         <br />
                         <Paper style={{ padding: "20px 10px" }}>
                             <Grid item xs={5} sm={12}>
-                                <Table2 details={Object.values(tempStudent).slice(0, 12)} titles={Object.keys(tempStudent).slice(0, 12)} />
+                                <Table2 details={Object.values(tempStudent.fees)} titles={Object.keys(tempStudent.fees)} />
                             </Grid>
                             <br />
                             <br />

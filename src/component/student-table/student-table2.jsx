@@ -59,7 +59,6 @@ export default function CustomizedTables({ details, titles }) {
                 <StyledTableCell align="center" key={indx}>{detail}</StyledTableCell>
               ))
             }
-            {console.log(details)}
           </StyledTableRow>
         </TableBody>
       </Table>

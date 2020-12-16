@@ -108,7 +108,6 @@ export default function MiniDrawer(props) {
         dispatch(logOuts());
     }
     React.useEffect(() => {
-        console.log("fooooo");
         document.querySelector("body").style.backgroundColor = isDark ? "#333" : "#FAFAFA";
     }, [isDark]);
 

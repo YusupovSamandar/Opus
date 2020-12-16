@@ -129,7 +129,17 @@
             "course": "1-bosqich",
             "group": "Malika",
             "advertise": "Social Media",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "2",
@@ -144,7 +154,17 @@
             "course": "2-bosqich",
             "group": "Shohida",
             "advertise": "Radio",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "3",
@@ -159,7 +179,17 @@
             "course": "2-bosqich",
             "group": "Malika",
             "advertise": "Newspaper",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "4",
@@ -174,7 +204,17 @@
             "course": "Dtm",
             "group": "Azizbek",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "5",
@@ -189,7 +229,17 @@
             "course": "1-bosqich",
             "group": "Shohida",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "6",
@@ -204,7 +254,17 @@
             "course": "Kids",
             "group": "Shohnigor",
             "advertise": "Teachers",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "7",
@@ -219,7 +279,17 @@
             "course": "1-bosqich",
             "group": "Shohida",
             "advertise": "Teachers",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "8",
@@ -234,7 +304,17 @@
             "course": "2-bosqich",
             "group": "Shohida",
             "advertise": "Teachers",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "9",
@@ -249,7 +329,17 @@
             "course": "1-bosqich",
             "group": "Malika",
             "advertise": "Social media",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "10",
@@ -264,7 +354,17 @@
             "course": "Kids",
             "group": "Lochinbek",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "11",
@@ -279,7 +379,17 @@
             "course": "Kids",
             "group": "Lochinbek",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "12",
@@ -294,7 +404,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "13",
@@ -309,7 +429,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "14",
@@ -324,7 +454,17 @@
             "course": "1-bosqich",
             "group": "Azizbek",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "15",
@@ -339,7 +479,17 @@
             "course": "3-bosqich",
             "group": "Malika",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "16",
@@ -354,7 +504,17 @@
             "course": "1-bosqich",
             "group": "Nuriddin",
             "advertise": "Newspaper",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "17",
@@ -369,7 +529,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "18",
@@ -384,7 +554,17 @@
             "course": "Dtm",
             "group": "Nuriddin",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "19",
@@ -399,7 +579,17 @@
             "course": "Dtm",
             "group": "Nuriddin",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "20",
@@ -414,7 +604,17 @@
             "course": "Dtm",
             "group": "Nuriddin",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "21",
@@ -429,7 +629,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "22",
@@ -444,7 +654,17 @@
             "course": "2-bosqich",
             "group": "Nuriddin",
             "advertise": "Newspaper",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "23",
@@ -459,7 +679,17 @@
             "course": "1-bosqich",
             "group": "Malika",
             "advertise": "Social Media",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "24",
@@ -474,7 +704,17 @@
             "course": "2-bosqich",
             "group": "Nuriddin",
             "advertise": "Radio",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "25",
@@ -489,7 +729,17 @@
             "course": "2-bosqich",
             "group": "Malika",
             "advertise": "Newspaper",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "26",
@@ -504,7 +754,17 @@
             "course": "Dtm",
             "group": "Azizbek",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "27",
@@ -519,7 +779,17 @@
             "course": "1-bosqich",
             "group": "Shohida",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "28",
@@ -534,7 +804,17 @@
             "course": "Kids",
             "group": "Shohnigor",
             "advertise": "Teachers",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "29",
@@ -549,7 +829,17 @@
             "course": "1-bosqich",
             "group": "Malika",
             "advertise": "Teachers",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "30",
@@ -564,7 +854,17 @@
             "course": "2-bosqich",
             "group": "Xurshida",
             "advertise": "Teachers",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "31",
@@ -579,7 +879,17 @@
             "course": "1-bosqich",
             "group": "Malika",
             "advertise": "Social media",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "32",
@@ -594,7 +904,17 @@
             "course": "Kids",
             "group": "Lochinbek",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "33",
@@ -609,7 +929,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "34",
@@ -624,7 +954,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "35",
@@ -639,7 +979,17 @@
             "course": "1-bosqich",
             "group": "Shohida",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "36",
@@ -654,7 +1004,17 @@
             "course": "2-bosqich",
             "group": "Azizbek",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "37",
@@ -669,7 +1029,17 @@
             "course": "1-bosqich",
             "group": "Lochinbek",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "38",
@@ -684,7 +1054,17 @@
             "course": "1-bosqich",
             "group": "Nuriddin",
             "advertise": "Newspaper",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "39",
@@ -699,7 +1079,17 @@
             "course": "Dtm",
             "group": "Malika",
             "advertise": "Tv",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         },
         {
             "id": "40",
@@ -714,7 +1104,17 @@
             "course": "Dtm",
             "group": "Nuriddin",
             "advertise": "Friends",
-            "comment": "Something must be written"
+            "comment": "Something must be written",
+            "fees": {
+                "yil": "",
+                "oy": "",
+                "oylikTolov": 160000,
+                "qatnashdi": "",
+                "tolanganSumma": "",
+                "qoldiq": "",
+                "info": "",
+                "date": ""
+            }
         }
     ]
 }

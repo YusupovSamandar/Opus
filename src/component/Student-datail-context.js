@@ -35,7 +35,31 @@ export const ThemeProvider = (props) => {
 }
 
 export const TempStudentProvider = (props) => {
-    const [tempStudents, setTempStudents] = useState({ firstName: "Abdushukur", lastName: "Urinboev", phoneNumber: "+998906335599" });
+    const [tempStudents, setTempStudents] = useState({
+        "id": "1",
+        "firstName": "Samandar",
+        "lastName": "Yusupov",
+        "fatherName": "Yunusali",
+        "dateOfBirth": "31.10.2005",
+        "phoneNumber": "+998999974771",
+        "extraPhoneNumber": "+998901245457",
+        "gender": "Male",
+        "schoolarship": "false",
+        "course": "1-bosqich",
+        "group": "Malika",
+        "advertise": "Social Media",
+        "comment": "Something must be written",
+        "fees": {
+            "yil": "",
+            "oy": "",
+            "oylikTolov": 160000,
+            "qatnashdi": "",
+            "tolanganSumma": "",
+            "qoldiq": "",
+            "info": "",
+            "date": ""
+        }
+    });
 
     return (
         <TempStudentContext.Provider value={[tempStudents, setTempStudents]}>

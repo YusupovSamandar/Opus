@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -18,6 +18,7 @@ import Input from '@material-ui/core/Input';
 import DateFnsUtils from '@date-io/date-fns';
 import Checkbox from '@material-ui/core/Checkbox';
 import ClearIcon from '@material-ui/icons/Clear';
+import { TempStudentContext } from "./../Student-datail-context";
 
 import {
     MuiPickersUtilsProvider,
@@ -100,6 +101,7 @@ const rows = [
 ];
 
 export default function TransitionsModal() {
+    const [temp, setTemp] = useContext(TempStudentContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
@@ -107,17 +109,48 @@ export default function TransitionsModal() {
     const [yearval, setYearval] = React.useState('October');
     const [isNaxt, setIsNaxt] = React.useState('Naxt pul orqali');
     const [payment, setPayment] = React.useState(160000);
+    const [all, setAll] = React.useState(temp);
     const handleChange = (event) => {
         setCurrency(event.target.value);
+        setAll((prev) => {
+            let prevFee = prev.fees;
+            return {
+                ...prev,
+                fees: {
+                    ...prevFee,
+                    yil: event.target.value
+                }
+            }
+        });
     };
     const handleChange3 = (event) => {
         setIsNaxt(event.target.value);
     };
     const handleChange2 = (event) => {
         setYearval(event.target.value);
+        setAll((prev) => {
+            let prevFee = prev.fees;
+            return {
+                ...prev,
+                fees: {
+                    ...prevFee,
+                    oy: event.target.value
+                }
+            }
+        });
     };
     const handleDateChange = (date) => {
         setSelectedDate(date);
+        setAll((prev) => {
+            let prevFee = prev.fees;
+            return {
+                ...prev,
+                fees: {
+                    ...prevFee,
+                    date: date.toDateString()
+                }
+            }
+        });
     };
     const handleOpen = () => {
         setOpen(true);
@@ -128,8 +161,24 @@ export default function TransitionsModal() {
     };
 
     const handlePayment = (event) => {
-        let paymentForDays = (160000 / 12) * event.target.value;
+        let paymentForDays = Math.floor((160000 / 12) * event.target.value);
         setPayment(paymentForDays);
+        setAll((prev) => {
+            let prevFee = prev.fees;
+            return {
+                ...prev,
+                fees: {
+                    ...prevFee,
+                    tolanganSumma: paymentForDays,
+                    qatnashdi: event.target.value,
+                    qoldiq: 12 - event.target.value
+                }
+            }
+        });
+    }
+    const pay = () => {
+        setOpen(false);
+        setTemp(all);
     }
 
     return (
@@ -184,7 +233,6 @@ export default function TransitionsModal() {
                                         label="To'lov Qilingan yil"
                                         value={currency}
                                         onChange={handleChange}
-                                        helperText="Iltimos yilni tanlang"
                                     >
                                         {year.map((option) => (
                                             <MenuItem key={option.value} value={option.value}>
@@ -198,7 +246,6 @@ export default function TransitionsModal() {
                                         label="To'lov Qilingan yil"
                                         value={yearval}
                                         onChange={handleChange2}
-                                        helperText="Iltimos yilni tanlang"
                                     >
                                         {month.map((option) => (
                                             <MenuItem key={option.value} value={option.value}>
@@ -212,7 +259,6 @@ export default function TransitionsModal() {
                                         label="To'lov Qilingan yil"
                                         value={isNaxt}
                                         onChange={handleChange3}
-                                        helperText="Iltimos yilni tanlang"
                                     >
                                         {paymentType.map((option, index) => (
                                             <MenuItem key={index} value={option}>
@@ -220,7 +266,7 @@ export default function TransitionsModal() {
                                             </MenuItem>
                                         ))}
                                     </TextField>
-                                    <TextField required id="standard-required" label="To'langan Summa" value={isNaN(payment) ? "iltimos raqam kiriting" : Math.floor(payment)} />
+                                    <TextField required id="standard-required" label="To'langan Summa" value={isNaN(payment) ? "iltimos raqam kiriting" : payment} />
                                     <span style={{ marginRight: "80px" }}>Qatnashgan Darslar:</span>
                                     <Input placeholder="12" style={{ textAlign: "right", direction: "rtl" }} onChange={handlePayment} inputProps={{ 'aria-label': 'description' }} />
                                     <br /><br />
@@ -245,7 +291,7 @@ export default function TransitionsModal() {
                                     </div>
                                     <Checkbox style={{ color: "#009D77" }} inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} /> <span>Check Chiqarish</span>
                                     <br />
-                                    <Button style={{ margin: "10px", backgroundColor: '#009D77', color: "white" }} onClick={handleClose} variant="contained" >
+                                    <Button style={{ margin: "10px", backgroundColor: '#009D77', color: "white" }} onClick={pay} variant="contained" >
                                         To'lov Qilish
                                     </Button>
                                 </form>
