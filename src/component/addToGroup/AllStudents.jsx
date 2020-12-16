@@ -1,7 +1,7 @@
 import React from "react";
 import MaterialTable from "material-table";
 import axios from 'axios';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 
 import { addData } from '../../actions';
@@ -21,7 +21,7 @@ function HandlingSelectionChanges() {
 
 
     return (
-        <MaterialTable style={{ width: "65%", display: "inline-block" }}
+        <MaterialTable style={{ marginBottom: "70px", width: "65%", display: "inline-block" }}
             title="Add to group"
             columns={[
                 { title: 'First Name', field: 'name' },
