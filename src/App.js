@@ -7,7 +7,7 @@ import Registeration from "./container/Registration/Register";
 import CardGroup2 from './component/CardsGroup/CardGroup2';
 import Grouplist from './component/Grouplist/Grouplist';
 import TeachersContainer from './component/TeachersPanel/TeachersPanel';
-import AddToGroup from './component/addToGroup/category';
+import AddToGroup from './component/addToGroup/AddToGroup';
 import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
