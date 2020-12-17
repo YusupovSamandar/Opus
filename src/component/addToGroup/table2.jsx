@@ -11,7 +11,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import SaveIcon from '@material-ui/icons/Save';
 import Date from "./date";
 import './table.css';
 import Container from '@material-ui/core/Container';
@@ -76,16 +75,9 @@ function CustomizedTable(props) {
                             </TableRow>
                         </TableBody>
                         <div float="left">
-                            <Button style={{ marginTop: "20px", float: "right" }}
-                                variant="contained"
-                                color="primary"
-                                size="small"
-                                float="right"
-                                className={classes.button}
-                                startIcon={<SaveIcon />}
-                            >
+                            <Button style={{ marginTop: "20px", float: "right", backgroundColor: '#009D77', color: "white" }} variant="contained" color="primary">
                                 Save
-      </Button>
+            </Button>
                         </div>
                     </Table>
                 </Paper>

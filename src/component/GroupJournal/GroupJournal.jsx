@@ -72,7 +72,7 @@ export default function VerticalTabs() {
   }, []);
 
   const fetchItems = async () => {
-    const { data } = await axios.get("http://localhost:3000/Student-details");
+    const { data } = await axios.get("http://localhost:4000/Student-details");
     setTeacher(data);
     setGroup(data)
   }

@@ -7,7 +7,7 @@ import Registeration from "./container/Registration/Register";
 import CardGroup2 from './component/CardsGroup/CardGroup2';
 import Grouplist from './component/Grouplist/Grouplist';
 import TeachersContainer from './component/TeachersPanel/TeachersPanel';
-import AddToGroup from './component/addToGroup/category';
+import AddToGroup from './component/addToGroup/AddToGroup';
 import ReportsContainer from './component/ReportsPage/ReportsContainer';
 import TeachersReg from './container/teachers-reges/teacher-reges';
 import Rekvizits from './container/Rekvizits/Rekvizit';
@@ -30,6 +30,7 @@ import { ThemeProvider } from "./component/Student-datail-context";
 import Archive from "./component/ReportsInside/Archive/Archive1";
 import PageNotFound from "./component/notFound/404";
 import ReportsPayment from './component/Reportes-payments/Reports-table';
+import Qarzdorlik from './component/ReportsInside/Qarzdorlik';
 
 function App() {
   useEffect(() => {
@@ -53,14 +54,14 @@ function App() {
                 <TempStudentProvider><Sidebar component={<Search />} /></TempStudentProvider>
               </Private>
               <Private exact path="/register"><Sidebar component={<Registeration />} /></Private>
-              <Private exact path="/cardsgroup"><Sidebar component={<CardGroup2 />} /></Private>
-              <Private exact path="/cardsgroup/grouplist"><Sidebar component={<Grouplist />} /></Private>
+              {/* <Private exact path="/cardsgroup"><Sidebar component={<CardGroup2 />} /></Private> */}
+              <Private exact path="/grouplist"><Sidebar component={<Grouplist />} /></Private>
               <Private exact path="/Teacherscontainer"><Sidebar component={<TeachersContainer />} /></Private>
               <Private exact path="/Teacherscontainer/groupjournal"><Sidebar component={<GroupJournal />} /></Private>
               <Private exact path="/reports/Archive"><Sidebar component={<Archive />} /></Private>
               <Private exact path="/add"><Sidebar component={<AddToGroup />} /></Private>
               <Private exact path="/reports"><Sidebar component={<ReportsContainer />} /></Private>
-              {/* <Private exact path="/reports/reportsinside"><Sidebar component={<ReportsInside />} /></Private> */}
+              <Private exact path="/reports/qarzdorlik"><Sidebar component={<Qarzdorlik />} /></Private>
               <Private exact path="/reports/reportpayment"><Sidebar component={<ReportsPayment />} /></Private>
               <Private exact path="/teachersreg"><Sidebar component={<TeachersReg />} /></Private>
               <Private exact path="/rekvizits"><Sidebar component={<Rekvizits />} /></Private>
