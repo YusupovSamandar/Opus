@@ -119,7 +119,7 @@ export default function MiniDrawer(props) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-    // const [stats, setSearch] = useState('');
+    // const [search, setSearch] = useState('');
     // const filteredComponents = card.filter(discription => (
     //     props.component.toLowerCase().includes(setSearch.toLowerCase())
     // ))
@@ -162,9 +162,7 @@ export default function MiniDrawer(props) {
                             <div className='search'>
 
                                 <Search
-                                    placeholder='type to search'
-                                    handleChange={(event) => {
-                                    }}
+
                                 />
 
                             </div>
