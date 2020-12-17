@@ -1,21 +1,23 @@
 #hover-paper {
-cursor: default;
-    padding: 30px;
+    height: 200px;
+    cursor: default;
+    width: 400px;
     z-index: 5;
 
 }
 
-#hover-paper:hover #hovered{
+#hover-paper:hover #hovered {
     margin-top: -10px;
     background-color: #8BC6EC;
- background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    
-}
-#hover-paper:hover p {
-    color: white!important
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-#hovered{
+#hover-paper:hover p {
+    color: white !important
+}
+
+#hovered {
     transition: 0.5s;
 
 }

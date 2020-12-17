@@ -1,0 +1,29 @@
+.inputs {
+    border: 2px solid gray;
+    width: 230px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.element {
+    height: 200px;
+    font-size: 18px;
+    color: black;
+}
+
+.list {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 5px;
+    transition: 1s;
+    display: block;
+    width: 100%;
+}
+
+.list:hover {
+    color: white;
+    background-color: cadetblue;
+}
