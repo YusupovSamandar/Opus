@@ -117,7 +117,7 @@ const VerticalTabs = () => {
         </TabPanel>
 
       </div>
-      </Container>
+    </Container>
   );
 }
 
