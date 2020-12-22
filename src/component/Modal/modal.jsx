@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -108,49 +108,37 @@ export default function TransitionsModal() {
     const [currency, setCurrency] = React.useState('2004');
     const [yearval, setYearval] = React.useState('October');
     const [isNaxt, setIsNaxt] = React.useState('Naxt pul orqali');
+    const [qatnashdi, setQatnashdi] = React.useState(12)
     const [payment, setPayment] = React.useState(160000);
     const [all, setAll] = React.useState(temp);
-    const handleChange = (event) => {
-        setCurrency(event.target.value);
+    useEffect(() => {
         setAll((prev) => {
             let prevFee = prev.fees;
             return {
                 ...prev,
                 fees: {
                     ...prevFee,
-                    yil: event.target.value
+                    yil: currency,
+                    oy: yearval,
+                    date: selectedDate.toDateString(),
+                    tolanganSumma: payment,
+                    qatnashdi: qatnashdi,
+                    qoldiq: 12 - qatnashdi
                 }
             }
         });
+    }, [currency, payment, qatnashdi, selectedDate, yearval]);
+    const handleChange = (event) => {
+        setCurrency(event.target.value);
     };
     const handleChange3 = (event) => {
         setIsNaxt(event.target.value);
     };
     const handleChange2 = (event) => {
         setYearval(event.target.value);
-        setAll((prev) => {
-            let prevFee = prev.fees;
-            return {
-                ...prev,
-                fees: {
-                    ...prevFee,
-                    oy: event.target.value
-                }
-            }
-        });
     };
     const handleDateChange = (date) => {
         setSelectedDate(date);
-        setAll((prev) => {
-            let prevFee = prev.fees;
-            return {
-                ...prev,
-                fees: {
-                    ...prevFee,
-                    date: date.toDateString()
-                }
-            }
-        });
     };
     const handleOpen = () => {
         setOpen(true);
@@ -162,19 +150,8 @@ export default function TransitionsModal() {
 
     const handlePayment = (event) => {
         let paymentForDays = Math.floor((160000 / 12) * event.target.value);
+        setQatnashdi(event.target.value);
         setPayment(paymentForDays);
-        setAll((prev) => {
-            let prevFee = prev.fees;
-            return {
-                ...prev,
-                fees: {
-                    ...prevFee,
-                    tolanganSumma: paymentForDays,
-                    qatnashdi: event.target.value,
-                    qoldiq: 12 - event.target.value
-                }
-            }
-        });
     }
     const pay = () => {
         setOpen(false);
@@ -268,7 +245,7 @@ export default function TransitionsModal() {
                                     </TextField>
                                     <TextField required id="standard-required" label="To'langan Summa" value={isNaN(payment) ? "iltimos raqam kiriting" : payment} />
                                     <span style={{ marginRight: "80px" }}>Qatnashgan Darslar:</span>
-                                    <Input placeholder="12" style={{ textAlign: "right", direction: "rtl" }} onChange={handlePayment} inputProps={{ 'aria-label': 'description' }} />
+                                    <Input placeholder="12" style={{ textAlign: "right", direction: "rtl" }} onChange={handlePayment} value={qatnashdi} inputProps={{ 'aria-label': 'description' }} />
                                     <br /><br />
                                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
                                         <span>Qatnashgan Darslar:</span>
