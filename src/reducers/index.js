@@ -1,4 +1,3 @@
-import { Satellite } from "@material-ui/icons";
 import { createStore } from "redux";
 
 export const AppState = {
@@ -8,7 +7,7 @@ export const AppState = {
     groupStudents: [],
     users: [],
     currentUser: {},
-    isAuth: false
+    isAuth: true,
 }
 
 

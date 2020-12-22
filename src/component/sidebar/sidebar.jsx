@@ -118,7 +118,7 @@ export default function MiniDrawer(props) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-    // const [stats, setSearch] = useState('');
+    // const [search, setSearch] = useState('');
     // const filteredComponents = card.filter(discription => (
     //     props.component.toLowerCase().includes(setSearch.toLowerCase())
     // ))
@@ -161,9 +161,7 @@ export default function MiniDrawer(props) {
                             <div className='search'>
 
                                 <Search
-                                    placeholder='type to search'
-                                    handleChange={(event) => {
-                                    }}
+
                                 />
 
                             </div>
@@ -220,7 +218,7 @@ export default function MiniDrawer(props) {
                 </List>
                 <List>
                     {['Groups', 'Reports'].map((text, index) => (
-                        <Link to={index % 2 === 0 ? "/cardsGroup" : "/reports"}>
+                        <Link to={index % 2 === 0 ? "/grouplist" : "/reports"}>
                             <ListItem button key={text}>
                                 <ListItemIcon>{index % 2 === 0 ? <img src='https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg' alt="" /> : <img src='https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg' alt="" />}</ListItemIcon>
                                 <ListItemText primary={text} />

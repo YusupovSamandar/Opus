@@ -11,10 +11,10 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import SaveIcon from '@material-ui/icons/Save';
 import Date from "./date";
 import './table.css';
 import Grid from '@material-ui/core/Grid';
+import SelectMultiple from './select-item'
 
 const styles = theme => ({
     root: {
@@ -82,6 +82,18 @@ function CustomizedTable(props) {
                             <TableCell>
                                 <form className={classes.root} noValidate autoComplete="off">
                                     <TextField id="outlined-basic" label="Number of lessons" variant="standard" />
+                                </form>
+                            </TableCell>
+
+                        </TableRow>
+                        <TableRow>
+                            <TableCell style={{ fontSize: "15px" }}>
+                                Days of the course
+                                <SelectMultiple />
+                            </TableCell>
+                            <TableCell>
+                                <form className={classes.root} noValidate autoComplete="off">
+                                    <TextField style={{ fontSize: "15px" }} id="standard-basic" label="Hour" />
                                 </form>
                             </TableCell>
                         </TableRow>

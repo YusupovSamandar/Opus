@@ -7,14 +7,13 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import "./Grouplist.css";
 import Container from '@material-ui/core/Container';
-import AllButtons from "./AllButtons";
+import GroupItem from "./GroupItem";
 import axios from "axios";
 import { useSelector, useDispatch } from 'react-redux';
-
 import { loadData, selectedTeacher } from '../../actions';
 
 function TabPanel(props) {
-  // const loadData = useSelector(state => state.)
+
   const { children, value, index, ...other } = props;
   return (
     <div
@@ -65,8 +64,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const VerticalTabs = () => {
-  // const [teacher, setTeacher] = useState([]);
-  // const [group, setGroup] = useState([]);
 
   useEffect(() => {
     fetchItems();
@@ -110,13 +107,13 @@ const VerticalTabs = () => {
               <Tab style={{
                 boxShadow: '0 2px 10px',
                 margin: '10px 0'
-              }} onClick={() => { handleClick(obj) }} label={obj.title + ' - ' + obj.group} {...a11yProps({ index })} />
+              }} onClick={() => { handleClick(obj) }} label={obj.title} {...a11yProps({ index })} />
             ))
           }
         </Tabs>
 
         <TabPanel style={{ width: '700px' }}>
-          <AllButtons students={groupStudents} />
+          <GroupItem students={groupStudents} />
         </TabPanel>
 
       </div>
@@ -124,13 +121,6 @@ const VerticalTabs = () => {
   );
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     teachers: state.teachers,
-//     students: state.students
-//   }
-// }
-
-
-
 export default VerticalTabs
+
+

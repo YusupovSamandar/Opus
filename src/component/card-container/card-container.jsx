@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
 }));
-const cardContainer = (props) => {
+const cardContainer = () => {
     const classes = useStyles();
     return (
         <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "" }}>
@@ -26,7 +26,7 @@ const cardContainer = (props) => {
                             text: "Registration", link: '/register', img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg"
                         },
                         { text: "Attendance/Fees", link: '/detail', img: "https://www.flaticon.com/svg/static/icons/svg/3101/3101082.svg" },
-                        { text: "Groups", link: '/cardsgroup', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
+                        { text: "Groups", link: '/grouplist', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
                         { text: "Reports", link: '/reports', img: "https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg" },
                         { text: "Add to group", link: '/add', img: "https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" },
                         { text: "Admin Panel", link: '/adminpanel', img: "https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" },

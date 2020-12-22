@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+body {
+    font-family: 'PT Serif', serif;
+
+}
+
+.searcher {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.searcher .inputs {
+    border: 2px solid gray;
+    width: 290px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 15px;
+    color: #0f1257;
+    transition: 1s;
+    outline: none;
+}
+
+.searcher .element {
+    height: 200px;
+    font-size: 18px;
+    color: black;
+}
+
+.searcher ::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+.searcher .list {
+    animation: mymove s infinite;
+    color: white;
+    border-bottom: 2px solid gray;
+    padding: 25px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    display: block;
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+
+}
+
+
+
+.searcher .list:hover {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: 3px solid rgb(236, 233, 53);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px
+}
+
+
+.searcher .listbox {
+    margin-top: 10px;
+    background-color: #FAFAFA;
+    width: 280px;
+    padding: 15px;
+    margin-right: 900px;
+    list-style: none;
+    position: absolute;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.searcher .img-icon {
+    float: left;
+    widows: 30px;
+    height: 30px;
+}
