@@ -1,0 +1,14 @@
+.detail u{
+   color: blue;
+   margin-left: 10px;
+}
+
+.detail h2{
+   padding: 10px 0;
+}
+
+.detail{
+   display: flex; 
+   text-align: center; 
+   flex-direction: column;
+}

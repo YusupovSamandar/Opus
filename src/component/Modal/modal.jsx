@@ -7,11 +7,6 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import "./modal.css";
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableRow from '@material-ui/core/TableRow';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
@@ -85,20 +80,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2, 4, 3),
     },
 }));
-
-function createData(name, calories) {
-    return { name, calories };
-}
-
-const rows = [
-    createData("O`quvchi", 'Abdullayev Abdumalik'),
-    createData('Yo`nalishi', 237),
-    createData('Kurs Nomi', 262),
-    createData('Guruh', 201),
-    createData('Oylik darslar soni', 356),
-    createData('Oylik to`lov summasi', '160 000'),
-    createData('Imtiyoz Mavjud', '80 000.00')
-];
 
 export default function TransitionsModal() {
     const [temp, setTemp] = useContext(TempStudentContext);
@@ -183,23 +164,15 @@ export default function TransitionsModal() {
                         <Grid container spacing={3}>
                             <Grid item xs={6}>
                                 <h1 style={{ color: "White", backgroundColor: "#009D77" }}>Malumotlar</h1>
-                                <TableContainer component={Paper}>
-                                    <Table aria-label="simple table">
-                                        <TableBody>
-                                            {rows.map((row) => (
-                                                <TableRow key={row.name}>
-                                                    <TableCell component="th" scope="row">
-                                                        {row.name}
-                                                    </TableCell>
-                                                    <TableCell align="right">{row.calories}</TableCell>
-                                                    <TableCell align="right">{row.fat}</TableCell>
-                                                    <TableCell align="right">{row.carbs}</TableCell>
-                                                    <TableCell align="right">{row.protein}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </TableContainer>
+                                <Paper className="detail">
+                                    <h2>O'quvchi: <u>{temp.firstName} {temp.lastName}</u></h2>
+                                    <h2>Yo'nalishi: <u>English</u></h2>
+                                    <h2>Kurs nomi: <u>{temp.course}</u></h2>
+                                    <h2>Guruh: <u>415</u></h2>
+                                    <h2>Olik Darslar Soni: <u>12</u></h2>
+                                    <h2>Oylik to'lov summasi: <u>160 000</u></h2>
+                                    <h2>Imtiyoz mavjud: <u>150 000, 00</u></h2>
+                                </Paper>
                             </Grid>
                             <Grid item xs={6}>
                                 <h1 style={{ color: "White", backgroundColor: "#009D77" }}>To'lov</h1>
