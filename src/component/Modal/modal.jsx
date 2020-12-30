@@ -158,8 +158,8 @@ export default function TransitionsModal() {
                 }}
             >
                 <Fade style={{ outline: "none", border: "none" }} in={open}>
-                    <Paper style={{ textAlign: "center", padding: "0 20px", width: "1000px" }} className={classes.paper}>
-                        <Button onClick={handleClose} style={{ minWidth: "42px", padding: "6px 0", position: "absolute", top: "15%", right: "15%" }} variant="contained"><ClearIcon /></Button>
+                    <Paper style={{ textAlign: "center", padding: "0 20px", width: "1000px", position: "relative" }} className={classes.paper}>
+                        <Button onClick={handleClose} style={{ minWidth: "42px", padding: "6px 0", position: "absolute", top: "-20%", right: "-15%" }} variant="contained"><ClearIcon /></Button>
 
                         <Grid container spacing={3}>
                             <Grid item xs={6}>
@@ -170,7 +170,7 @@ export default function TransitionsModal() {
                                     <h2>Kurs nomi: <u>{temp.course}</u></h2>
                                     <h2>Guruh: <u>415</u></h2>
                                     <h2>Olik Darslar Soni: <u>12</u></h2>
-                                    <h2>Oylik to'lov summasi: <u>160 000</u></h2>
+                                    <h2>Oylik to'lov summasi: <u style={{ fontSize: "2rem" }}>160 000</u></h2>
                                     <h2>Imtiyoz mavjud: <u>150 000, 00</u></h2>
                                 </Paper>
                             </Grid>
@@ -193,7 +193,7 @@ export default function TransitionsModal() {
                                     <TextField
                                         id="standard-select-currency"
                                         select
-                                        label="To'lov Qilingan yil"
+                                        label="To'lov Qilingan Oy"
                                         value={yearval}
                                         onChange={handleChange2}
                                     >
@@ -206,7 +206,7 @@ export default function TransitionsModal() {
                                     <TextField
                                         id="standard-select-currency"
                                         select
-                                        label="To'lov Qilingan yil"
+                                        label="To'lov Turi"
                                         value={isNaxt}
                                         onChange={handleChange3}
                                     >
@@ -217,11 +217,12 @@ export default function TransitionsModal() {
                                         ))}
                                     </TextField>
                                     <TextField required id="standard-required" label="To'langan Summa" value={isNaN(payment) ? "iltimos raqam kiriting" : payment} />
+                                    <br /><br />
                                     <span style={{ marginRight: "80px" }}>Qatnashgan Darslar:</span>
                                     <Input placeholder="12" style={{ textAlign: "right", direction: "rtl" }} onChange={handlePayment} value={qatnashdi} inputProps={{ 'aria-label': 'description' }} />
                                     <br /><br />
                                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
-                                        <span>Qatnashgan Darslar:</span>
+                                        <span>To'lov Sanasi:</span>
                                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
                                             <KeyboardDatePicker
                                                 disableToolbar
@@ -229,7 +230,6 @@ export default function TransitionsModal() {
                                                 format="MM/dd/yyyy"
                                                 margin="normal"
                                                 id="date-picker-inline"
-                                                label="Date picker inline"
                                                 value={selectedDate}
                                                 onChange={handleDateChange}
                                                 KeyboardButtonProps={{

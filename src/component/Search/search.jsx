@@ -17,6 +17,7 @@ function BasicSearch(props) {
                 ]}
                 data={props.data}
                 options={{
+                    pageSize: 10,
                     search: true
                 }}
                 actions={[
