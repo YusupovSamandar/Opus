@@ -94,24 +94,23 @@ export default function TransitionsModal() {
     const [all, setAll] = React.useState({
         yil: currency,
         oy: yearval,
-        date: selectedDate.toDateString(),
-        tolanganSumma: payment,
+        oylikTolov: 160000,
         qatnashdi: qatnashdi,
-        qoldiq: 12 - qatnashdi
+        tolanganSumma: payment,
+        qoldiq: 12 - qatnashdi,
+        info: "",
+        date: selectedDate.toDateString()
     });
     useEffect(() => {
-        setAll((prev) => {
-            let prevFee = prev.fees;
-            return {
-                ...prevFee,
-                yil: currency,
-                oy: yearval,
-                date: selectedDate.toDateString(),
-                tolanganSumma: payment,
-                qatnashdi: qatnashdi,
-                qoldiq: 12 - qatnashdi
-            }
-
+        setAll({
+            yil: currency,
+            oy: yearval,
+            oylikTolov: 160000,
+            qatnashdi: qatnashdi,
+            tolanganSumma: payment,
+            qoldiq: 12 - qatnashdi,
+            info: "",
+            date: selectedDate.toDateString()
         });
     }, [currency, payment, qatnashdi, selectedDate, yearval]);
     const handleChange = (event) => {
