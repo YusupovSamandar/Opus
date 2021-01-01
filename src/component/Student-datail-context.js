@@ -49,16 +49,7 @@ export const TempStudentProvider = (props) => {
         "group": "Malika",
         "advertise": "Social Media",
         "comment": "Something must be written",
-        "fees": {
-            "yil": "",
-            "oy": "",
-            "oylikTolov": 160000,
-            "qatnashdi": "",
-            "tolanganSumma": "",
-            "qoldiq": "",
-            "info": "",
-            "date": ""
-        }
+        "fees": []
     });
 
     return (

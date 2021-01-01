@@ -91,22 +91,27 @@ export default function TransitionsModal() {
     const [isNaxt, setIsNaxt] = React.useState('Naxt pul orqali');
     const [qatnashdi, setQatnashdi] = React.useState(12)
     const [payment, setPayment] = React.useState(160000);
-    const [all, setAll] = React.useState(temp);
+    const [all, setAll] = React.useState({
+        yil: currency,
+        oy: yearval,
+        date: selectedDate.toDateString(),
+        tolanganSumma: payment,
+        qatnashdi: qatnashdi,
+        qoldiq: 12 - qatnashdi
+    });
     useEffect(() => {
         setAll((prev) => {
             let prevFee = prev.fees;
             return {
-                ...prev,
-                fees: {
-                    ...prevFee,
-                    yil: currency,
-                    oy: yearval,
-                    date: selectedDate.toDateString(),
-                    tolanganSumma: payment,
-                    qatnashdi: qatnashdi,
-                    qoldiq: 12 - qatnashdi
-                }
+                ...prevFee,
+                yil: currency,
+                oy: yearval,
+                date: selectedDate.toDateString(),
+                tolanganSumma: payment,
+                qatnashdi: qatnashdi,
+                qoldiq: 12 - qatnashdi
             }
+
         });
     }, [currency, payment, qatnashdi, selectedDate, yearval]);
     const handleChange = (event) => {
@@ -136,7 +141,16 @@ export default function TransitionsModal() {
     }
     const pay = () => {
         setOpen(false);
-        setTemp(all);
+        setTemp((prev) => {
+            let prevFees = prev.fees;
+            return {
+                ...prev,
+                fees: [
+                    ...prevFees,
+                    all
+                ]
+            }
+        });
     }
 
     return (
