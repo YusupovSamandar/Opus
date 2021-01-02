@@ -130,16 +130,7 @@
             "group": "Malika",
             "advertise": "Social Media",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "2",
@@ -155,16 +146,7 @@
             "group": "Shohida",
             "advertise": "Radio",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "3",
@@ -180,16 +162,7 @@
             "group": "Malika",
             "advertise": "Newspaper",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "4",
@@ -205,16 +178,7 @@
             "group": "Azizbek",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "5",
@@ -230,16 +194,7 @@
             "group": "Shohida",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "6",
@@ -255,16 +210,7 @@
             "group": "Shohnigor",
             "advertise": "Teachers",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "7",
@@ -280,16 +226,7 @@
             "group": "Shohida",
             "advertise": "Teachers",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "8",
@@ -305,16 +242,7 @@
             "group": "Shohida",
             "advertise": "Teachers",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "9",
@@ -330,16 +258,7 @@
             "group": "Malika",
             "advertise": "Social media",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "10",
@@ -355,16 +274,7 @@
             "group": "Lochinbek",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "11",
@@ -380,16 +290,7 @@
             "group": "Lochinbek",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "12",
@@ -405,16 +306,7 @@
             "group": "Malika",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "13",
@@ -430,16 +322,7 @@
             "group": "Malika",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "14",
@@ -455,16 +338,7 @@
             "group": "Azizbek",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "15",
@@ -480,16 +354,7 @@
             "group": "Malika",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "16",
@@ -505,16 +370,7 @@
             "group": "Nuriddin",
             "advertise": "Newspaper",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "17",
@@ -530,16 +386,7 @@
             "group": "Malika",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "18",
@@ -555,16 +402,7 @@
             "group": "Nuriddin",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "19",
@@ -580,16 +418,7 @@
             "group": "Nuriddin",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "20",
@@ -605,16 +434,7 @@
             "group": "Nuriddin",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "21",
@@ -630,16 +450,7 @@
             "group": "Malika",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "22",
@@ -655,16 +466,7 @@
             "group": "Nuriddin",
             "advertise": "Newspaper",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "23",
@@ -680,16 +482,7 @@
             "group": "Malika",
             "advertise": "Social Media",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "24",
@@ -705,16 +498,7 @@
             "group": "Nuriddin",
             "advertise": "Radio",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "25",
@@ -730,16 +514,7 @@
             "group": "Malika",
             "advertise": "Newspaper",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "26",
@@ -755,16 +530,7 @@
             "group": "Azizbek",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "27",
@@ -780,16 +546,7 @@
             "group": "Shohida",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "28",
@@ -805,16 +562,7 @@
             "group": "Shohnigor",
             "advertise": "Teachers",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "29",
@@ -830,16 +578,7 @@
             "group": "Malika",
             "advertise": "Teachers",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "30",
@@ -855,16 +594,7 @@
             "group": "Xurshida",
             "advertise": "Teachers",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "31",
@@ -880,16 +610,7 @@
             "group": "Malika",
             "advertise": "Social media",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "32",
@@ -905,16 +626,7 @@
             "group": "Lochinbek",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "33",
@@ -930,16 +642,7 @@
             "group": "Malika",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "34",
@@ -955,16 +658,7 @@
             "group": "Malika",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "35",
@@ -980,16 +674,7 @@
             "group": "Shohida",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "36",
@@ -1005,16 +690,7 @@
             "group": "Azizbek",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "37",
@@ -1030,16 +706,7 @@
             "group": "Lochinbek",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "38",
@@ -1055,16 +722,7 @@
             "group": "Nuriddin",
             "advertise": "Newspaper",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "39",
@@ -1080,16 +738,7 @@
             "group": "Malika",
             "advertise": "Tv",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         },
         {
             "id": "40",
@@ -1105,16 +754,7 @@
             "group": "Nuriddin",
             "advertise": "Friends",
             "comment": "Something must be written",
-            "fees": {
-                "yil": "",
-                "oy": "",
-                "oylikTolov": 160000,
-                "qatnashdi": "",
-                "tolanganSumma": "",
-                "qoldiq": "",
-                "info": "",
-                "date": ""
-            }
+            "fees": []
         }
     ]
 }

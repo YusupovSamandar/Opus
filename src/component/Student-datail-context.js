@@ -35,6 +35,9 @@ export const ThemeProvider = (props) => {
 }
 
 export const TempStudentProvider = (props) => {
+
+
+
     const [tempStudents, setTempStudents] = useState({
         "id": "1",
         "firstName": "Samandar",
@@ -49,16 +52,7 @@ export const TempStudentProvider = (props) => {
         "group": "Malika",
         "advertise": "Social Media",
         "comment": "Something must be written",
-        "fees": {
-            "yil": "",
-            "oy": "",
-            "oylikTolov": 160000,
-            "qatnashdi": "",
-            "tolanganSumma": "",
-            "qoldiq": "",
-            "info": "",
-            "date": ""
-        }
+        "fees": []
     });
 
     return (

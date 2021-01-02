@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -8,7 +8,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import "./student-table.css";
-import { TempStudentContext } from "./../Student-datail-context";
 
 
 const StyledTableCell = withStyles((theme) => ({
@@ -52,15 +51,18 @@ export default function CustomizedTables({ details, titles }) {
             }
           </TableRow>
         </TableHead>
-        <TableBody>
-          <StyledTableRow style={{ backgroundColor: 'white' }}>
-            {
-              details.map((detail, indx) => (
-                <StyledTableCell align="center" key={indx}>{detail}</StyledTableCell>
-              ))
-            }
-          </StyledTableRow>
-        </TableBody>
+        {details[0] && <TableBody>
+          {details.map((detail, index) => (
+            <StyledTableRow key={index} style={{ backgroundColor: 'white' }}>
+              {
+                Object.values(detail).map((value, indx) => (
+                  <StyledTableCell align="center" key={indx}>{value}</StyledTableCell>
+                ))
+              }
+            </StyledTableRow>
+          ))}
+
+        </TableBody>}
       </Table>
     </TableContainer>
   );

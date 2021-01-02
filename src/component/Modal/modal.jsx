@@ -14,6 +14,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import Checkbox from '@material-ui/core/Checkbox';
 import ClearIcon from '@material-ui/icons/Clear';
 import { TempStudentContext } from "./../Student-datail-context";
+import { StudentContext } from "./../Student-datail-context";
 
 import {
     MuiPickersUtilsProvider,
@@ -83,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TransitionsModal() {
     const [temp, setTemp] = useContext(TempStudentContext);
+    const [stud, setStud] = useContext(StudentContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
@@ -91,22 +93,26 @@ export default function TransitionsModal() {
     const [isNaxt, setIsNaxt] = React.useState('Naxt pul orqali');
     const [qatnashdi, setQatnashdi] = React.useState(12)
     const [payment, setPayment] = React.useState(160000);
-    const [all, setAll] = React.useState(temp);
+    const [all, setAll] = React.useState({
+        yil: currency,
+        oy: yearval,
+        oylikTolov: 160000,
+        qatnashdi: qatnashdi,
+        tolanganSumma: payment,
+        qoldiq: 12 - qatnashdi,
+        info: "",
+        date: selectedDate.toDateString()
+    });
     useEffect(() => {
-        setAll((prev) => {
-            let prevFee = prev.fees;
-            return {
-                ...prev,
-                fees: {
-                    ...prevFee,
-                    yil: currency,
-                    oy: yearval,
-                    date: selectedDate.toDateString(),
-                    tolanganSumma: payment,
-                    qatnashdi: qatnashdi,
-                    qoldiq: 12 - qatnashdi
-                }
-            }
+        setAll({
+            yil: currency,
+            oy: yearval,
+            oylikTolov: 160000,
+            qatnashdi: qatnashdi,
+            tolanganSumma: payment,
+            qoldiq: 12 - qatnashdi,
+            info: "",
+            date: selectedDate.toDateString()
         });
     }, [currency, payment, qatnashdi, selectedDate, yearval]);
     const handleChange = (event) => {
@@ -136,7 +142,24 @@ export default function TransitionsModal() {
     }
     const pay = () => {
         setOpen(false);
-        setTemp(all);
+        setTemp((prev) => {
+            let prevFees = prev.fees;
+            return {
+                ...prev,
+                fees: [
+                    ...prevFees,
+                    all
+                ]
+            }
+        });
+        let newArray = stud.map((stud) => {
+            if (stud.id === temp.id) {
+                return { ...stud, fees: [...stud.fees, all] }
+            } else {
+                return stud;
+            }
+        });
+        setStud(newArray);
     }
 
     return (
