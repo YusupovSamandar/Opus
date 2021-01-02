@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useEffect, useContext } from "react";
 import axios from "axios";
 
 export const StudentContext = createContext();
@@ -35,6 +35,11 @@ export const ThemeProvider = (props) => {
 }
 
 export const TempStudentProvider = (props) => {
+
+    const [student, setStudent] = useContext(StudentContext);
+
+
+
     const [tempStudents, setTempStudents] = useState({
         "id": "1",
         "firstName": "Samandar",
@@ -51,6 +56,19 @@ export const TempStudentProvider = (props) => {
         "comment": "Something must be written",
         "fees": []
     });
+
+    useEffect(() => {
+        let newArray = student.map((stud) => {
+            if (stud.id === tempStudents.id) {
+                return { ...stud, fees: tempStudents.fees }
+            } else {
+                return stud;
+            }
+        });
+
+        setStudent(newArray)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [tempStudents]);
 
     return (
         <TempStudentContext.Provider value={[tempStudents, setTempStudents]}>

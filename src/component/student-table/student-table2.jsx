@@ -38,9 +38,6 @@ const useStyles = makeStyles({
 
 export default function CustomizedTables({ details, titles }) {
   const classes = useStyles();
-  React.useEffect(() => {
-    console.log(details[0]);
-  }, [details])
 
   return (
     <TableContainer component={Paper}>

@@ -2,12 +2,11 @@
     border-radius: 100% !important;
 }
 
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-29,
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-25,
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-45,
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-52,
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-27,
-.hovered-styled-row .MuiTableCell-root.MuiTableCell-head.MTableHeader-header-31,
+.MuiTableRow-root.MuiTableRow-head > .MuiTableCell-root.MuiTableCell-head {
+    background-color: #009D77;
+    color: #eee;
+}
+
 .hovered-styled-row .MTableHeader-header-50 {
     background-color: #009D77;
     color: #eee;
