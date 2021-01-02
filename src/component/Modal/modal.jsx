@@ -14,6 +14,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import Checkbox from '@material-ui/core/Checkbox';
 import ClearIcon from '@material-ui/icons/Clear';
 import { TempStudentContext } from "./../Student-datail-context";
+import { StudentContext } from "./../Student-datail-context";
 
 import {
     MuiPickersUtilsProvider,
@@ -83,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TransitionsModal() {
     const [temp, setTemp] = useContext(TempStudentContext);
+    const [stud, setStud] = useContext(StudentContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
@@ -150,6 +152,14 @@ export default function TransitionsModal() {
                 ]
             }
         });
+        let newArray = stud.map((stud) => {
+            if (stud.id === temp.id) {
+                return { ...stud, fees: [...stud.fees, all] }
+            } else {
+                return stud;
+            }
+        });
+        setStud(newArray);
     }
 
     return (
