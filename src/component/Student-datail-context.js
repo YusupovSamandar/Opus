@@ -25,7 +25,7 @@ export const StudentProvider = (props) => {
 }
 
 export const ThemeProvider = (props) => {
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
     return (
         <themeContext.Provider value={[isDark, setIsDark]}>
