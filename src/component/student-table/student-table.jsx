@@ -9,6 +9,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import "./student-table.css";
 import { TempStudentContext } from "./../Student-datail-context";
+import Button from '@material-ui/core/Button';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 const StyledTableCell = withStyles((theme) => ({
@@ -52,6 +54,7 @@ export default function CustomizedTables() {
             <Table className={classes.table} aria-label="customized table">
                 <TableHead>
                     <TableRow className="styled-table-header-row">
+                        <StyledTableCell align="center" style={{ padding: "15px 0" }}>Action</StyledTableCell>
                         <StyledTableCell align="center">Guruh</StyledTableCell>
                         <StyledTableCell align="center">Kurs</StyledTableCell>
                         <StyledTableCell align="center">Fan Oqitivchisi</StyledTableCell>
@@ -60,6 +63,11 @@ export default function CustomizedTables() {
                 <TableBody>
                     {rows.map((row) => (
                         <StyledTableRow style={{ backgroundColor: 'white' }} key={row.name}>
+                            <StyledTableCell style={{ padding: "0" }} align="center">
+                                <Button style={{ borderRadius: "100%", padding: "6px 14px", minWidth: "unset", height: "50px" }}>
+                                    <ExpandMoreIcon />
+                                </Button>
+                            </StyledTableCell>
                             <StyledTableCell align="center">{row.guruh}</StyledTableCell>
                             <StyledTableCell align="center">{row.kurs}</StyledTableCell>
                             <StyledTableCell align="center">{row.fanOqitivchisi}</StyledTableCell>

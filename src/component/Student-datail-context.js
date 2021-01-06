@@ -35,9 +35,6 @@ export const ThemeProvider = (props) => {
 }
 
 export const TempStudentProvider = (props) => {
-
-
-
     const [tempStudents, setTempStudents] = useState({
         "id": "1",
         "firstName": "Samandar",

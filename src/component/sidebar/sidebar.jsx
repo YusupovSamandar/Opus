@@ -1,4 +1,4 @@
-import React, { useState, useContext, } from 'react';
+import React, { useContext, } from 'react';
 // Icons
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 // Packages
@@ -17,9 +17,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Input from '@material-ui/core/Input';
-import SearchIcon from '@material-ui/icons/Search';
+import ListItemText from '@material-ui/core/ListItemText'
 import Search from './search'
 import { Link } from 'react-router-dom';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
