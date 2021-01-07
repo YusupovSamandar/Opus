@@ -8,14 +8,16 @@ import { addData } from '../../actions';
 
 function HandlingSelectionChanges() {
 
-    useEffect(() => {
-        fetchItems();
-    }, []);
-
     const fetchItems = async () => {
         const { data: students } = await axios.get("http://localhost:4000/students");
         dispatch(addData(students));
     }
+
+    useEffect(() => {
+        fetchItems();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const dispatch = useDispatch();
     const students = useSelector(state => state.students);
 
