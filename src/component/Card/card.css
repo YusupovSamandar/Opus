@@ -1,4 +1,5 @@
 #hover-paper {
+    border: 20px solid transparent;
     height: 200px;
     cursor: default;
     width: 400px;

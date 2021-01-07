@@ -34,15 +34,20 @@ function Search(props) {
     const classes = useStyles();
 
     let component = [
-        { title: "Registration", link: '/register', img: "https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" },
-        { title: "Attendance/Fees", link: '/detail', img: "https://www.flaticon.com/svg/static/icons/svg/3101/3101082.svg" },
-        { title: "Groups", link: '/cardsgroup', img: "https://www.flaticon.com/svg/static/icons/svg/3588/3588693.svg" },
-        { title: "Reports", link: '/reports', img: "https://www.flaticon.com/svg/static/icons/svg/1055/1055644.svg" },
-        { title: "AddToGroup", link: '/add', img: "https://www.flaticon.com/svg/static/icons/svg/3658/3658947.svg" },
         {
             title: "Admin", link: '/adminpanel', img: "https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg"
         },
         { title: "Teachers", link: '/teacherscontainer', img: "https://www.flaticon.com/svg/static/icons/svg/2913/2913968.svg" },
+        { title: "Qarzdorlik", link: '/reports/qarzdorlik', img: "https://www.flaticon.com/svg/static/icons/svg/3399/3399165.svg" },
+        { title: "Shartnomalar", link: '/contracts', img: "https://www.flaticon.com/svg/static/icons/svg/748/748504.svg" },
+        { title: "Reklama", link: '/adverts', img: "https://www.flaticon.com/svg/static/icons/svg/3800/3800402.svg" },
+        { title: "Payments", link: '/reports/reportpayment', img: "https://www.flaticon.com/svg/static/icons/svg/3135/3135706.svg" },
+        { title: "Archive", link: '/reports/Archive', img: "https://www.flaticon.com/svg/static/icons/svg/716/716820.svg" },
+        { title: "Staff", link: '/teachers', img: "https: //www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
+        { title: "Add a New Employee", link: '/addnewemployee', img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256628.svg" },
+        { title: "Rekvizits", link: '/rekvizits ', img: "https://www.flaticon.com/svg/static/icons/svg/2897/2897980.svg" },
+        { title: "Guruh Jurnali", link: '/teacherscontainer/groupjournal ', img: "https://www.flaticon.com/svg/static/icons/svg/2795/2795229.svg" },
+        { title: "Tulovlar", link: '/teachers-fees ', img: "https://www.flaticon.com/svg/static/icons/svg/2921/2921222.svg " },
 
     ]
     const {
