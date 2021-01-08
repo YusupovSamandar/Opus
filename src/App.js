@@ -34,6 +34,7 @@ import Qarzdorlik from './component/ReportsInside/Qarzdorlik';
 function App() {
   useEffect(() => {
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   async function load() {
     const { data: Users } = await Axios.get('http://localhost:4000/users');
@@ -53,7 +54,6 @@ function App() {
                 <TempStudentProvider><Sidebar component={<Search />} /></TempStudentProvider>
               </Private>
               <Private exact path="/register"><Sidebar component={<Registeration />} /></Private>
-              {/* <Private exact path="/cardsgroup"><Sidebar component={<CardGroup2 />} /></Private> */}
               <Private exact path="/grouplist"><Sidebar component={<Grouplist />} /></Private>
               <Private exact path="/Teacherscontainer"><Sidebar component={<TeachersContainer />} /></Private>
               <Private exact path="/Teacherscontainer/groupjournal"><Sidebar component={<GroupJournal />} /></Private>
