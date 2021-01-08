@@ -1,10 +1,9 @@
 import React from 'react';
 import CardCont from "./component/card-container/card-container";
 import Sidebar from './component/sidebar/sidebar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Search from "./container/Detail/detail";
 import Registeration from "./container/Registration/Register";
-import CardGroup2 from './component/CardsGroup/CardGroup2';
 import Grouplist from './component/Grouplist/Grouplist';
 import TeachersContainer from './component/TeachersPanel/TeachersPanel';
 import AddToGroup from './component/addToGroup/AddToGroup';
@@ -35,6 +34,7 @@ import Qarzdorlik from './component/ReportsInside/Qarzdorlik';
 function App() {
   useEffect(() => {
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   async function load() {
     const { data: Users } = await Axios.get('http://localhost:4000/users');
@@ -55,7 +55,6 @@ function App() {
                   <TempStudentProvider><Sidebar component={<Search />} /></TempStudentProvider>
                 </Private>
                 <Private exact path="/register"><Sidebar component={<Registeration />} /></Private>
-                {/* <Private exact path="/cardsgroup"><Sidebar component={<CardGroup2 />} /></Private> */}
                 <Private exact path="/grouplist"><Sidebar component={<Grouplist />} /></Private>
                 <Private exact path="/Teacherscontainer"><Sidebar component={<TeachersContainer />} /></Private>
                 <Private exact path="/Teacherscontainer/groupjournal"><Sidebar component={<GroupJournal />} /></Private>
@@ -75,26 +74,7 @@ function App() {
                 <Public exact path="/login">
                   <SignInSide />
                 </Public>
-                <Sidebar component={<PageNotFound />} />
-                {/* <Route exact path="/detail" component={() => <TempStudentProvider><Sidebar component={<Search />} /></TempStudentProvider>} />
-            <Route exact path="/register" component={() => <Sidebar component={<Registeration />} />} />
-            <Route exact path="/cardsgroup" component={() => <Sidebar component={<CardGroup2 />} />} />
-            <Route exact path="/cardsgroup/grouplist" component={() => <Sidebar component={<Grouplist />} />} />
-            <Route exact path="/Teacherscontainer" component={() => <Sidebar component={<TeachersContainer />} />} />
-            <Route exact path="/Teacherscontainer/groupjournal" component={() => <Sidebar component={<GroupJournal />} />} />
-            <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
-            <Route exact path="/reports" component={() => <Sidebar component={<ReportsContainer />} />} />
-            <Route exact path="/reports/reportsinside" component={() => <Sidebar component={<ReportsInside />} />} />
-            <Route exact path="/teachersreg" component={() => <Sidebar component={<TeachersReg />} />} />
-            <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
-            <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
-            <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
-            <Route exact path="/teachers-fees" component={() => <Sidebar component={<TeacherFees />} />} />
-            <Route exact path="/addnewemployee" component={() => <Sidebar component={<AddNewEmployee />} />} />
-            <Route exact path="/login">
-              <SignInSide />
-            </Route> */}
-                <Sidebar />
+                <Sidebar component={<PageNotFound />} /><Sidebar />
               </Switch>
             </Router>
           </div>

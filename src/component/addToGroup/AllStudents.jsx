@@ -2,7 +2,6 @@ import React from "react";
 import MaterialTable from "material-table";
 import { useContext } from "react";
 import { chosenStudent } from "./../Student-datail-context";
-
 function AllStudents(props) {
     const SetChosenStudent = useContext(chosenStudent)[1];
 

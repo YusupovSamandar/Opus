@@ -1,11 +1,11 @@
 import React from 'react';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+import Link from '';
 
 
 export default function Links(props) {
     return (
-        <Breadcrumbs style={{margin:"100px" } } aria-label="breadcrumb">
+        <Breadcrumbs style={{ margin: "100px" }} aria-label="breadcrumb">
             <Link color="primary" href={props.link1}>
                 {props.text1}
             </Link>
