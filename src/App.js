@@ -1,10 +1,9 @@
 import React from 'react';
 import CardCont from "./component/card-container/card-container";
 import Sidebar from './component/sidebar/sidebar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Search from "./container/Detail/detail";
 import Registeration from "./container/Registration/Register";
-import CardGroup2 from './component/CardsGroup/CardGroup2';
 import Grouplist from './component/Grouplist/Grouplist';
 import TeachersContainer from './component/TeachersPanel/TeachersPanel';
 import AddToGroup from './component/addToGroup/AddToGroup';
