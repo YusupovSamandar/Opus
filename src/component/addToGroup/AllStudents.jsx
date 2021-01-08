@@ -1,45 +1,31 @@
 import React from "react";
 import MaterialTable from "material-table";
-import axios from 'axios';
-import { useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useContext } from "react";
+import { chosenStudent } from "./../Student-datail-context";
 
-import { addData } from '../../actions';
-
-function HandlingSelectionChanges() {
-
-    useEffect(() => {
-        fetchItems();
-    }, []);
-
-    const fetchItems = async () => {
-        const { data: students } = await axios.get("http://localhost:4000/students");
-        dispatch(addData(students));
-    }
-    const dispatch = useDispatch();
-    const students = useSelector(state => state.students);
-
+function AllStudents(props) {
+    const SetChosenStudent = useContext(chosenStudent)[1];
 
     return (
         <MaterialTable style={{ marginBottom: "70px", width: "65%", display: "inline-block" }}
             title="Add to group"
             columns={[
-                { title: 'First Name', field: 'name' },
-                { title: 'Surname', field: 'surname' },
-                { title: 'Phone number', field: 'Phone number' },
-                { title: 'Course', field: 'Course' },
+                { title: 'First Name', field: 'firstName' },
+                { title: 'Surname', field: 'lastName' },
+                { title: 'Phone number', field: 'phoneNumber' },
                 { title: 'Comment', field: 'comment' }
             ]}
-            data={
-                students.map(student => ({
-                    name: student.name, surname: student.group
-                }))
-            }
-            options={{
-                selection: true,
-                selectionProps: { color: 'primary' }
-            }}
+            data={props.data}
+            actions={[
+                {
+                    icon: "add",
+                    tooltip: 'Save User',
+                    onClick: (event, rowData) => {
+                        SetChosenStudent(rowData);
+                    }
+                }
+            ]}
         />
     )
 }
-export default HandlingSelectionChanges;
+export default AllStudents;

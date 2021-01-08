@@ -55,14 +55,14 @@ const reducer = (state = AppState, action) => {
                 currentUser: {}
             }
         }
-        case "ADD_DATA": {
-            const students = action.payload;
-            return {
-                ...state,
-                students
-            }
+        // case "ADD_DATA": {
+        //     const students = action.payload;
+        //     return {
+        //         ...state,
+        //         students
+        //     }
 
-        }
+        // }
 
         default:
             return state;
