@@ -73,26 +73,7 @@ function App() {
               <Public exact path="/login">
                 <SignInSide />
               </Public>
-              <Sidebar component={<PageNotFound />} />
-              {/* <Route exact path="/detail" component={() => <TempStudentProvider><Sidebar component={<Search />} /></TempStudentProvider>} />
-            <Route exact path="/register" component={() => <Sidebar component={<Registeration />} />} />
-            <Route exact path="/cardsgroup" component={() => <Sidebar component={<CardGroup2 />} />} />
-            <Route exact path="/cardsgroup/grouplist" component={() => <Sidebar component={<Grouplist />} />} />
-            <Route exact path="/Teacherscontainer" component={() => <Sidebar component={<TeachersContainer />} />} />
-            <Route exact path="/Teacherscontainer/groupjournal" component={() => <Sidebar component={<GroupJournal />} />} />
-            <Route exact path="/add" component={() => <Sidebar component={<AddToGroup />} />} />
-            <Route exact path="/reports" component={() => <Sidebar component={<ReportsContainer />} />} />
-            <Route exact path="/reports/reportsinside" component={() => <Sidebar component={<ReportsInside />} />} />
-            <Route exact path="/teachersreg" component={() => <Sidebar component={<TeachersReg />} />} />
-            <Route exact path="/rekvizits" component={() => <Sidebar component={<Rekvizits />} />} />
-            <Route exact path="/adminpanel" component={() => <Sidebar component={<AdminPanel />} />} />
-            <Route exact path="/teachers" component={() => <Sidebar component={<Teachers />} />} />
-            <Route exact path="/teachers-fees" component={() => <Sidebar component={<TeacherFees />} />} />
-            <Route exact path="/addnewemployee" component={() => <Sidebar component={<AddNewEmployee />} />} />
-            <Route exact path="/login">
-              <SignInSide />
-            </Route> */}
-              <Sidebar />
+              <Sidebar component={<PageNotFound />} /><Sidebar />
             </Switch>
           </Router>
         </div>
