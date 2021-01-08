@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { withStyles } from '@material-ui/core/styles';
@@ -11,10 +11,10 @@ import Add from "./AllStudents";
 import Section from "./combineTable";
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import { RegisteredStudents } from "./../../component/Student-datail-context";
 
 function TabContainer(props) {
     const { children, dir } = props;
-
     return (
         <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
             {children}
@@ -53,6 +53,7 @@ class FloatingActionButtonZoom extends React.Component {
     state = {
         value: 0
     };
+    static contextType = RegisteredStudents
 
     handleChange = (event, value) => {
         this.setState({ value });
@@ -64,6 +65,7 @@ class FloatingActionButtonZoom extends React.Component {
 
     render() {
         const { classes, theme } = this.props;
+        const [students] = this.context
 
         return (
             <Container maxWidth="lg" minWidth="sm">
@@ -87,9 +89,9 @@ class FloatingActionButtonZoom extends React.Component {
                             index={this.state.value}
                             onChangeIndex={this.handleChangeIndex}
                         >
-                            <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
-                            <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
-                            <TabContainer dir={theme.direction}><Add /><Section /></TabContainer>
+                            <TabContainer dir={theme.direction}><Add data={students} /><Section /></TabContainer>
+                            <TabContainer dir={theme.direction}><Add data={students} /><Section /></TabContainer>
+                            <TabContainer dir={theme.direction}><Add data={students} /><Section /></TabContainer>
                         </SwipeableViews>
                     </Grid>
                 </div >

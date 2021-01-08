@@ -3,6 +3,8 @@ import axios from "axios";
 
 export const StudentContext = createContext();
 export const TempStudentContext = createContext();
+export const RegisteredStudents = createContext();
+export const chosenStudent = createContext();
 export const themeContext = createContext();
 
 export const StudentProvider = (props) => {
@@ -23,6 +25,26 @@ export const StudentProvider = (props) => {
         </StudentContext.Provider>
     )
 }
+
+export const RegisteredProvider = (props) => {
+    const [students, setStudents] = useState([]);
+
+    useEffect(() => {
+        fetchItems();
+    }, []);
+
+    const fetchItems = async () => {
+        const { data } = await axios.get("http://localhost:4000/students");
+        setStudents(data);
+    }
+
+    return (
+        <RegisteredStudents.Provider value={[students, setStudents]}>
+            {props.children}
+        </RegisteredStudents.Provider>
+    )
+}
+
 
 export const ThemeProvider = (props) => {
     const [isDark, setIsDark] = useState(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -56,5 +78,16 @@ export const TempStudentProvider = (props) => {
         <TempStudentContext.Provider value={[tempStudents, setTempStudents]}>
             {props.children}
         </TempStudentContext.Provider>
+    )
+}
+
+export const ChosenStudentProvider = (props) => {
+
+    const [chosenStudents, setChosenStudents] = useState({});
+
+    return (
+        <chosenStudent.Provider value={[chosenStudents, setChosenStudents]}>
+            {props.children}
+        </chosenStudent.Provider>
     )
 }
