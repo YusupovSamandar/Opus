@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
@@ -6,14 +6,16 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import JournalWindows from "./JournalWindows";
 import axios from "axios";
-
-
+import { useSelector, useDispatch } from 'react-redux';
+import { loadData, selectedTeacher } from '../../actions';
+import Grid from '@material-ui/core/Grid';
+import JournalList from './JournalList';
+import JournalWindows from './JournalWindows';
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
 
+  const { children, value, index, ...other } = props;
   return (
     <div
       role="tabpanel"
@@ -52,88 +54,60 @@ const useStyles = makeStyles((theme) => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
-    maxHeight: '550px'
+    maxHeight: '500px'
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-  
+
   },
 }));
 
-export default function VerticalTabs() {
-  const [teacher, setTeacher] = useState([]);
-  const [group,setGroup] = useState([]);
- 
+const VerticalTabs = () => {
 
   useEffect(() => {
     fetchItems();
   }, []);
 
   const fetchItems = async () => {
-    const { data } = await axios.get("http://localhost:4000/Student-details");
-    setTeacher(data);
-    setGroup(data)
+    const { data: teachers } = await axios.get("http://localhost:4000/teachers");
+    const { data: students } = await axios.get("http://localhost:4000/students");
+    dispatch(loadData(teachers, students));
   }
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const dispatch = useDispatch();
+  const teachers = useSelector(state => state.teachers);
+  const students = useSelector(state => state.students);
+  const groupStudents = useSelector(state => state.groupStudents);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  function handleClick(obj) {
+    dispatch(selectedTeacher(obj))
+  }
+
   return (
     <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
-    <div className={classes.root}>
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        className={classes.tabs}
-        style = {{padding: '14px'}}
-      >
-        {
-            teacher.map((obj, index) => (
-              <Tab style={{
-                boxShadow: '0 2px 10px',
-                margin: '10px 0'
-              }} label={obj.group} {...a11yProps({ index })} />
-            ))
-          }
-      </Tabs>
-      {group.map((obj,index)=>(
-   
-   <TabPanel value={value} index={index} style={{ width: '1040px' }}>
-           <JournalWindows />
-         </TabPanel>
-       
- ))}
-{/*       
-    <TabPanel value={value} index={0} style={{width: '1040px'}}>
-        <JournalWindows />
-      </TabPanel>
-      <TabPanel value={value} index={1} style={{width: '1040px'}}>
-      <JournalWindows />
-      </TabPanel>
-      <TabPanel value={value} index={2} style={{width: '1040px'}}>
-      <JournalWindows />
-      </TabPanel>
-      <TabPanel value={value} index={3} style={{width: '1040px'}}>
-      <JournalWindows />
-      </TabPanel>
-      <TabPanel value={value} index={4} style={{width: '1040px'}}>
-      <JournalWindows />
-      </TabPanel>
-      <TabPanel value={value} index={5} style={{width: '1040px'}}>
-      <JournalWindows />
-      </TabPanel>
-      <TabPanel value={value} index={6} style={{width: '1040px'}}>
-      <JournalWindows />
-      </TabPanel> */}
-    </div>
+      <div className={classes.root}>
+      <Grid container spacing={2}>
+        <Grid item xs={4} sm={4}>
+         <JournalList />
+        </Grid>
+        <Grid style={{ paddingTop: "5px" }} item xs={8} sm={8}>
+         <JournalWindows />
+        </Grid>
+        </Grid>
+
+      </div>
     </Container>
   );
 }
+
+export default VerticalTabs
+
+

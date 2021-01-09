@@ -11,6 +11,11 @@ import GroupItem from "./GroupItem";
 import axios from "axios";
 import { useSelector, useDispatch } from 'react-redux';
 import { loadData, selectedTeacher } from '../../actions';
+// import NewList from './NewList';
+import CombineList from './CombineList';
+import StudentsList from './StudentsList';
+import Grid from '@material-ui/core/Grid';
+import { RegisteredStudents } from "./../../component/Student-datail-context";
 
 function TabPanel(props) {
 
@@ -93,7 +98,8 @@ const VerticalTabs = () => {
   return (
     <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
       <div className={classes.root}>
-        <Tabs
+      <Grid container spacing={2}>
+        {/* <Tabs
           id="own-scroll-x"
           orientation="vertical"
           variant="scrollable"
@@ -110,11 +116,21 @@ const VerticalTabs = () => {
               }} onClick={() => { handleClick(obj) }} label={obj.title} {...a11yProps({ index })} />
             ))
           }
-        </Tabs>
+        </Tabs> */}
+        {/* <NewList /> */}
+        <Grid item xs={4} sm={4}>
+          <CombineList />
+        </Grid>
+        <Grid style={{ paddingTop: "80px" }} item xs={8} sm={8}>
+          <StudentsList />
+        </Grid>
+       
+     
 
-        <TabPanel style={{ width: '700px' }}>
+        {/* <TabPanel style={{ width: '700px' }}>
           <GroupItem students={groupStudents} />
-        </TabPanel>
+        </TabPanel> */}
+        </Grid>
 
       </div>
     </Container>

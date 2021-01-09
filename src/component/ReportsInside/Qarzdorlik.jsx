@@ -63,6 +63,7 @@ function Params() {
                 InputLabelProps={{
                     shrink: true,
                 }}
+                style ={{width: '150px'}}
             />
         </form>
         <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >
