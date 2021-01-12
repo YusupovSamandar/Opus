@@ -11,7 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
 import MaterialTable from 'material-table';
 import TextField from '@material-ui/core/TextField';
-
+import { ExportReactCSV } from './ExportReactCSV'
 
 <MaterialTable
     // other props
@@ -53,7 +53,7 @@ function Params() {
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
-    return (<Grid style={{ alignItems: "baseline", display: "flex", marginBottom: "30px" }}>
+    return (<Grid style={{ alignItems: "baseline", display: "flex", marginBottom: "0px" }}>
         <form className={classes.container} noValidate>
             <TextField
                 id="date"
@@ -63,7 +63,7 @@ function Params() {
                 InputLabelProps={{
                     shrink: true,
                 }}
-                style ={{width: '150px'}}
+                style={{ width: '150px' }}
             />
         </form>
         <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >
@@ -76,7 +76,10 @@ function Params() {
 export default function MaterialUIPickers() {
     // The first commit of Material-UI
 
-
+    const [datas, setData] = React.useState([
+        { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+        { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+    ]);
 
     return (
         <Container maxWidth="lg" style={{ marginTop: "150px", padding: "30px", maxWidth: "1050px", backgroundColor: "#fff" }}>
@@ -90,10 +93,7 @@ export default function MaterialUIPickers() {
                     { title: 'The day of payment', field: 'Group' },
                     { title: 'Sum', field: 'Group' },
                 ]}
-                data={[
-                    { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-                    { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-                ]}
+                data={datas}
                 options={{
                     exportButton: true,
                     headerStyle: {
@@ -103,7 +103,7 @@ export default function MaterialUIPickers() {
                 }}
             />
 
-
+            <ExportReactCSV csvData={datas} fileName="student.xls" />
 
 
 
