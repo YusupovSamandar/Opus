@@ -33,6 +33,7 @@
   border-color: dodgerBlue;
   box-shadow: 0 0 8px 0 dodgerBlue;
   margin-bottom: 15px;
+  float: left;
 }
 
 [type='date'] {
@@ -62,7 +63,9 @@
 }
 
 #border-div-scholar {
-  border-right: 2px solid #aaa;
+  border-right: none !important;
+  text-align: center;
+  align-items: center;
 }
 
 #reg-div {

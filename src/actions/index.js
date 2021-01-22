@@ -35,6 +35,12 @@ export const logOuts = () => {
     type: "LOG_OUT"
   }
 }
+export const addStudent = (student) => {
+  return {
+    type: "ADD_STUDENT",
+    payload: student
+  }
+}
 // export const addData = (students) => {
 //   return {
 //     type: "ADD_DATA",
