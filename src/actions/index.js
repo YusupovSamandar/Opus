@@ -6,6 +6,12 @@ export const selectedTeacher = (teacher) => {
   };
 };
 
+export const revealFeesPage = (boolean) => {
+  return {
+    type: "SET_FEES_PAGE",
+    boolean
+  }
+}
 
 export const loadData = (teachers, students) => {
   //Return an action

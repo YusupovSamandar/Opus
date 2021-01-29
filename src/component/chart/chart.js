@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
 const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
 { name: 'Page A', uv: 300, pv: 2400, amt: 2400 },

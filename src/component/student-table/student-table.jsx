@@ -11,6 +11,8 @@ import "./student-table.css";
 import { TempStudentContext } from "./../Student-datail-context";
 import Button from '@material-ui/core/Button';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useDispatch } from "react-redux";
+import { revealFeesPage } from "./../../actions";
 
 
 const StyledTableCell = withStyles((theme) => ({
@@ -40,10 +42,13 @@ const useStyles = makeStyles({
 });
 
 export default function CustomizedTables() {
+
+    const dispatch = useDispatch();
+
     function createData(guruh, kurs, fanOqitivchisi) {
         return { guruh, kurs, fanOqitivchisi };
     }
-    const [tempStudent] = useContext(TempStudentContext)
+    const [tempStudent] = useContext(TempStudentContext);
     const rows = [
         createData(113, tempStudent.course, tempStudent.group)
     ];
@@ -64,7 +69,7 @@ export default function CustomizedTables() {
                     {rows.map((row) => (
                         <StyledTableRow style={{ backgroundColor: 'white' }} key={row.name}>
                             <StyledTableCell style={{ padding: "0" }} align="center">
-                                <Button style={{ borderRadius: "100%", padding: "6px 14px", minWidth: "unset", height: "50px" }}>
+                                <Button onClick={() => { dispatch(revealFeesPage(true)) }} style={{ borderRadius: "100%", padding: "6px 14px", minWidth: "unset", height: "50px" }}>
                                     <ExpandMoreIcon />
                                 </Button>
                             </StyledTableCell>

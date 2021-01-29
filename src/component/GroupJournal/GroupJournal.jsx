@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -94,13 +92,13 @@ const VerticalTabs = () => {
   return (
     <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
       <div className={classes.root}>
-      <Grid container spacing={2}>
-        <Grid item xs={4} sm={4}>
-         <JournalList />
-        </Grid>
-        <Grid style={{ paddingTop: "5px" }} item xs={8} sm={8}>
-         <JournalWindows />
-        </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={4} sm={4}>
+            <JournalList />
+          </Grid>
+          <Grid style={{ paddingTop: "5px" }} item xs={8} sm={8}>
+            <JournalWindows />
+          </Grid>
         </Grid>
 
       </div>

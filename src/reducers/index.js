@@ -7,6 +7,7 @@ export const AppState = {
     groupStudents: [],
     users: [],
     currentUser: {},
+    revealFees: false,
     isAuth: true,
 }
 
@@ -16,7 +17,6 @@ const reducer = (state = AppState, action) => {
         case "TEACHER_SELECTED": {
             const selectedTeacher = action.payload;
             const filteredStudents = state.students.filter(student => student.group === selectedTeacher.group);
-            console.log(filteredStudents);
             return { ...state, groupStudents: filteredStudents };
         }
 
@@ -53,6 +53,14 @@ const reducer = (state = AppState, action) => {
                 ...state,
                 isAuth: false,
                 currentUser: {}
+            }
+        }
+        case "SET_FEES_PAGE": {
+            const { boolean } = action;
+            console.log(boolean);
+            return {
+                ...state,
+                revealFees: boolean
             }
         }
         // case "ADD_DATA": {
