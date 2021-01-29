@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import { useSelector } from "react-redux";
 import "./student-table.css";
 
 
@@ -37,6 +38,7 @@ const useStyles = makeStyles({
 });
 
 export default function CustomizedTables({ details, titles }) {
+  const showFees = useSelector(state => state.revealFees);
   const classes = useStyles();
 
   return (
@@ -51,7 +53,7 @@ export default function CustomizedTables({ details, titles }) {
             }
           </TableRow>
         </TableHead>
-        {details[0] && <TableBody>
+        {showFees && details[0] && <TableBody>
           {details.map((detail, index) => (
             <StyledTableRow key={index} style={{ backgroundColor: 'white' }}>
               {
