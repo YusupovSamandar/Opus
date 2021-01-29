@@ -7,6 +7,7 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import "./modal.css";
+import { useSelector } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
@@ -83,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TransitionsModal() {
+    const clickable = useSelector(state => state.revealFees);
     const [temp, setTemp] = useContext(TempStudentContext);
     const [stud, setStud] = useContext(StudentContext);
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
@@ -164,7 +166,7 @@ export default function TransitionsModal() {
 
     return (
         <div>
-            <Button style={{ marginRight: "20px", backgroundColor: '#009D77', color: "white" }} onClick={handleOpen} variant="contained" color="primary">
+            <Button style={{ marginRight: "20px", backgroundColor: '#009D77', color: "white", cursor: clickable ? "pointer" : "not-allowed", opacity: clickable ? "1" : "0.5" }} onClick={clickable && handleOpen} variant="contained" color="primary">
                 To'lov
             </Button>
             <Modal
