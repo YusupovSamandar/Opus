@@ -30,14 +30,14 @@ const styles = theme => ({
 
 function CustomizedTable(props) {
     const { classes } = props;
-    const [allStudents, setAllStudents] = useContext(StudentContext);
+    const [setAllStudents] = useContext(StudentContext)[1];
     const [chosen, setChosen] = useContext(chosenStudent);
     const [selectedDate, setSelectedDate] = React.useState(new Date());
     const [course, setCourse] = React.useState();
     const [teacher, setTeacher] = React.useState();
     const [group, setGroup] = React.useState();
     const [pay, setPay] = React.useState();
-    const [reset, setReset] = React.useState(false);
+    const [setReset] = React.useState(false)[1];
     const [lessons, setLessons] = React.useState();
     const [days, setDays] = React.useState();
     const [hour, setHour] = React.useState();
@@ -62,7 +62,7 @@ function CustomizedTable(props) {
             days: days,
             hour: hour
         });
-    }, [course, teacher, group, pay, lessons, days, hour]);
+    }, [course, teacher, group, pay, lessons, days, hour, selectedDate]);
     const handleCourse = (event) => {
         setCourse(event.target.value);
     };

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
 }));
-const cardContainer = () => {
+const CardContainer = () => {
     const classes = useStyles();
     return (
         <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "" }}>
@@ -41,4 +41,4 @@ const cardContainer = () => {
 
 }
 
-export default cardContainer;
+export default CardContainer;

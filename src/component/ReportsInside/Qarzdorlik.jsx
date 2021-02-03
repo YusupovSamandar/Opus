@@ -1,11 +1,6 @@
 import 'date-fns';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-// import DateFnsUtils from '@date-io/date-fns';
-// import {
-//     MuiPickersUtilsProvider,
-//     KeyboardDatePicker,
-// } from '@material-ui/pickers';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
@@ -14,7 +9,6 @@ import TextField from '@material-ui/core/TextField';
 import { ExportReactCSV } from './ExportReactCSV'
 
 <MaterialTable
-    // other props
     options={{
         exportButton: true
     }}
@@ -43,16 +37,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Params() {
     const classes = useStyles();
-    const [age, setAge] = React.useState('');
-
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-
-    const handleDateChange = (date) => {
-        setSelectedDate(date);
-    };
     return (<Grid style={{ alignItems: "baseline", display: "flex", marginBottom: "0px" }}>
         <form className={classes.container} noValidate>
             <TextField
@@ -66,17 +50,12 @@ function Params() {
                 style={{ width: '150px' }}
             />
         </form>
-        <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >
-            Saralash
-                    </Button>
+        <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >Saralash</Button>
     </Grid >)
 }
 
-
 export default function MaterialUIPickers() {
-    // The first commit of Material-UI
-
-    const [datas, setData] = React.useState([
+    const [datas] = React.useState([
         { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
         { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
     ]);
@@ -102,16 +81,7 @@ export default function MaterialUIPickers() {
                     }
                 }}
             />
-
             <ExportReactCSV csvData={datas} fileName="student.xls" />
-
-
-
-
-
-
-
-
         </Container>
     );
 }

@@ -1,14 +1,12 @@
 import MaterialTable from 'material-table';
-import React from 'react'
-import ReactHTMLTableToExcel from "react-html-table-to-excel";
-import Button from "@material-ui/core/Button";
+import React from 'react';
 
 export default function Table() {
     return (
         <div className='table'>
 
             <MaterialTable
-                id = 'reportsTable'
+                id='reportsTable'
                 title="Basic Search Preview"
                 columns={[
                     { title: '#', field: 'id' },

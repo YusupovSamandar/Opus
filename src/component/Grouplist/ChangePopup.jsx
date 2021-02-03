@@ -48,17 +48,12 @@ export default function TransitionsModal() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const [isNaxt, setIsNaxt] = React.useState('Bosqich');
-    const [isTeacher, setTeacher] = React.useState('Teacher');
-   
+    const [isTeacher] = React.useState('Teacher');
+
     const handleChange3 = (event) => {
         setIsNaxt(event.target.value);
     };
 
-    const handleChange = (event) => {
-        setTeacher(event.target.value);
-    };
- 
-   
     const handleOpen = () => {
         setOpen(true);
     };
@@ -90,53 +85,48 @@ export default function TransitionsModal() {
                 <Fade style={{ outline: "none", border: "none" }} in={open}>
                     <Paper style={{ textAlign: "center", padding: "0 20px", width: "500px" }} className={classes.paper}>
                         <Button onClick={handleClose} style={{ minWidth: "42px", padding: "6px 0", position: "absolute", top: "10%", right: "30%" }} variant="contained"><ClearIcon /></Button>
+                        <h1 style={{ color: "White", backgroundColor: " #3f51b5" }}>Guruh ma'lumotlatini o'zgartirish</h1>
+                        <form className={classes.root} noValidate autoComplete="off">
+                            <TextField required id="standard-required" label="Guruh nomi" />
+                            <TextField
+                                id="standard-select-currency"
+                                select
+                                label="Kursi"
+                                value={isNaxt}
+                                onChange={handleChange3}
+                                helperText="Iltimos kursni tanlang"
+                            >
+                                {groupCourse.map((option, index) => (
+                                    <MenuItem key={index} value={option}>
+                                        {option}
+                                    </MenuItem>
+                                ))}
+                            </TextField>
+                            <TextField
+                                id="standard-select-currency"
+                                select
+                                label="O'qituvchi"
+                                value={isTeacher}
+                                onChange={handleChange3}
+                                helperText="Iltimos o'qituvchini tanlang"
+                            >
+                                {groupTeacher.map((option, index) => (
+                                    <MenuItem key={index} value={option}>
+                                        {option}
+                                    </MenuItem>
+                                ))}
+                            </TextField>
+                            <TextField required id="standard-required" label="Oylik to'lov summasi" />
+                            <TextField required id="standard-required" label="Bir oylik darslar soni" />
 
-                        {/* <Grid container spacing={3}>
-                            <Grid item xs={6}> */}
-                                <h1 style={{ color: "White", backgroundColor: " #3f51b5" }}>Guruh ma'lumotlatini o'zgartirish</h1>
-                                <form className={classes.root} noValidate autoComplete="off">
-                                    <TextField required id="standard-required" label="Guruh nomi"  />
-                                    <TextField
-                                        id="standard-select-currency"
-                                        select
-                                        label="Kursi"
-                                        value={isNaxt}
-                                        onChange={handleChange3}
-                                        helperText="Iltimos kursni tanlang"
-                                    >
-                                        {groupCourse.map((option, index) => (
-                                            <MenuItem key={index} value={option}>
-                                                {option}
-                                            </MenuItem>
-                                        ))}
-                                    </TextField>
-                                    <TextField
-                                        id="standard-select-currency"
-                                        select
-                                        label="O'qituvchi"
-                                        value={isTeacher}
-                                        onChange={handleChange3}
-                                        helperText="Iltimos o'qituvchini tanlang"
-                                    >
-                                        {groupTeacher.map((option, index) => (
-                                            <MenuItem key={index} value={option}>
-                                                {option}
-                                            </MenuItem>
-                                        ))}
-                                    </TextField>
-                                    <TextField required id="standard-required" label="Oylik to'lov summasi"  />
-                                    <TextField required id="standard-required" label="Bir oylik darslar soni"  />
-                                    
-                                    
-                                    <Button style={{ margin: "10px", backgroundColor: '#3f51b5', color: "white" }} onClick={handleOpen} variant="contained" >
-                                                Saqlash
+
+                            <Button style={{ margin: "10px", backgroundColor: '#3f51b5', color: "white" }} onClick={handleOpen} variant="contained" >
+                                Saqlash
                                     </Button>
-                                    <Button style={{ margin: "10px", backgroundColor: '#3f51b5', color: "white" }} onClick={handleOpen} variant="contained" >
-                                        Bekor qilish
+                            <Button style={{ margin: "10px", backgroundColor: '#3f51b5', color: "white" }} onClick={handleOpen} variant="contained" >
+                                Bekor qilish
                                     </Button>
-                                </form>
-                            {/* </Grid>
-                        </Grid> */}
+                        </form>
                     </Paper>
                 </Fade>
             </Modal>

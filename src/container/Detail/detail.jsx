@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// Components
 import Search from "./../../component/Search/search";
 import Table from "./../../component/student-table/student-table";
 import Table2 from "./../../component/student-table/student-table2";
@@ -7,7 +6,6 @@ import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-// import axios from "axios";
 import "./detail.css";
 import { StudentContext } from "./../../component/Student-datail-context";
 import Popup from "./../../component/Modal/modal";
@@ -29,17 +27,6 @@ export default function FullWidthGrid() {
     // Data
     const [value] = useContext(StudentContext);
     const [tempStudent] = useContext(TempStudentContext);
-
-    // useEffect(() => {
-    //     fetchItems();
-    // }, []);
-
-    // const [students, setStudents] = useState([]);
-
-    // const fetchItems = async () => {
-    //     const { data } = await axios.get("http://localhost:3000/students");
-    //     setStudents(data);
-    // }
 
 
     const classes = useStyles();
