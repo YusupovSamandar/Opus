@@ -22,16 +22,16 @@ export default function Card(props) {
     const classes = useStyles();
 
     return (
-        <Grid item xs={6} sm={3} lg={3} xl={3} md={4} sm={6} >
+        <Grid item xs={6} sm={3} lg={3} xl={3} md={4} >
             <Link to="/cardsgroup/grouplist">
 
-            <Paper id="cardGroup" style={{ borderBottom: "2px solid blue ", padding: "20px 10px", marginTop: "10px", boxShadow: "5px 10px 10px #bbbfca" }} className={classes.paper}>
-                <p style={{ fontWeight: "bold" }}>{props.description}</p>
-                <hr style={{ margin: "5px" }}></hr>
-                <img style={{ width: "50px", }} className="card-img" src={img} alt="" />
-                <p style={{ fontWeight: "bold", paddingBottom: "7px" }}>{props.name} </p>
-                <p>{props.day}</p>
-            </Paper>
+                <Paper id="cardGroup" style={{ borderBottom: "2px solid blue ", padding: "20px 10px", marginTop: "10px", boxShadow: "5px 10px 10px #bbbfca" }} className={classes.paper}>
+                    <p style={{ fontWeight: "bold" }}>{props.description}</p>
+                    <hr style={{ margin: "5px" }}></hr>
+                    <img style={{ width: "50px", }} className="card-img" src={img} alt="" />
+                    <p style={{ fontWeight: "bold", paddingBottom: "7px" }}>{props.name} </p>
+                    <p>{props.day}</p>
+                </Paper>
             </Link>
         </Grid>
     );

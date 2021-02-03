@@ -1,5 +1,4 @@
 import React from 'react'
-// import Button from 'react-bootstrap/Button';
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
 import Button from '@material-ui/core/Button';
@@ -20,6 +19,5 @@ export const ExportCSV = ({ csvData, fileName }) => {
     return (
         <Button style={{ marginRight: "10px", float: "right", height: "35px", padding: "10px" }} variant="contained" color="primary"
             onClick={(e) => exportToCSV(csvData, fileName)}>Export</Button>
-        // <button onClick={(e) => exportToCSV(csvData, fileName)}>Export</button>
     )
 }

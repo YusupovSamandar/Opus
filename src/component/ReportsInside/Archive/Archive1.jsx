@@ -1,11 +1,6 @@
 import 'date-fns';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-    MuiPickersUtilsProvider,
-    KeyboardDatePicker,
-} from '@material-ui/pickers';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -51,11 +46,6 @@ function Params() {
     const handleChange = (event) => {
         setAge(event.target.value);
     };
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-
-    const handleDateChange = (date) => {
-        setSelectedDate(date);
-    };
     return (<Grid style={{ alignItems: "baseline", display: "flex", marginBottom: "30px" }}>
         <form className={classes.container} noValidate>
             <TextField
@@ -81,7 +71,6 @@ function Params() {
         </form>
         <FormControl className={classes.formControl}>
             <Select
-
                 value={age}
                 onChange={handleChange}
                 displayEmpty
@@ -95,20 +84,13 @@ function Params() {
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>
             </Select>
-
         </FormControl>
-        <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >
-            Saralash
-                    </Button>
+        <Button style={{ marginLeft: "30px" }} variant="contained" color="primary" >Saralash</Button>
     </Grid >)
 }
 
 
 export default function MaterialUIPickers() {
-    // The first commit of Material-UI
-
-
-
     return (
         <Container maxWidth="lg" style={{ marginTop: "150px", padding: "30px", maxWidth: "1050px", backgroundColor: "#fff" }}>
             <MaterialTable
@@ -139,16 +121,6 @@ export default function MaterialUIPickers() {
                     }
                 }}
             />
-
-
-
-
-
-
-
-
-
-
         </Container>
     );
 }

@@ -1,14 +1,8 @@
-// Icons
 import Admin from "./Admin"
-// Packages
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-
-// Card packages
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'flex-end',
         padding: theme.spacing(0, 1),
-        // necessary for content to be below app bar
         ...theme.mixins.toolbar,
     },
     content: {

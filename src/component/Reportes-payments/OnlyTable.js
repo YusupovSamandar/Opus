@@ -1,22 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import clsx from 'clsx'
-import SwipeableViews from 'react-swipeable-views'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
-import Zoom from '@material-ui/core/Zoom'
-import Fab from '@material-ui/core/Fab'
-import AddIcon from '@material-ui/icons/Add'
-import EditIcon from '@material-ui/icons/Edit'
-import UpIcon from '@material-ui/icons/KeyboardArrowUp'
-import { green } from '@material-ui/core/colors'
-import Box from '@material-ui/core/Box'
-import TableOne from './TableOne'
-import TableTwo from './TableTwo'
-import TableThree from './TableThree'
+import React from 'react';
+import PropTypes from 'prop-types';
+import SwipeableViews from 'react-swipeable-views';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import { green } from '@material-ui/core/colors';
+import Box from '@material-ui/core/Box';
+import TableOne from './TableOne';
+import TableTwo from './TableTwo';
+import TableThree from './TableThree';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -83,31 +77,6 @@ export default function FloatingActionButtonZoom() {
     setValue(index)
   }
 
-  const transitionDuration = {
-    enter: theme.transitions.duration.enteringScreen,
-    exit: theme.transitions.duration.leavingScreen,
-  }
-
-  const fabs = [
-    {
-      color: 'primary',
-      className: classes.fab,
-      icon: <AddIcon />,
-      label: 'Add',
-    },
-    {
-      color: 'secondary',
-      className: classes.fab,
-      icon: <EditIcon />,
-      label: 'Edit',
-    },
-    {
-      color: 'inherit',
-      className: clsx(classes.fab, classes.fabGreen),
-      icon: <UpIcon />,
-      label: 'Expand',
-    },
-  ]
 
   return (
     <div className={classes.root}>

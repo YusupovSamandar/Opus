@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
-// Table package
+import React from "react";
 import MaterialTable from 'material-table';
 
 
-function BasicSearch(props) {
+function BasicSearch() {
 
     return (
         <div className="hovered-styled-row">
@@ -15,17 +14,11 @@ function BasicSearch(props) {
                 data={[
                     { name: '2', surname: 'Baran', birthYear: 1987, birthCity: 63 },
                     { name: '3', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-                  ]}
+                ]}
                 options={{
                     pageSize: 10,
                     search: true
                 }}
-                // actions={[
-                //     {
-                //         icon: "add",
-                //         tooltip: 'Save User',
-                //     }
-                // ]}
             />
         </div>
     )

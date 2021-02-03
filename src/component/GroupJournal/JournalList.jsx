@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 // Table package
 import MaterialTable from 'material-table';
 
@@ -15,17 +15,11 @@ function BasicSearch(props) {
                 data={[
                     { name: '2', surname: 'Baran', birthYear: 1987, birthCity: 63 },
                     { name: '3', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-                  ]}
+                ]}
                 options={{
                     pageSize: 10,
                     search: true
                 }}
-                // actions={[
-                //     {
-                //         icon: "add",
-                //         tooltip: 'Save User',
-                //     }
-                // ]}
             />
         </div>
     )

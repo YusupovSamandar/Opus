@@ -3,7 +3,7 @@ import React from "react";
 import MaterialTable from 'material-table';
 
 
-function BasicSearch(props) {
+function BasicSearch() {
 
     return (
         <div className="hovered-styled-row">
@@ -14,17 +14,11 @@ function BasicSearch(props) {
                 ]}
                 data={[
                     { name: '1-bosqich' },
-                  ]}
+                ]}
                 options={{
                     pageSize: 10,
                     search: true
                 }}
-                // actions={[
-                //     {
-                //         icon: "add",
-                //         tooltip: 'Save User',
-                //     }
-                // ]}
             />
         </div>
     )

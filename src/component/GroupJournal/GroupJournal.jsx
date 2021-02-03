@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import axios from "axios";
-import { useSelector, useDispatch } from 'react-redux';
-import { loadData, selectedTeacher } from '../../actions';
+import { useDispatch } from 'react-redux';
+import { loadData } from '../../actions';
 import Grid from '@material-ui/core/Grid';
 import JournalList from './JournalList';
 import JournalWindows from './JournalWindows';
@@ -37,13 +37,6 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
-  };
-}
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -66,6 +59,7 @@ const VerticalTabs = () => {
 
   useEffect(() => {
     fetchItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchItems = async () => {
@@ -75,19 +69,9 @@ const VerticalTabs = () => {
   }
 
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
   const dispatch = useDispatch();
-  const teachers = useSelector(state => state.teachers);
-  const students = useSelector(state => state.students);
-  const groupStudents = useSelector(state => state.groupStudents);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
-  function handleClick(obj) {
-    dispatch(selectedTeacher(obj))
-  }
 
   return (
     <Container maxWidth="lg" style={{ marginTop: "100px", maxWidth: "1300px" }}>
