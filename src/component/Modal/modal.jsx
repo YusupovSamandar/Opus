@@ -166,7 +166,7 @@ export default function TransitionsModal() {
 
     return (
         <div>
-            <Button style={{ marginRight: "20px", backgroundColor: '#009D77', color: "white", cursor: clickable ? "pointer" : "not-allowed", opacity: clickable ? "1" : "0.5" }} onClick={clickable && handleOpen} variant="contained" color="primary">
+            <Button disabled={!clickable} style={{ marginRight: "20px", backgroundColor: '#009D77', color: "white", opacity: clickable ? "1" : "0.5" }} onClick={handleOpen} variant="contained" color="primary">
                 To'lov
             </Button>
             <Modal

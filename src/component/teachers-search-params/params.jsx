@@ -60,8 +60,8 @@ function Params() {
                     <FormHelperText>Iltimos Oyni kiriting</FormHelperText>
                 </FormControl>
                 <div style={{ marginLeft: "40px" }}>
-                    <img style={{ width: "100px", cursor: "pointer", borderRadius: "100%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTas9q0FVF21ebCV4tNwgYXc_vakCYAddS-Bw&usqp=CAU" alt="" /><br />
-                    <img style={{ width: "100px", cursor: "pointer", borderRadius: "100%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTas9q0FVF21ebCV4tNwgYXc_vakCYAddS-Bw&usqp=CAU" alt="" />
+                    {/* <img style={{ width: "100px", cursor: "pointer", borderRadius: "100%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTas9q0FVF21ebCV4tNwgYXc_vakCYAddS-Bw&usqp=CAU" alt="" /><br />
+                    <img style={{ width: "100px", cursor: "pointer", borderRadius: "100%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTas9q0FVF21ebCV4tNwgYXc_vakCYAddS-Bw&usqp=CAU" alt="" /> */}
                 </div>
             </ul>
         </div>
