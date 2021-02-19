@@ -5,6 +5,7 @@ import MaterialTable from 'material-table';
 import { useDispatch } from 'react-redux';
 import { TempStudentContext } from "./../Student-datail-context";
 import { revealFeesPage } from "./../../actions";
+import RestoreIcon from '@material-ui/icons/Restore';
 
 
 function BasicSearch(props) {
@@ -27,10 +28,17 @@ function BasicSearch(props) {
                 actions={[
                     {
                         icon: "add",
-                        tooltip: 'Save User',
+                        tooltip: 'add user',
                         onClick: (event, rowData) => {
                             SetTempStudent(rowData);
                             dispatch(revealFeesPage(false));
+                        }
+                    },
+                    {
+                        icon: "edit",
+                        tooltip: 'Change User',
+                        onClick: (event, rowData) => {
+
                         }
                     }
                 ]}
